@@ -28,12 +28,11 @@
         </nav>
     </header>
 
-
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
                 <h1>Preparati all'Esame di Stato</h1>
-                <h2>Indirizzo Informatica</h2>
+                <h2>ITIS Pininfarina - Indirizzo Informatica</h2>
                 <p>La piattaforma interattiva che ti guida verso il successo nell'esame di maturità</p>
                 <div class="cta-buttons">
                     <button class="cta-primary">Inizia Ora</button>
@@ -49,7 +48,6 @@
                 </div>
             </div>
         </section>
-
 
         <section id="esame-overview" class="overview-section">
             <h2>Struttura dell'Esame di Stato</h2>
@@ -100,7 +98,6 @@
             </div>
         </section>
 
-
         <section id="prima-prova" class="prima-prova-section">
             <h2>Prima Prova: Italiano</h2>
             <p>Preparati alla prova scritta di italiano con risorse ed esercitazioni</p>
@@ -149,7 +146,7 @@
                             <div class="practice-box">
                                 <h4>Esercitati ora</h4>
                                 <p>Prova ad analizzare un testo di Pirandello</p>
-                                <button class="practice-btn">Inizia esercitazione</button>
+                                <button class="practice-btn" data-exercise="tipologia-a">Inizia esercitazione</button>
                             </div>
                         </div>
                     </div>
@@ -189,7 +186,7 @@
                             <div class="practice-box">
                                 <h4>Esercitati ora</h4>
                                 <p>Prova a scrivere un testo argomentativo su tecnologia e società</p>
-                                <button class="practice-btn">Inizia esercitazione</button>
+                                <button class="practice-btn" data-exercise="tipologia-b">Inizia esercitazione</button>
                             </div>
                         </div>
                     </div>
@@ -230,14 +227,13 @@
                             <div class="practice-box">
                                 <h4>Esercitati ora</h4>
                                 <p>Prova a scrivere un tema sull'impatto dell'intelligenza artificiale</p>
-                                <button class="practice-btn">Inizia esercitazione</button>
+                                <button class="practice-btn" data-exercise="tipologia-c">Inizia esercitazione</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
 
         <section id="seconda-prova" class="seconda-prova-section">
             <h2>Seconda Prova: Informatica</h2>
@@ -284,7 +280,7 @@
                             <div class="practice-box">
                                 <h4>Esercitati ora</h4>
                                 <p>Prova a progettare un database per un sistema scolastico</p>
-                                <button class="practice-btn">Inizia esercitazione</button>
+                                <button class="practice-btn" data-exercise="database">Inizia esercitazione</button>
                             </div>
                         </div>
                     </div>
@@ -301,7 +297,6 @@ CREATE TABLE Studenti (
     ClasseID INT,
     FOREIGN KEY (ClasseID) REFERENCES Classi(ID)
 );
-
 
 -- Query di selezione con JOIN
 SELECT s.Nome, s.Cognome, c.Nome AS Classe
@@ -348,7 +343,7 @@ ORDER BY s.Cognome, s.Nome;</code></pre>
                             <div class="practice-box">
                                 <h4>Esercitati ora</h4>
                                 <p>Prova a sviluppare un'applicazione per la gestione degli studenti</p>
-                                <button class="practice-btn">Inizia esercitazione</button>
+                                <button class="practice-btn" data-exercise="programmazione">Inizia esercitazione</button>
                             </div>
                         </div>
                     </div>
@@ -417,7 +412,7 @@ ORDER BY s.Cognome, s.Nome;</code></pre>
                             <div class="practice-box">
                                 <h4>Esercitati ora</h4>
                                 <p>Prova a implementare un algoritmo di ordinamento efficiente</p>
-                                <button class="practice-btn">Inizia esercitazione</button>
+                                <button class="practice-btn" data-exercise="algoritmi">Inizia esercitazione</button>
                             </div>
                         </div>
                     </div>
@@ -432,7 +427,6 @@ ORDER BY s.Cognome, s.Nome;</code></pre>
         quickSort(array, pivotIndex + 1, high);
     }
 }
-
 
 private static int partition(int[] array, int low, int high) {
     int pivot = array[high];
@@ -459,14 +453,13 @@ private static int partition(int[] array, int low, int high) {
             </div>
         </section>
 
-
         <section id="orale" class="orale-section">
             <h2>Colloquio Orale</h2>
             <p>Preparati all'esame orale multidisciplinare</p>
            
             <div class="materie-container">
                 <div class="materie-grid">
-                    <div class="materia-card" data-materia="italiano">
+                    <div class="materia-card active" data-materia="italiano">
                         <div class="materia-icon">
                             <i class="fas fa-book"></i>
                         </div>
@@ -553,16 +546,16 @@ private static int partition(int[] array, int low, int high) {
                             <div class="detail-resources">
                                 <h4>Risorse per lo studio</h4>
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-file-pdf"></i> Riassunto autori del '900</a></li>
-                                    <li><a href="#"><i class="fas fa-file-pdf"></i> Analisi testi principali</a></li>
-                                    <li><a href="#"><i class="fas fa-video"></i> Videolezioni sul Neorealismo</a></li>
-                                    <li><a href="#"><i class="fas fa-book"></i> Mappe concettuali</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="italiano-riassunto"><i class="fas fa-file-pdf"></i> Riassunto autori del '900</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="italiano-analisi"><i class="fas fa-file-pdf"></i> Analisi testi principali</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="italiano-video"><i class="fas fa-video"></i> Videolezioni sul Neorealismo</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="italiano-mappe"><i class="fas fa-book"></i> Mappe concettuali</a></li>
                                 </ul>
                                
                                 <div class="practice-box">
                                     <h4>Esercitati ora</h4>
                                     <p>Quiz sugli autori del '900</p>
-                                    <button class="practice-btn">Inizia quiz</button>
+                                    <button class="practice-btn" data-exercise="italiano-quiz">Inizia quiz</button>
                                 </div>
                             </div>
                         </div>
@@ -589,16 +582,16 @@ private static int partition(int[] array, int low, int high) {
                             <div class="detail-resources">
                                 <h4>Risorse per lo studio</h4>
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-file-pdf"></i> Cronologia del '900</a></li>
-                                    <li><a href="#"><i class="fas fa-file-pdf"></i> Mappe concettuali</a></li>
-                                    <li><a href="#"><i class="fas fa-video"></i> Documentari storici</a></li>
-                                    <li><a href="#"><i class="fas fa-book"></i> Riassunti per periodo</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="storia-cronologia"><i class="fas fa-file-pdf"></i> Cronologia del '900</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="storia-mappe"><i class="fas fa-file-pdf"></i> Mappe concettuali</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="storia-video"><i class="fas fa-video"></i> Documentari storici</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="storia-riassunti"><i class="fas fa-book"></i> Riassunti per periodo</a></li>
                                 </ul>
                                
                                 <div class="practice-box">
                                     <h4>Esercitati ora</h4>
                                     <p>Quiz sulla Seconda Guerra Mondiale</p>
-                                    <button class="practice-btn">Inizia quiz</button>
+                                    <button class="practice-btn" data-exercise="storia-quiz">Inizia quiz</button>
                                 </div>
                             </div>
                         </div>
@@ -625,16 +618,16 @@ private static int partition(int[] array, int low, int high) {
                             <div class="detail-resources">
                                 <h4>Risorse per lo studio</h4>
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-file-pdf"></i> Technical vocabulary</a></li>
-                                    <li><a href="#"><i class="fas fa-file-pdf"></i> Reading comprehension</a></li>
-                                    <li><a href="#"><i class="fas fa-video"></i> Listening exercises</a></li>
-                                    <li><a href="#"><i class="fas fa-book"></i> Grammar review</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="inglese-vocab"><i class="fas fa-file-pdf"></i> Technical vocabulary</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="inglese-reading"><i class="fas fa-file-pdf"></i> Reading comprehension</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="inglese-listening"><i class="fas fa-video"></i> Listening exercises</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="inglese-grammar"><i class="fas fa-book"></i> Grammar review</a></li>
                                 </ul>
                                
                                 <div class="practice-box">
                                     <h4>Esercitati ora</h4>
                                     <p>Quiz sulla terminologia tecnica</p>
-                                    <button class="practice-btn">Inizia quiz</button>
+                                    <button class="practice-btn" data-exercise="inglese-quiz">Inizia quiz</button>
                                 </div>
                             </div>
                         </div>
@@ -661,16 +654,16 @@ private static int partition(int[] array, int low, int high) {
                             <div class="detail-resources">
                                 <h4>Risorse per lo studio</h4>
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-file-pdf"></i> Formulario completo</a></li>
-                                    <li><a href="#"><i class="fas fa-file-pdf"></i> Esercizi svolti</a></li>
-                                    <li><a href="#"><i class="fas fa-video"></i> Videolezioni</a></li>
-                                    <li><a href="#"><i class="fas fa-book"></i> Mappe concettuali</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="matematica-formulario"><i class="fas fa-file-pdf"></i> Formulario completo</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="matematica-esercizi"><i class="fas fa-file-pdf"></i> Esercizi svolti</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="matematica-video"><i class="fas fa-video"></i> Videolezioni</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="matematica-mappe"><i class="fas fa-book"></i> Mappe concettuali</a></li>
                                 </ul>
                                
                                 <div class="practice-box">
                                     <h4>Esercitati ora</h4>
                                     <p>Esercizi su derivate e integrali</p>
-                                    <button class="practice-btn">Inizia esercitazione</button>
+                                    <button class="practice-btn" data-exercise="matematica-esercizi">Inizia esercitazione</button>
                                 </div>
                             </div>
                         </div>
@@ -697,16 +690,16 @@ private static int partition(int[] array, int low, int high) {
                             <div class="detail-resources">
                                 <h4>Risorse per lo studio</h4>
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-file-pdf"></i> Teoria dei database</a></li>
-                                    <li><a href="#"><i class="fas fa-file-pdf"></i> Esercizi SQL</a></li>
-                                    <li><a href="#"><i class="fas fa-video"></i> Videolezioni</a></li>
-                                    <li><a href="#"><i class="fas fa-book"></i> Esempi di progetti</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="informatica-db"><i class="fas fa-file-pdf"></i> Teoria dei database</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="informatica-sql"><i class="fas fa-file-pdf"></i> Esercizi SQL</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="informatica-video"><i class="fas fa-video"></i> Videolezioni</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="informatica-progetti"><i class="fas fa-book"></i> Esempi di progetti</a></li>
                                 </ul>
                                
                                 <div class="practice-box">
                                     <h4>Esercitati ora</h4>
                                     <p>Esercizi su query SQL</p>
-                                    <button class="practice-btn">Inizia esercitazione</button>
+                                    <button class="practice-btn" data-exercise="informatica-sql">Inizia esercitazione</button>
                                 </div>
                             </div>
                         </div>
@@ -733,16 +726,16 @@ private static int partition(int[] array, int low, int high) {
                             <div class="detail-resources">
                                 <h4>Risorse per lo studio</h4>
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-file-pdf"></i> Teoria delle reti</a></li>
-                                    <li><a href="#"><i class="fas fa-file-pdf"></i> Esercizi di subnetting</a></li>
-                                    <li><a href="#"><i class="fas fa-video"></i> Videolezioni</a></li>
-                                    <li><a href="#"><i class="fas fa-book"></i> Simulazioni Packet Tracer</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="sistemi-teoria"><i class="fas fa-file-pdf"></i> Teoria delle reti</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="sistemi-subnetting"><i class="fas fa-file-pdf"></i> Esercizi di subnetting</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="sistemi-video"><i class="fas fa-video"></i> Videolezioni</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="sistemi-packet"><i class="fas fa-book"></i> Simulazioni Packet Tracer</a></li>
                                 </ul>
                                
                                 <div class="practice-box">
                                     <h4>Esercitati ora</h4>
                                     <p>Esercizi su subnetting</p>
-                                    <button class="practice-btn">Inizia esercitazione</button>
+                                    <button class="practice-btn" data-exercise="sistemi-subnetting">Inizia esercitazione</button>
                                 </div>
                             </div>
                         </div>
@@ -769,16 +762,16 @@ private static int partition(int[] array, int low, int high) {
                             <div class="detail-resources">
                                 <h4>Risorse per lo studio</h4>
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-file-pdf"></i> Teoria architetture</a></li>
-                                    <li><a href="#"><i class="fas fa-file-pdf"></i> Esempi di codice</a></li>
-                                    <li><a href="#"><i class="fas fa-video"></i> Videolezioni</a></li>
-                                    <li><a href="#"><i class="fas fa-book"></i> Progetti guidati</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="tpsit-teoria"><i class="fas fa-file-pdf"></i> Teoria architetture</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="tpsit-codice"><i class="fas fa-file-pdf"></i> Esempi di codice</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="tpsit-video"><i class="fas fa-video"></i> Videolezioni</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="tpsit-progetti"><i class="fas fa-book"></i> Progetti guidati</a></li>
                                 </ul>
                                
                                 <div class="practice-box">
                                     <h4>Esercitati ora</h4>
                                     <p>Esercizi su socket e thread</p>
-                                    <button class="practice-btn">Inizia esercitazione</button>
+                                    <button class="practice-btn" data-exercise="tpsit-socket">Inizia esercitazione</button>
                                 </div>
                             </div>
                         </div>
@@ -805,16 +798,16 @@ private static int partition(int[] array, int low, int high) {
                             <div class="detail-resources">
                                 <h4>Risorse per lo studio</h4>
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-file-pdf"></i> Teoria project management</a></li>
-                                    <li><a href="#"><i class="fas fa-file-pdf"></i> Esempi di progetti</a></li>
-                                    <li><a href="#"><i class="fas fa-video"></i> Videolezioni</a></li>
-                                    <li><a href="#"><i class="fas fa-book"></i> Casi di studio</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="gpoi-teoria"><i class="fas fa-file-pdf"></i> Teoria project management</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="gpoi-progetti"><i class="fas fa-file-pdf"></i> Esempi di progetti</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="gpoi-video"><i class="fas fa-video"></i> Videolezioni</a></li>
+                                    <li><a href="#" class="resource-link" data-resource="gpoi-casi"><i class="fas fa-book"></i> Casi di studio</a></li>
                                 </ul>
                                
                                 <div class="practice-box">
                                     <h4>Esercitati ora</h4>
                                     <p>Esercizi su WBS e diagrammi</p>
-                                    <button class="practice-btn">Inizia esercitazione</button>
+                                    <button class="practice-btn" data-exercise="gpoi-wbs">Inizia esercitazione</button>
                                 </div>
                             </div>
                         </div>
@@ -840,7 +833,7 @@ private static int partition(int[] array, int low, int high) {
                         <div class="template-box">
                             <h4>Template PowerPoint</h4>
                             <p>Scarica un template per la presentazione PCTO</p>
-                            <button class="download-btn">Scarica template <i class="fas fa-download"></i></button>
+                            <button class="download-btn" data-resource="pcto-template">Scarica template <i class="fas fa-download"></i></button>
                         </div>
                     </div>
                 </div>
@@ -865,13 +858,12 @@ private static int partition(int[] array, int low, int high) {
                         <div class="practice-box">
                             <h4>Esercitati ora</h4>
                             <p>Quiz su Costituzione e cittadinanza digitale</p>
-                            <button class="practice-btn">Inizia quiz</button>
+                            <button class="practice-btn" data-exercise="ed-civica-quiz">Inizia quiz</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
 
         <section id="risorse" class="risorse-section">
             <h2>Risorse per lo studio</h2>
@@ -884,7 +876,7 @@ private static int partition(int[] array, int low, int high) {
                     </div>
                     <h3>Riassunti</h3>
                     <p>Sintesi delle materie principali</p>
-                    <button class="download-btn">Scarica <i class="fas fa-download"></i></button>
+                    <button class="download-btn" data-resource="riassunti-materie">Scarica <i class="fas fa-download"></i></button>
                 </div>
                
                 <div class="resource-card">
@@ -893,7 +885,7 @@ private static int partition(int[] array, int low, int high) {
                     </div>
                     <h3>Simulazioni</h3>
                     <p>Prove d'esame degli anni precedenti</p>
-                    <button class="download-btn">Scarica <i class="fas fa-download"></i></button>
+                    <button class="download-btn" data-resource="simulazioni-precedenti">Scarica <i class="fas fa-download"></i></button>
                 </div>
                
                 <div class="resource-card">
@@ -902,7 +894,7 @@ private static int partition(int[] array, int low, int high) {
                     </div>
                     <h3>Video lezioni</h3>
                     <p>Spiegazioni video dei concetti chiave</p>
-                    <button class="view-btn">Guarda <i class="fas fa-play"></i></button>
+                    <button class="view-btn" data-resource="video-lezioni">Guarda <i class="fas fa-play"></i></button>
                 </div>
                
                 <div class="resource-card">
@@ -911,7 +903,7 @@ private static int partition(int[] array, int low, int high) {
                     </div>
                     <h3>Esempi di codice</h3>
                     <p>Soluzioni e progetti di esempio</p>
-                    <button class="view-btn">Esplora <i class="fas fa-code"></i></button>
+                    <button class="view-btn" data-resource="esempi-codice">Esplora <i class="fas fa-code"></i></button>
                 </div>
                
                 <div class="resource-card">
@@ -920,7 +912,7 @@ private static int partition(int[] array, int low, int high) {
                     </div>
                     <h3>Progetti completi</h3>
                     <p>Progetti full-stack di esempio</p>
-                    <button class="download-btn">Scarica <i class="fas fa-download"></i></button>
+                    <button class="download-btn" data-resource="progetti-completi">Scarica <i class="fas fa-download"></i></button>
                 </div>
                
                 <div class="resource-card">
@@ -929,7 +921,7 @@ private static int partition(int[] array, int low, int high) {
                     </div>
                     <h3>Forum di discussione</h3>
                     <p>Confrontati con altri studenti</p>
-                    <button class="join-btn">Partecipa <i class="fas fa-arrow-right"></i></button>
+                    <button class="join-btn" data-resource="forum-discussione">Partecipa <i class="fas fa-arrow-right"></i></button>
                 </div>
                
                 <div class="resource-card">
@@ -938,7 +930,7 @@ private static int partition(int[] array, int low, int high) {
                     </div>
                     <h3>Checklist esame</h3>
                     <p>Lista di controllo per la preparazione</p>
-                    <button class="download-btn">Scarica <i class="fas fa-download"></i></button>
+                    <button class="download-btn" data-resource="checklist-esame">Scarica <i class="fas fa-download"></i></button>
                 </div>
                
                 <div class="resource-card">
@@ -947,11 +939,10 @@ private static int partition(int[] array, int low, int high) {
                     </div>
                     <h3>Quiz interattivi</h3>
                     <p>Verifica la tua preparazione</p>
-                    <button class="view-btn">Inizia <i class="fas fa-play"></i></button>
+                    <button class="view-btn" data-resource="quiz-interattivi">Inizia <i class="fas fa-play"></i></button>
                 </div>
             </div>
         </section>
-
 
         <section id="simulazioni" class="simulazioni-section">
             <h2>Simulazioni d'esame</h2>
@@ -973,7 +964,7 @@ private static int partition(int[] array, int low, int high) {
                             <li>Correzione guidata</li>
                             <li>Esempi di svolgimento</li>
                         </ul>
-                        <button class="simulazione-btn">Inizia simulazione</button>
+                        <button class="simulazione-btn" data-simulazione="prima-prova">Inizia simulazione</button>
                     </div>
                 </div>
                
@@ -992,7 +983,7 @@ private static int partition(int[] array, int low, int high) {
                             <li>Sviluppo applicazione</li>
                             <li>Soluzione guidata</li>
                         </ul>
-                        <button class="simulazione-btn">Inizia simulazione</button>
+                        <button class="simulazione-btn" data-simulazione="seconda-prova">Inizia simulazione</button>
                     </div>
                 </div>
                
@@ -1011,7 +1002,7 @@ private static int partition(int[] array, int low, int high) {
                             <li>Consigli per l'esposizione</li>
                             <li>Feedback personalizzato</li>
                         </ul>
-                        <button class="simulazione-btn">Inizia simulazione</button>
+                        <button class="simulazione-btn" data-simulazione="colloquio">Inizia simulazione</button>
                     </div>
                 </div>
             </div>
@@ -1030,28 +1021,28 @@ private static int partition(int[] array, int low, int high) {
                         </thead>
                         <tbody>
                             <tr>
-                                <td>15 Aprile 2025</td>
-                                <td>Prima Prova</td>
+                                <td>10 Aprile 2025</td>
+                                <td>Esercitazione Prima Prova</td>
                                 <td>6 ore</td>
-                                <td>Simulazione ministeriale</td>
+                                <td>Simulazione d'istituto</td>
                             </tr>
                             <tr>
-                                <td>22 Aprile 2025</td>
-                                <td>Seconda Prova</td>
-                                <td>6 ore</td>
-                                <td>Simulazione ministeriale</td>
-                            </tr>
-                            <tr>
-                                <td>10 Maggio 2025</td>
-                                <td>Prima Prova</td>
+                                <td>30 Aprile 2025</td>
+                                <td>Esercitazione Seconda Prova</td>
                                 <td>6 ore</td>
                                 <td>Simulazione d'istituto</td>
                             </tr>
                             <tr>
                                 <td>17 Maggio 2025</td>
+                                <td>Prima Prova</td>
+                                <td>6 ore</td>
+                                <td>Simulazione ministeriale</td>
+                            </tr>
+                            <tr>
+                                <td>18 Maggio 2025</td>
                                 <td>Seconda Prova</td>
                                 <td>6 ore</td>
-                                <td>Simulazione d'istituto</td>
+                                <td>Simulazione ministeriale</td>
                             </tr>
                             <tr>
                                 <td>24-28 Maggio 2025</td>
@@ -1064,7 +1055,6 @@ private static int partition(int[] array, int low, int high) {
                 </div>
             </div>
         </section>
-
 
         <section id="countdown" class="countdown-section">
             <h2>Countdown Esame di Stato</h2>
@@ -1089,17 +1079,93 @@ private static int partition(int[] array, int low, int high) {
                 </div>
                 <div class="countdown-message">
                     <p>Resta concentrato e organizza il tuo tempo!</p>
-                    <button class="plan-btn">Crea piano di studio <i class="fas fa-calendar-alt"></i></button>
+                    <button class="plan-btn" id="create-plan-btn">Crea piano di studio <i class="fas fa-calendar-alt"></i></button>
                 </div>
             </div>
         </section>
-    </main>
 
+        <!-- Modal per il piano di studio -->
+        <div id="plan-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Crea il tuo piano di studio personalizzato</h2>
+                
+                <div class="plan-form">
+                    <div class="form-group">
+                        <label for="exam-date">Data dell'esame:</label>
+                        <input type="date" id="exam-date" value="2025-06-19">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Seleziona le materie da studiare:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="subjects" value="italiano" checked> Italiano</label>
+                            <label><input type="checkbox" name="subjects" value="storia" checked> Storia</label>
+                            <label><input type="checkbox" name="subjects" value="inglese" checked> Inglese</label>
+                            <label><input type="checkbox" name="subjects" value="matematica" checked> Matematica</label>
+                            <label><input type="checkbox" name="subjects" value="informatica" checked> Informatica</label>
+                            <label><input type="checkbox" name="subjects" value="sistemi" checked> Sistemi e Reti</label>
+                            <label><input type="checkbox" name="subjects" value="tpsit" checked> TPSIT</label>
+                            <label><input type="checkbox" name="subjects" value="gpoi" checked> GPOI</label>
+                            <label><input type="checkbox" name="subjects" value="ed-civica" checked> Educazione Civica</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="study-hours">Ore di studio giornaliere:</label>
+                        <input type="number" id="study-hours" min="1" max="12" value="4">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="priority">Priorità:</label>
+                        <select id="priority">
+                            <option value="balanced">Bilanciata</option>
+                            <option value="first-test">Prima prova</option>
+                            <option value="second-test">Seconda prova</option>
+                            <option value="oral">Colloquio orale</option>
+                        </select>
+                    </div>
+                    
+                    <button id="generate-plan-btn" class="cta-primary">Genera piano di studio</button>
+                </div>
+                
+                <div id="plan-result" class="plan-result" style="display: none;">
+                    <h3>Il tuo piano di studio personalizzato</h3>
+                    <div id="plan-calendar"></div>
+                    <button id="download-plan-btn" class="download-btn">Scarica piano <i class="fas fa-download"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal per le esercitazioni -->
+        <div id="exercise-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="exercise-content"></div>
+            </div>
+        </div>
+
+        <!-- Modal per le risorse -->
+        <div id="resource-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="resource-content"></div>
+            </div>
+        </div>
+
+        <!-- Modal per le simulazioni -->
+        <div id="simulazione-modal" class="modal">
+            <div class="modal-content simulazione-modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="simulazione-content"></div>
+            </div>
+        </div>
+    </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <div class="logo">PrepEsame</div>
+                <div class="logo">PrepEsame <span>ITIS Pininfarina</span></div>
                 <p>La tua guida all'Esame di Stato</p>
             </div>
            
@@ -1119,10 +1185,10 @@ private static int partition(int[] array, int low, int high) {
                 <div class="link-group">
                     <h4>Risorse</h4>
                     <ul>
-                        <li><a href="#">Riassunti</a></li>
-                        <li><a href="#">Simulazioni</a></li>
-                        <li><a href="#">Video lezioni</a></li>
-                        <li><a href="#">Forum</a></li>
+                        <li><a href="#risorse">Riassunti</a></li>
+                        <li><a href="#simulazioni">Simulazioni</a></li>
+                        <li><a href="#risorse">Video lezioni</a></li>
+                        <li><a href="#risorse">Forum</a></li>
                     </ul>
                 </div>
                
@@ -1142,13 +1208,13 @@ private static int partition(int[] array, int low, int high) {
                 <p>Iscriviti alla newsletter per ricevere aggiornamenti e consigli</p>
                 <div class="newsletter-form">
                     <input type="email" placeholder="La tua email">
-                    <button>Iscriviti</button>
+                    <button id="newsletter-btn">Iscriviti</button>
                 </div>
             </div>
         </div>
        
         <div class="footer-bottom">
-            <p>&copy; 2025 PrepEsame. Tutti i diritti riservati.</p>
+            <p>&copy; 2025 PrepEsame ITIS Pininfarina. Tutti i diritti riservati.</p>
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1157,7 +1223,6 @@ private static int partition(int[] array, int low, int high) {
             </div>
         </div>
     </footer>
-
 
     <script src="script.js"></script>
 </body>
