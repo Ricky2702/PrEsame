@@ -4,59 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PrepEsame - ITIS Pininfarina Informatica</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <nav>
-            <div class="logo">PrepEsame <span>ITIS Pininfarina</span></div>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+        <nav class="container">
+            <a href="#home" class="logo">PrepEsame</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#prima-prova">Prima Prova</a></li>
                 <li><a href="#seconda-prova">Seconda Prova</a></li>
                 <li><a href="#orale">Orale</a></li>
-                <li><a href="#risorse">Risorse</a></li>
                 <li><a href="#simulazioni">Simulazioni</a></li>
             </ul>
-            <button id="theme-toggle" aria-label="Cambia tema">
-                <i class="fas fa-moon"></i>
-            </button>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Preparati all'Esame di Stato</h1>
-                <h2>ITIS Pininfarina - Indirizzo Informatica</h2>
-                <p>La piattaforma interattiva che ti guida verso il successo nell'esame di maturità</p>
-                <div class="cta-buttons">
-                    <button class="cta-primary" id="inizia-ora-btn">Inizia Ora</button>
-                    <button class="cta-secondary" id="scopri-di-piu-btn">Scopri di più</button>
-                </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Preparati all'Esame di Stato</h1>
+            <h2>ITIS Pininfarina - Indirizzo Informatica</h2>
+            <p>La piattaforma completa per la preparazione all'esame di maturità</p>
+            <div class="cta-buttons">
+                <a href="#orale" class="btn btn-primary">Inizia Ora</a>
+                <a href="#esame-overview" class="btn btn-secondary">Scopri di più</a>
             </div>
-            <div class="hero-image">
-                <div class="floating-elements">
-                    <div class="element code">&lt;/&gt;</div>
-                    <div class="element database">DB</div>
-                    <div class="element network">IP</div>
-                    <div class="element literature">A</div>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="esame-overview" class="overview-section">
-            <h2>Struttura dell'Esame di Stato</h2>
-            <p>Ecco come si articola l'esame di maturità per l'indirizzo informatica</p>
-           
-            <div class="exam-structure">
-                <div class="exam-card">
-                    <div class="exam-icon">
-                        <i class="fas fa-book"></i>
+    <!-- Countdown -->
+    <section class="countdown">
+        <div class="container">
+            <h2>Countdown Esame di Stato</h2>
+            <div class="countdown-timer">
+                <div class="time-unit">
+                    <span class="number" id="days">0</span>
+                    <span class="label">Giorni</span>
+                </div>
+                <div class="time-unit">
+                    <span class="number" id="hours">0</span>
+                    <span class="label">Ore</span>
+                </div>
+                <div class="time-unit">
+                    <span class="number" id="minutes">0</span>
+                    <span class="label">Minuti</span>
+                </div>
+                <div class="time-unit">
+                    <span class="number" id="seconds">0</span>
+                    <span class="label">Secondi</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exam Overview -->
+    <section id="esame-overview" class="section">
+        <div class="container">
+            <h2 class="section-title">Struttura dell'Esame di Stato</h2>
+            <p class="section-subtitle">Ecco come si articola l'esame di maturità per l'indirizzo informatica</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon blue">
+                        <i class="fas fa-book-open"></i>
                     </div>
                     <h3>Prima Prova</h3>
                     <p>Italiano</p>
@@ -65,11 +83,10 @@
                         <li>Tipologia B: Testo argomentativo</li>
                         <li>Tipologia C: Tema di attualità</li>
                     </ul>
-                    <a href="#prima-prova" class="exam-link">Approfondisci <i class="fas fa-arrow-right"></i></a>
                 </div>
-               
-                <div class="exam-card">
-                    <div class="exam-icon">
+
+                <div class="card">
+                    <div class="card-icon green">
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3>Seconda Prova</h3>
@@ -79,11 +96,10 @@
                         <li>Sviluppo applicazioni</li>
                         <li>Algoritmi e strutture dati</li>
                     </ul>
-                    <a href="#seconda-prova" class="exam-link">Approfondisci <i class="fas fa-arrow-right"></i></a>
                 </div>
-               
-                <div class="exam-card">
-                    <div class="exam-icon">
+
+                <div class="card">
+                    <div class="card-icon purple">
                         <i class="fas fa-comments"></i>
                     </div>
                     <h3>Colloquio Orale</h3>
@@ -93,1166 +109,2009 @@
                         <li>PCTO (ex Alternanza)</li>
                         <li>Educazione Civica</li>
                     </ul>
-                    <a href="#orale" class="exam-link">Approfondisci <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="prima-prova" class="prima-prova-section">
-            <h2>Prima Prova: Italiano</h2>
-            <p>Preparati alla prova scritta di italiano con risorse ed esercitazioni</p>
-           
-            <div class="tipologie-container">
-                <div class="tipologia-tabs">
-                    <button class="tipologia-tab active" data-tipologia="tipologia-a">Tipologia A</button>
-                    <button class="tipologia-tab" data-tipologia="tipologia-b">Tipologia B</button>
-                    <button class="tipologia-tab" data-tipologia="tipologia-c">Tipologia C</button>
-                </div>
-               
-                <div class="tipologia-content active" id="tipologia-a-content">
-                    <h3>Analisi del testo</h3>
-                    <div class="tipologia-info">
-                        <div class="info-col">
-                            <h4>Struttura</h4>
-                            <ul>
-                                <li>Comprensione del testo</li>
-                                <li>Analisi lessicale e stilistica</li>
-                                <li>Interpretazione complessiva</li>
-                                <li>Approfondimento</li>
-                            </ul>
-                           
-                            <h4>Autori principali</h4>
-                            <ul>
-                                <li>Dante Alighieri</li>
-                                <li>Giovanni Verga</li>
-                                <li>Luigi Pirandello</li>
-                                <li>Eugenio Montale</li>
-                                <li>Italo Svevo</li>
-                                <li>Giuseppe Ungaretti</li>
-                                <li>Primo Levi</li>
-                            </ul>
-                        </div>
-                       
-                        <div class="info-col">
-                            <h4>Consigli pratici</h4>
-                            <ul>
-                                <li>Leggi attentamente il testo più volte</li>
-                                <li>Sottolinea parole chiave e figure retoriche</li>
-                                <li>Analizza la struttura del testo</li>
-                                <li>Collega l'opera al contesto storico-culturale</li>
-                                <li>Organizza la risposta in paragrafi</li>
-                            </ul>
-                           
-                            <div class="practice-box">
-                                <h4>Esercitati ora</h4>
-                                <p>Prova ad analizzare un testo di Pirandello</p>
-                                <button class="practice-btn" data-exercise="tipologia-a">Inizia esercitazione</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               
-                <div class="tipologia-content" id="tipologia-b-content">
-                    <h3>Testo argomentativo</h3>
-                    <div class="tipologia-info">
-                        <div class="info-col">
-                            <h4>Struttura</h4>
-                            <ul>
-                                <li>Comprensione della tesi dell'autore</li>
-                                <li>Analisi della struttura argomentativa</li>
-                                <li>Individuazione dei nessi logici</li>
-                                <li>Produzione di un testo argomentativo</li>
-                            </ul>
-                           
-                            <h4>Ambiti tematici</h4>
-                            <ul>
-                                <li>Artistico-letterario</li>
-                                <li>Storico-politico</li>
-                                <li>Scientifico-tecnologico</li>
-                                <li>Socio-economico</li>
-                            </ul>
-                        </div>
-                       
-                        <div class="info-col">
-                            <h4>Consigli pratici</h4>
-                            <ul>
-                                <li>Identifica chiaramente la tesi dell'autore</li>
-                                <li>Analizza gli argomenti a sostegno</li>
-                                <li>Riconosci le tecniche argomentative</li>
-                                <li>Sviluppa una tua tesi coerente</li>
-                                <li>Usa esempi concreti e riferimenti culturali</li>
-                            </ul>
-                           
-                            <div class="practice-box">
-                                <h4>Esercitati ora</h4>
-                                <p>Prova a scrivere un testo argomentativo su tecnologia e società</p>
-                                <button class="practice-btn" data-exercise="tipologia-b">Inizia esercitazione</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               
-                <div class="tipologia-content" id="tipologia-c-content">
-                    <h3>Tema di attualità</h3>
-                    <div class="tipologia-info">
-                        <div class="info-col">
-                            <h4>Struttura</h4>
-                            <ul>
-                                <li>Introduzione alla tematica</li>
-                                <li>Sviluppo dell'argomento</li>
-                                <li>Riflessione critica</li>
-                                <li>Conclusione</li>
-                            </ul>
-                           
-                            <h4>Temi ricorrenti</h4>
-                            <ul>
-                                <li>Tecnologia e innovazione</li>
-                                <li>Ambiente e sostenibilità</li>
-                                <li>Diritti umani e cittadinanza</li>
-                                <li>Globalizzazione</li>
-                                <li>Comunicazione e social media</li>
-                            </ul>
-                        </div>
-                       
-                        <div class="info-col">
-                            <h4>Consigli pratici</h4>
-                            <ul>
-                                <li>Analizza attentamente la traccia</li>
-                                <li>Organizza le idee prima di scrivere</li>
-                                <li>Usa un linguaggio chiaro e appropriato</li>
-                                <li>Inserisci riferimenti culturali pertinenti</li>
-                                <li>Esprimi un punto di vista personale</li>
-                            </ul>
-                           
-                            <div class="practice-box">
-                                <h4>Esercitati ora</h4>
-                                <p>Prova a scrivere un tema sull'impatto dell'intelligenza artificiale</p>
-                                <button class="practice-btn" data-exercise="tipologia-c">Inizia esercitazione</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Oral Exam Section -->
+    <section id="orale" class="section practice-section">
+        <div class="container">
+            <h2 class="section-title">Colloquio Orale</h2>
+            <p class="section-subtitle">Preparati all'esame orale multidisciplinare con i nostri materiali di studio</p>
 
-        <section id="seconda-prova" class="seconda-prova-section">
-            <h2>Seconda Prova: Informatica</h2>
-            <p>Preparati alla prova di indirizzo con esercitazioni mirate</p>
-           
-            <div class="informatica-container">
-                <div class="argomenti-tabs">
-                    <button class="argomento-tab active" data-argomento="database">Database</button>
-                    <button class="argomento-tab" data-argomento="programmazione">Programmazione</button>
-                    <button class="argomento-tab" data-argomento="algoritmi">Algoritmi</button>
-                </div>
-               
-                <div class="argomento-content active" id="database-content">
-                    <h3>Progettazione Database</h3>
-                    <div class="argomento-info">
-                        <div class="info-col">
-                            <h4>Argomenti chiave</h4>
-                            <ul>
-                                <li>Modello E/R</li>
-                                <li>Modello relazionale</li>
-                                <li>Normalizzazione</li>
-                                <li>SQL (DDL, DML, QL)</li>
-                                <li>Transazioni e concorrenza</li>
-                                <li>Sicurezza dei dati</li>
-                            </ul>
-                           
-                            <h4>Tecnologie</h4>
-                            <ul>
-                                <li>MySQL / MariaDB</li>
-                                <li>PostgreSQL</li>
-                                <li>Microsoft SQL Server</li>
-                                <li>SQLite</li>
-                            </ul>
-                        </div>
-                       
-                        <div class="info-col">
-                            <h4>Esempi di tracce</h4>
-                            <div class="example-box">
-                                <p><strong>Esempio 1:</strong> Progettare un database per la gestione di un e-commerce</p>
-                                <p><strong>Esempio 2:</strong> Sistema di gestione prenotazioni per un'azienda di trasporti</p>
-                                <p><strong>Esempio 3:</strong> Database per la gestione di una biblioteca digitale</p>
-                            </div>
-                           
-                            <div class="practice-box">
-                                <h4>Esercitati ora</h4>
-                                <p>Prova a progettare un database per un sistema scolastico</p>
-                                <button class="practice-btn" data-exercise="database">Inizia esercitazione</button>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="code-example">
-                        <h4>Esempio di codice SQL</h4>
-                        <pre><code>-- Creazione tabella Studenti
-CREATE TABLE Studenti (
-    ID INT PRIMARY KEY AUTO_INCREMENT,
-    Nome VARCHAR(50) NOT NULL,
-    Cognome VARCHAR(50) NOT NULL,
-    DataNascita DATE,
-    Email VARCHAR(100) UNIQUE,
-    ClasseID INT,
-    FOREIGN KEY (ClasseID) REFERENCES Classi(ID)
-);
-
--- Query di selezione con JOIN
-SELECT s.Nome, s.Cognome, c.Nome AS Classe
-FROM Studenti s
-JOIN Classi c ON s.ClasseID = c.ID
-WHERE c.Anno = 5
-ORDER BY s.Cognome, s.Nome;</code></pre>
-                    </div>
-                </div>
-               
-                <div class="argomento-content" id="programmazione-content">
-                    <h3>Programmazione e Sviluppo Applicazioni</h3>
-                    <div class="argomento-info">
-                        <div class="info-col">
-                            <h4>Argomenti chiave</h4>
-                            <ul>
-                                <li>Programmazione Object-Oriented</li>
-                                <li>Design Patterns</li>
-                                <li>Sviluppo Web (front-end e back-end)</li>
-                                <li>API REST</li>
-                                <li>Sicurezza applicativa</li>
-                                <li>Testing e debugging</li>
-                            </ul>
-                           
-                            <h4>Linguaggi e framework</h4>
-                            <ul>
-                                <li>Java</li>
-                                <li>PHP</li>
-                                <li>C#</li>
-                                <li>JavaScript</li>
-                                <li>HTML/CSS</li>
-                                <li>Framework MVC</li>
-                            </ul>
-                        </div>
-                       
-                        <div class="info-col">
-                            <h4>Esempi di tracce</h4>
-                            <div class="example-box">
-                                <p><strong>Esempio 1:</strong> Sviluppo di un'applicazione web per la gestione di un magazzino</p>
-                                <p><strong>Esempio 2:</strong> Sistema di prenotazione online con autenticazione</p>
-                                <p><strong>Esempio 3:</strong> Applicazione per la gestione di un social network</p>
-                            </div>
-                           
-                            <div class="practice-box">
-                                <h4>Esercitati ora</h4>
-                                <p>Prova a sviluppare un'applicazione per la gestione degli studenti</p>
-                                <button class="practice-btn" data-exercise="programmazione">Inizia esercitazione</button>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="code-example">
-                        <h4>Esempio di codice Java</h4>
-                        <pre><code>public class Studente {
-    private int id;
-    private String nome;
-    private String cognome;
-    private LocalDate dataNascita;
-    private String email;
-    private Classe classe;
-   
-    public Studente(int id, String nome, String cognome) {
-        this.id = id;
-        this.nome = nome;
-        this.cognome = cognome;
-    }
-   
-    // Getters e setters
-   
-    public int getEta() {
-        return Period.between(dataNascita, LocalDate.now()).getYears();
-    }
-   
-    @Override
-    public String toString() {
-        return cognome + " " + nome + " (" + classe.getNome() + ")";
-    }
-}</code></pre>
-                    </div>
-                </div>
-               
-                <div class="argomento-content" id="algoritmi-content">
-                    <h3>Algoritmi e Strutture Dati</h3>
-                    <div class="argomento-info">
-                        <div class="info-col">
-                            <h4>Argomenti chiave</h4>
-                            <ul>
-                                <li>Complessità computazionale</li>
-                                <li>Strutture dati (array, liste, alberi, grafi)</li>
-                                <li>Algoritmi di ordinamento</li>
-                                <li>Algoritmi di ricerca</li>
-                                <li>Programmazione dinamica</li>
-                                <li>Algoritmi greedy</li>
-                            </ul>
-                           
-                            <h4>Applicazioni</h4>
-                            <ul>
-                                <li>Ottimizzazione</li>
-                                <li>Elaborazione dati</li>
-                                <li>Intelligenza artificiale</li>
-                                <li>Analisi di reti</li>
-                            </ul>
-                        </div>
-                       
-                        <div class="info-col">
-                            <h4>Esempi di tracce</h4>
-                            <div class="example-box">
-                                <p><strong>Esempio 1:</strong> Implementazione di un algoritmo di ricerca ottimizzato</p>
-                                <p><strong>Esempio 2:</strong> Sistema di raccomandazione basato su grafi</p>
-                                <p><strong>Esempio 3:</strong> Ottimizzazione di un problema di scheduling</p>
-                            </div>
-                           
-                            <div class="practice-box">
-                                <h4>Esercitati ora</h4>
-                                <p>Prova a implementare un algoritmo di ordinamento efficiente</p>
-                                <button class="practice-btn" data-exercise="algoritmi">Inizia esercitazione</button>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="code-example">
-                        <h4>Esempio di algoritmo di ordinamento</h4>
-                        <pre><code>public static void quickSort(int[] array, int low, int high) {
-    if (low < high) {
-        int pivotIndex = partition(array, low, high);
-       
-        quickSort(array, low, pivotIndex - 1);
-        quickSort(array, pivotIndex + 1, high);
-    }
-}
-
-private static int partition(int[] array, int low, int high) {
-    int pivot = array[high];
-    int i = low - 1;
-   
-    for (int j = low; j < high; j++) {
-        if (array[j] <= pivot) {
-            i++;
-           
-            int temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-        }
-    }
-   
-    int temp = array[i + 1];
-    array[i + 1] = array[high];
-    array[high] = temp;
-   
-    return i + 1;
-}</code></pre>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="orale" class="orale-section">
-            <h2>Colloquio Orale</h2>
-            <p>Preparati all'esame orale multidisciplinare</p>
-           
-            <div class="materie-container">
-                <div class="materie-grid">
-                    <div class="materia-card active" data-materia="italiano">
-                        <div class="materia-icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <h3>Italiano</h3>
-                        <p>Letteratura del '900</p>
-                    </div>
-                   
-                    <div class="materia-card" data-materia="storia">
-                        <div class="materia-icon">
-                            <i class="fas fa-landmark"></i>
-                        </div>
-                        <h3>Storia</h3>
-                        <p>Dal '900 ad oggi</p>
-                    </div>
-                   
-                    <div class="materia-card" data-materia="inglese">
-                        <div class="materia-icon">
-                            <i class="fas fa-language"></i>
-                        </div>
-                        <h3>Inglese</h3>
-                        <p>Microlingua tecnica</p>
-                    </div>
-                   
-                    <div class="materia-card" data-materia="matematica">
-                        <div class="materia-icon">
-                            <i class="fas fa-square-root-alt"></i>
-                        </div>
-                        <h3>Matematica</h3>
-                        <p>Analisi e probabilità</p>
-                    </div>
-                   
-                    <div class="materia-card" data-materia="informatica">
-                        <div class="materia-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3>Informatica</h3>
-                        <p>Database e programmazione</p>
-                    </div>
-                   
-                    <div class="materia-card" data-materia="sistemi">
-                        <div class="materia-icon">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <h3>Sistemi e Reti</h3>
-                        <p>Reti e sicurezza</p>
-                    </div>
-                   
-                    <div class="materia-card" data-materia="tpsit">
-                        <div class="materia-icon">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <h3>TPSIT</h3>
-                        <p>Applicazioni e architetture</p>
-                    </div>
-                   
-                    <div class="materia-card" data-materia="gpoi">
-                        <div class="materia-icon">
-                            <i class="fas fa-tasks"></i>
-                        </div>
-                        <h3>GPOI</h3>
-                        <p>Project management</p>
-                    </div>
-
-                    <div class="materia-card" data-materia="scienze-motorie">
-                        <div class="materia-icon">
-                            <i class="fas fa-running"></i>
-                        </div>
-                        <h3>Scienze Motorie</h3>
-                        <p>Capacità motorie</p>
-                    </div>
-                </div>
-               
-                <div class="materia-details">
-                    <div class="materia-detail active" id="italiano-detail">
-                        <h3>Italiano - Argomenti principali</h3>
-                        <div class="detail-content">
-                            <ul class="argomenti-list">
-                                <li>Carducci - Odi barbare</li>
-                                <li>Verga - I malavoglia, Mastro don gesualdo</li>
-                                <li>Pascoli - Myricae, Il fanciullino</li>
-                                <li>D'annunzio - Il piacere</li>
-                                <li>Pirandello - La giara, Il fu mattia pascal</li>
-                                <li>Italo Svevo - La coscienza di Zeno</li>
-                                <li>Ungaretti</li>
-                                <li>Montale</li>
-                            </ul>
-                           
-                            <div class="detail-resources">
-                                <h4>Risorse per lo studio</h4>
-                                <div class="study-buttons">
-                                    <button class="summary-btn" data-materia="italiano">
-                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
-                                    </button>
-                                    <button class="quiz-btn" data-materia="italiano">
-                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="materia-detail" id="storia-detail">
-                        <h3>Storia - Argomenti principali</h3>
-                        <div class="detail-content">
-                            <ul class="argomenti-list">
-                                <li>I cambiamenti della società di massa</li>
-                                <li>La triplice intesa e la triplice alleanza</li>
-                                <li>L'affare Dreyfus</li>
-                                <li>Il Naturalismo</li>
-                                <li>La prima guerra mondiale</li>
-                                <li>I bolscevichi</li>
-                                <li>Il Comunismo</li>
-                                <li>Il Fascismo</li>
-                                <li>La seconda guerra mondiale</li>
-                                <li>Guerra fredda</li>
-                            </ul>
-                           
-                            <div class="detail-resources">
-                                <h4>Risorse per lo studio</h4>
-                                <div class="study-buttons">
-                                    <button class="summary-btn" data-materia="storia">
-                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
-                                    </button>
-                                    <button class="quiz-btn" data-materia="storia">
-                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="materia-detail" id="inglese-detail">
-                        <h3>Inglese - Argomenti principali</h3>
-                        <div class="detail-content">
-                            <ul class="argomenti-list">
-                                <li>Hardware and software</li>
-                                <li>The CPU, Computer memory, The motherboard</li>
-                                <li>Linguaggi di programmazione C, C#, C++</li>
-                                <li>Linguaggi Java, Python, PHP</li>
-                                <li>How to build a program</li>
-                                <li>Operating System</li>
-                                <li>Primi anni 900 in europa e america</li>
-                                <li>The roaring 20, The great depression</li>
-                                <li>The great gatsby</li>
-                                <li>George Orwell 1984</li>
-                                <li>Computer languages vs Natural Languages</li>
-                                <li>Databases, Graphic softwares</li>
-                                <li>Photo editing and fake news</li>
-                                <li>The history of videogames</li>
-                                <li>Cryptography</li>
-                                <li>WWW, websites, web browsers, search engine and web search</li>
-                                <li>Social networks</li>
-                                <li>Big data, GDPR and Privacy Regulations</li>
-                                <li>Types of networks, VPN</li>
-                                <li>Network topologies</li>
-                                <li>Communication protocol</li>
-                            </ul>
-                           
-                            <div class="detail-resources">
-                                <h4>Risorse per lo studio</h4>
-                                <div class="study-buttons">
-                                    <button class="summary-btn" data-materia="inglese">
-                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
-                                    </button>
-                                    <button class="quiz-btn" data-materia="inglese">
-                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="materia-detail" id="matematica-detail">
-                        <h3>Matematica - Argomenti principali</h3>
-                        <div class="detail-content">
-                            <ul class="argomenti-list">
-                                <li>Integrali indefiniti</li>
-                                <li>Integrazione per parti</li>
-                                <li>Metodo di sostituzione</li>
-                                <li>Funzioni composte</li>
-                                <li>Integrazione di funzioni razionali fratte</li>
-                                <li>Integrali definiti</li>
-                                <li>Definizione e Proprietà</li>
-                                <li>Teorema della media</li>
-                                <li>Teorema fondamentale del calcolo integrale</li>
-                                <li>Calcolo aree col calcolo integrale</li>
-                                <li>Area compresa tra due curve</li>
-                                <li>Teorema del valor medio</li>
-                                <li>Integrali impropri</li>
-                                <li>Calcolo aree a 3 volumi</li>
-                                <li>Geometria solida euclidea</li>
-                                <li>Definizione di rette sghembe, diedro, sezione di un diedro</li>
-                                <li>La piramide e il tronco di piramide</li>
-                                <li>Aree dei solidi</li>
-                                <li>Equivalenza di solidi</li>
-                                <li>Principio di cavalieri</li>
-                                <li>Volume dei solidi notevoli</li>
-                                <li>Probabilità</li>
-                                <li>Introduzione eventi certi impossibili e contrari</li>
-                                <li>Teorema della somma logica di eventi</li>
-                                <li>Teorema del prodotto logico di eventi</li>
-                                <li>Probabilità condizionata</li>
-                                <li>Teorema di Bayes</li>
-                            </ul>
-                           
-                            <div class="detail-resources">
-                                <h4>Risorse per lo studio</h4>
-                                <div class="study-buttons">
-                                    <button class="summary-btn" data-materia="matematica">
-                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
-                                    </button>
-                                    <button class="quiz-btn" data-materia="matematica">
-                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="materia-detail" id="informatica-detail">
-                        <h3>Informatica - Argomenti principali</h3>
-                        <div class="detail-content">
-                            <ul class="argomenti-list">
-                                <li>Ripasso HTML, CSS</li>
-                                <li>XAMPP</li>
-                                <li>Linguaggio PHP (tutto praticamente)</li>
-                                <li>Tutta la roba dei database</li>
-                            </ul>
-                           
-                            <div class="detail-resources">
-                                <h4>Risorse per lo studio</h4>
-                                <div class="study-buttons">
-                                    <button class="summary-btn" data-materia="informatica">
-                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
-                                    </button>
-                                    <button class="quiz-btn" data-materia="informatica">
-                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="materia-detail" id="sistemi-detail">
-                        <h3>Sistemi e Reti - Argomenti principali</h3>
-                        <div class="detail-content">
-                            <ul class="argomenti-list">
-                                <li>Indirizzi IP classi (A,B,C) Subnetting</li>
-                                <li>Il livello Applicazione del modello TCP/IP</li>
-                                <li>Servizi email, Protocollo http</li>
-                                <li>DHCP e DNS</li>
-                                <li>Cablaggio strutturato</li>
-                                <li>Nat dinamico e Pat</li>
-                                <li>Reti pubbliche Private e VLAN</li>
-                                <li>Crittografia</li>
-                                <li>Cybersecurity</li>
-                                <li>VPN</li>
-                                <li>ISAKMP</li>
-                                <li>Firma digitale</li>
-                            </ul>
-                           
-                            <div class="detail-resources">
-                                <h4>Risorse per lo studio</h4>
-                                <div class="study-buttons">
-                                    <button class="summary-btn" data-materia="sistemi">
-                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
-                                    </button>
-                                    <button class="quiz-btn" data-materia="sistemi">
-                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="materia-detail" id="tpsit-detail">
-                        <h3>TPSIT - Argomenti principali</h3>
-                        <div class="detail-content">
-                            <ul class="argomenti-list">
-                                <li>XML e DTD</li>
-                                <li>Logica(pensiero induttivo, deduttivo, abduttivo)</li>
-                                <li>JSON</li>
-                                <li>Algoritmi</li>
-                                <li>Relazione tra logica, veridicità degli assiomi e delle tesi, definizione del processo logico in matematica (geometria e algebra), algoritmi, programmi</li>
-                                <li>Javascript(circa circa)</li>
-                                <li>Definizione di Informatica</li>
-                                <li>Applicazioni Web</li>
-                                <li>Sistemi informativi distribuiti(DNS,HTTP) vs Sistemi di calcolo distribuito</li>
-                                <li>TCP la funzione dell'hash</li>
-                                <li>Socket</li>
-                                <li>Implementazione Socket tramite l'implementazione di un server/client Echo e un client/server Tris</li>
-                                <li>Ripasso classi in python</li>
-                                <li>Comunicazione client server in PHP con AJAX</li>
-                                <li>API "FETCH"</li>
-                                <li>Architetture Multi Tier (1,2,3,N)</li>
-                                <li>CGI-BIN</li>
-                            </ul>
-                           
-                            <div class="detail-resources">
-                                <h4>Risorse per lo studio</h4>
-                                <div class="study-buttons">
-                                    <button class="summary-btn" data-materia="tpsit">
-                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
-                                    </button>
-                                    <button class="quiz-btn" data-materia="tpsit">
-                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="materia-detail" id="gpoi-detail">
-                        <h3>GPOI - Argomenti principali</h3>
-                        <div class="detail-content">
-                            <ul class="argomenti-list">
-                                <li>CMS(Content Management System)</li>
-                                <li>Definizione di impresa, azienda e progetto</li>
-                                <li>Classificazione del sistema d'azienda in base al profitto, alla natura ed al settore</li>
-                                <li>Sistema aperto, relazioni di scambio conclusioni</li>
-                                <li>L'azienda , l'azienda, la gestione di un'azienda il capitale, il lavoro</li>
-                                <li>Il progetto definizione e caratteristiche</li>
-                                <li>Il project management(Diagramma di Gantt, WBS)</li>
-                                <li>Projectlibre (vario)</li>
-                                <li>Le fasi di un progetto</li>
-                                <li>gli obiettivi di un progetto</li>
-                                <li>La gestione del progetto: il principio dell'anticipazione dei vincoli. L'anticipazione dei vincoli e delle opportunità nelle prime fasi del progetto.Criteri da adottare per affrontare gli inconvenienti</li>
-                                <li>Tecniche Reticolari PERT e CPM</li>
-                                <li>I costi e i ricavi definizione di efficacia ed efficienza analisi dei costi e dei ricavi</li>
-                                <li>I costi aziendali, il grado di elevabilita'</li>
-                            </ul>
-                           
-                            <div class="detail-resources">
-                                <h4>Risorse per lo studio</h4>
-                                <div class="study-buttons">
-                                    <button class="summary-btn" data-materia="gpoi">
-                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
-                                    </button>
-                                    <button class="quiz-btn" data-materia="gpoi">
-                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="materia-detail" id="scienze-motorie-detail">
-                        <h3>Scienze Motorie e Sportive - Argomenti principali</h3>
-                        <div class="detail-content">
-                            <ul class="argomenti-list">
-                                <li>I parametri allenanti</li>
-                                <li>Allenamento delle capacità motorie</li>
-                                <li>Le capacità motorie (velocità, mobilità articolare e coordinazione)</li>
-                            </ul>
-                           
-                            <div class="detail-resources">
-                                <h4>Risorse per lo studio</h4>
-                                <div class="study-buttons">
-                                    <button class="summary-btn" data-materia="scienze-motorie">
-                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
-                                    </button>
-                                    <button class="quiz-btn" data-materia="scienze-motorie">
-                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-           
-            <div class="pcto-educazione-civica">
-                <div class="pcto-section">
-                    <h3>PCTO (ex Alternanza Scuola-Lavoro)</h3>
-                    <p>Prepara la presentazione della tua esperienza di PCTO</p>
-                   
-                    <div class="pcto-tips">
-                        <h4>Consigli per la presentazione</h4>
-                        <ul>
-                            <li>Descrivi l'azienda/ente ospitante</li>
-                            <li>Illustra le attività svolte</li>
-                            <li>Spiega le competenze acquisite</li>
-                            <li>Collega l'esperienza con il tuo percorso di studi</li>
-                            <li>Rifletti sull'impatto per il tuo futuro professionale</li>
-                        </ul>
-                    </div>
-                </div>
-               
-                <div class="ed-civica-section">
-                    <h3>Educazione Civica</h3>
-                    <p>Preparati sugli argomenti di Educazione Civica</p>
-                   
-                    <div class="ed-civica-topics">
-                        <h4>Argomenti principali</h4>
-                        <ul>
-                            <li>Costituzione italiana</li>
-                            <li>Unione Europea</li>
-                            <li>Cittadinanza digitale</li>
-                            <li>Privacy e protezione dati</li>
-                            <li>Sviluppo sostenibile</li>
-                            <li>Agenda 2030</li>
-                            <li>Diritti umani</li>
-                            <li>Etica dell'informatica</li>
-                        </ul>
-                       
-                        <div class="study-buttons">
-                            <button class="summary-btn" data-materia="educazione-civica">
-                                <i class="fas fa-file-text"></i> Riassunto per l'esame
-                            </button>
-                            <button class="quiz-btn" data-materia="educazione-civica">
-                                <i class="fas fa-question-circle"></i> Quiz di ripasso
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="risorse" class="risorse-section">
-            <h2>Risorse per lo studio</h2>
-            <p>Materiali utili per la tua preparazione all'esame</p>
-           
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <div class="resource-icon">
+            <!-- Subject Selection -->
+            <div class="subjects-grid">
+                <div class="subject-card active" data-subject="italiano">
+                    <div class="subject-icon" style="background: #e74c3c;">
                         <i class="fas fa-book"></i>
                     </div>
-                    <h3>Riassunti</h3>
-                    <p>Sintesi delle materie principali</p>
-                    <button class="download-btn" data-resource="riassunti-materie">Scarica <i class="fas fa-download"></i></button>
+                    <h4>Italiano</h4>
                 </div>
-               
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <i class="fas fa-file-alt"></i>
+                <div class="subject-card" data-subject="inglese">
+                    <div class="subject-icon" style="background: #3498db;">
+                        <i class="fas fa-globe"></i>
                     </div>
-                    <h3>Simulazioni</h3>
-                    <p>Prove d'esame degli anni precedenti</p>
-                    <button class="download-btn" data-resource="simulazioni-precedenti">Scarica <i class="fas fa-download"></i></button>
+                    <h4>Inglese</h4>
                 </div>
-               
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <i class="fas fa-video"></i>
+                <div class="subject-card" data-subject="matematica">
+                    <div class="subject-icon" style="background: #27ae60;">
+                        <i class="fas fa-calculator"></i>
                     </div>
-                    <h3>Video lezioni</h3>
-                    <p>Spiegazioni video dei concetti chiave</p>
-                    <button class="view-btn" data-resource="video-lezioni">Guarda <i class="fas fa-play"></i></button>
+                    <h4>Matematica</h4>
                 </div>
-               
-                <div class="resource-card">
-                    <div class="resource-icon">
+                <div class="subject-card" data-subject="sistemi">
+                    <div class="subject-icon" style="background: #9b59b6;">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h4>Sistemi e Reti</h4>
+                </div>
+                <div class="subject-card" data-subject="tpsit">
+                    <div class="subject-icon" style="background: #f39c12;">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3>Esempi di codice</h3>
-                    <p>Soluzioni e progetti di esempio</p>
-                    <button class="view-btn" data-resource="esempi-codice">Esplora <i class="fas fa-code"></i></button>
+                    <h4>TPSIT</h4>
                 </div>
-               
-                <div class="resource-card">
-                    <div class="resource-icon">
+                <div class="subject-card" data-subject="informatica">
+                    <div class="subject-icon" style="background: #1abc9c;">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4>Informatica</h4>
+                </div>
+                <div class="subject-card" data-subject="gpoi">
+                    <div class="subject-icon" style="background: #34495e;">
                         <i class="fas fa-project-diagram"></i>
                     </div>
-                    <h3>Progetti completi</h3>
-                    <p>Progetti full-stack di esempio</p>
-                    <button class="download-btn" data-resource="progetti-completi">Scarica <i class="fas fa-download"></i></button>
+                    <h4>GPOI</h4>
                 </div>
-               
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <i class="fas fa-comments"></i>
+                <div class="subject-card" data-subject="storia">
+                    <div class="subject-icon" style="background: #e67e22;">
+                        <i class="fas fa-landmark"></i>
                     </div>
-                    <h3>Forum di discussione</h3>
-                    <p>Confrontati con altri studenti</p>
-                    <button class="join-btn" data-resource="forum-discussione">Partecipa <i class="fas fa-arrow-right"></i></button>
+                    <h4>Storia</h4>
                 </div>
-               
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <i class="fas fa-tasks"></i>
+                <div class="subject-card" data-subject="educazione_civica">
+                    <div class="subject-icon" style="background: #2ecc71;">
+                        <i class="fas fa-balance-scale"></i>
                     </div>
-                    <h3>Checklist esame</h3>
-                    <p>Lista di controllo per la preparazione</p>
-                    <button class="download-btn" data-resource="checklist-esame">Scarica <i class="fas fa-download"></i></button>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <i class="fas fa-question-circle"></i>
-                    </div>
-                    <h3>Quiz interattivi</h3>
-                    <p>Verifica la tua preparazione</p>
-                    <button class="view-btn" data-resource="quiz-interattivi">Inizia <i class="fas fa-play"></i></button>
+                    <h4>Educazione Civica</h4>
                 </div>
             </div>
-        </section>
 
-        <section id="simulazioni" class="simulazioni-section">
-            <h2>Simulazioni d'esame</h2>
-            <p>Mettiti alla prova con simulazioni complete delle prove d'esame</p>
-           
-            <div class="simulazioni-container">
-                <div class="simulazione-card">
-                    <div class="simulazione-header">
-                        <div class="simulazione-icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <h3>Prima Prova</h3>
-                    </div>
-                    <div class="simulazione-content">
-                        <p>Simulazione della prova di italiano con tutte le tipologie</p>
-                        <ul>
-                            <li>Durata: 6 ore</li>
-                            <li>Tipologie A, B, C</li>
-                            <li>Correzione guidata</li>
-                            <li>Esempi di svolgimento</li>
+            <!-- Subject Details -->
+            <div class="subject-details">
+                <div class="subject-content">
+                    <div>
+                        <h3 id="subject-title">Italiano - Argomenti principali</h3>
+                        <h4>Argomenti del programma:</h4>
+                        <ul class="topics-list" id="topics-list">
+                            <!-- Topics will be populated by JavaScript -->
                         </ul>
-                        <button class="simulazione-btn" data-simulazione="prima-prova">Inizia simulazione</button>
                     </div>
-                </div>
-               
-                <div class="simulazione-card">
-                    <div class="simulazione-header">
-                        <div class="simulazione-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3>Seconda Prova</h3>
-                    </div>
-                    <div class="simulazione-content">
-                        <p>Simulazione della prova di informatica</p>
-                        <ul>
-                            <li>Durata: 6 ore</li>
-                            <li>Progettazione database</li>
-                            <li>Sviluppo applicazione</li>
-                            <li>Soluzione guidata</li>
-                        </ul>
-                        <button class="simulazione-btn" data-simulazione="seconda-prova">Inizia simulazione</button>
-                    </div>
-                </div>
-               
-                <div class="simulazione-card">
-                    <div class="simulazione-header">
-                        <div class="simulazione-icon">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <h3>Colloquio</h3>
-                    </div>
-                    <div class="simulazione-content">
-                        <p>Simulazione del colloquio orale multidisciplinare</p>
-                        <ul>
-                            <li>Materiali di partenza</li>
-                            <li>Domande tipiche</li>
-                            <li>Consigli per l'esposizione</li>
-                            <li>Feedback personalizzato</li>
-                        </ul>
-                        <button class="simulazione-btn" data-simulazione="colloquio">Inizia simulazione</button>
-                    </div>
-                </div>
-            </div>
-           
-            <div class="simulazioni-calendar">
-                <h3>Calendario simulazioni ufficiali</h3>
-                <div class="calendar-container">
-                    <table class="calendar-table">
-                        <thead>
-                            <tr>
-                                <th>Data</th>
-                                <th>Prova</th>
-                                <th>Durata</th>
-                                <th>Note</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>10 Aprile 2025</td>
-                                <td>Esercitazione Prima Prova</td>
-                                <td>6 ore</td>
-                                <td>Simulazione d'istituto</td>
-                            </tr>
-                            <tr>
-                                <td>30 Aprile 2025</td>
-                                <td>Esercitazione Seconda Prova</td>
-                                <td>6 ore</td>
-                                <td>Simulazione d'istituto</td>
-                            </tr>
-                            <tr>
-                                <td>17 Maggio 2025</td>
-                                <td>Prima Prova</td>
-                                <td>6 ore</td>
-                                <td>Simulazione ministeriale</td>
-                            </tr>
-                            <tr>
-                                <td>18 Maggio 2025</td>
-                                <td>Seconda Prova</td>
-                                <td>6 ore</td>
-                                <td>Simulazione ministeriale</td>
-                            </tr>
-                            <tr>
-                                <td>24-28 Maggio 2025</td>
-                                <td>Colloquio</td>
-                                <td>1 ora</td>
-                                <td>Simulazione individuale</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <section id="countdown" class="countdown-section">
-            <h2>Countdown Esame di Stato</h2>
-            <div class="countdown-container">
-                <div class="countdown-timer">
-                    <div class="countdown-item">
-                        <div class="countdown-value" id="countdown-days">--</div>
-                        <div class="countdown-label">Giorni</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-value" id="countdown-hours">--</div>
-                        <div class="countdown-label">Ore</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-value" id="countdown-minutes">--</div>
-                        <div class="countdown-label">Minuti</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-value" id="countdown-seconds">--</div>
-                        <div class="countdown-label">Secondi</div>
-                    </div>
-                </div>
-                <div class="countdown-message">
-                    <p>Resta concentrato e organizza il tuo tempo!</p>
-                    <button class="plan-btn" id="create-plan-btn">Crea piano di studio <i class="fas fa-calendar-alt"></i></button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Modal per il piano di studio -->
-        <div id="plan-modal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h2>Crea il tuo piano di studio personalizzato</h2>
-                
-                <div class="plan-form">
-                    <div class="form-group">
-                        <label for="exam-date">Data dell'esame:</label>
-                        <input type="date" id="exam-date" value="2025-06-19">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Seleziona le materie da studiare:</label>
-                        <div class="checkbox-group">
-                            <label><input type="checkbox" name="subjects" value="italiano" checked> Italiano</label>
-                            <label><input type="checkbox" name="subjects" value="storia" checked> Storia</label>
-                            <label><input type="checkbox" name="subjects" value="inglese" checked> Inglese</label>
-                            <label><input type="checkbox" name="subjects" value="matematica" checked> Matematica</label>
-                            <label><input type="checkbox" name="subjects" value="informatica" checked> Informatica</label>
-                            <label><input type="checkbox" name="subjects" value="sistemi" checked> Sistemi e Reti</label>
-                            <label><input type="checkbox" name="subjects" value="tpsit" checked> TPSIT</label>
-                            <label><input type="checkbox" name="subjects" value="gpoi" checked> GPOI</label>
-                            <label><input type="checkbox" name="subjects" value="ed-civica" checked> Educazione Civica</label>
+                    <div>
+                        <h4>Strumenti di studio:</h4>
+                        <div class="study-tools">
+                            <a href="#" class="tool-btn" id="summary-btn">
+                                <i class="fas fa-file-text"></i>
+                                Riassunto per l'esame
+                            </a>
+                            <a href="#" class="tool-btn" id="quiz-btn">
+                                <i class="fas fa-question-circle"></i>
+                                Quiz di ripasso
+                            </a>
                         </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="study-hours">Ore di studio giornaliere:</label>
-                        <input type="number" id="study-hours" min="1" max="12" value="4">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="priority">Priorità:</label>
-                        <select id="priority">
-                            <option value="balanced">Bilanciata</option>
-                            <option value="first-test">Prima prova</option>
-                            <option value="second-test">Seconda prova</option>
-                            <option value="oral">Colloquio orale</option>
-                        </select>
-                    </div>
-                    
-                    <button id="generate-plan-btn" class="cta-primary">Genera piano di studio</button>
-                </div>
-                
-                <div id="plan-result" class="plan-result" style="display: none;">
-                    <h3>Il tuo piano di studio personalizzato</h3>
-                    <div id="plan-calendar"></div>
-                    <button id="download-plan-btn" class="download-btn">Scarica piano <i class="fas fa-download"></i></button>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Modal per le esercitazioni -->
-        <div id="exercise-modal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <div id="exercise-content"></div>
+    <!-- Practice Section -->
+    <section id="seconda-prova" class="section">
+        <div class="container">
+            <h2 class="section-title">Esercitazioni Seconda Prova</h2>
+            <p class="section-subtitle">Preparati alla seconda prova di Informatica con esercitazioni pratiche</p>
+            
+            <div class="practice-grid">
+                <div class="practice-card">
+                    <h3>Database e SQL</h3>
+                    <p>Progettazione di database relazionali, normalizzazione e query SQL avanzate</p>
+                    <button class="practice-btn" data-exercise="database">Inizia Esercitazione</button>
+                </div>
+                <div class="practice-card">
+                    <h3>Programmazione Web</h3>
+                    <p>Sviluppo di applicazioni web con PHP, HTML, CSS e JavaScript</p>
+                    <button class="practice-btn" data-exercise="programmazione">Inizia Esercitazione</button>
+                </div>
+                <div class="practice-card">
+                    <h3>Algoritmi e Strutture Dati</h3>
+                    <p>Implementazione di algoritmi complessi e ottimizzazione delle performance</p>
+                    <button class="practice-btn" data-exercise="algoritmi">Inizia Esercitazione</button>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Modal per le risorse -->
-        <div id="resource-modal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <div id="resource-content"></div>
+    <!-- Simulations Section -->
+    <section id="simulazioni" class="section">
+        <div class="container">
+            <h2 class="section-title">Simulazioni d'Esame</h2>
+            <p class="section-subtitle">Mettiti alla prova con simulazioni complete dell'esame di stato</p>
+            
+            <div class="simulations-grid">
+                <div class="simulation-card">
+                    <h3>Prima Prova</h3>
+                    <p>Simulazione completa della prima prova scritta di Italiano</p>
+                    <button class="simulazione-btn" data-simulation="prima-prova">Inizia Simulazione</button>
+                </div>
+                <div class="simulation-card">
+                    <h3>Seconda Prova</h3>
+                    <p>Simulazione completa della seconda prova scritta di Informatica</p>
+                    <button class="simulazione-btn" data-simulation="seconda-prova">Inizia Simulazione</button>
+                </div>
+                <div class="simulation-card">
+                    <h3>Colloquio Orale</h3>
+                    <p>Simulazione completa del colloquio orale multidisciplinare</p>
+                    <button class="simulazione-btn" data-simulation="colloquio">Inizia Simulazione</button>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Modal per le simulazioni -->
-        <div id="simulazione-modal" class="modal">
-            <div class="modal-content simulazione-modal-content">
-                <span class="close-modal">&times;</span>
-                <div id="simulazione-content"></div>
-            </div>
-        </div>
-
-        <!-- Modal per i riassunti -->
-        <div id="summary-modal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <div id="summary-content"></div>
-            </div>
-        </div>
-
-        <!-- Modal per i quiz -->
-        <div id="quiz-modal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <div id="quiz-content"></div>
-            </div>
-        </div>
-    </main>
-
+    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <div class="logo">PrepEsame <span>ITIS Pininfarina</span></div>
-                <p>La tua guida all'Esame di Stato</p>
-            </div>
-           
-            <div class="footer-links">
-                <div class="link-group">
-                    <h4>Navigazione</h4>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PrepEsame</h3>
+                    <p>La tua guida completa per l'Esame di Stato dell'ITIS Pininfarina</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigazione</h3>
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#prima-prova">Prima Prova</a></li>
                         <li><a href="#seconda-prova">Seconda Prova</a></li>
                         <li><a href="#orale">Orale</a></li>
-                        <li><a href="#risorse">Risorse</a></li>
                         <li><a href="#simulazioni">Simulazioni</a></li>
                     </ul>
                 </div>
-               
-                <div class="link-group">
-                    <h4>Risorse</h4>
+                <div class="footer-section">
+                    <h3>Materie</h3>
                     <ul>
-                        <li><a href="#risorse">Riassunti</a></li>
-                        <li><a href="#simulazioni">Simulazioni</a></li>
-                        <li><a href="#risorse">Video lezioni</a></li>
-                        <li><a href="#risorse">Forum</a></li>
+                        <li><a href="#orale">Italiano</a></li>
+                        <li><a href="#orale">Informatica</a></li>
+                        <li><a href="#orale">Sistemi e Reti</a></li>
+                        <li><a href="#orale">TPSIT</a></li>
+                        <li><a href="#orale">GPOI</a></li>
                     </ul>
                 </div>
-               
-                <div class="link-group">
-                    <h4>Contatti</h4>
+                <div class="footer-section">
+                    <h3>Contatti</h3>
                     <ul>
-                        <li><a href="#">Supporto</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Termini</a></li>
+                        <li>ITIS Pininfarina</li>
+                        <li>Indirizzo Informatica</li>
+                        <li>Anno Scolastico 2024/2025</li>
                     </ul>
                 </div>
             </div>
-           
-            <div class="footer-newsletter">
-                <h4>Resta aggiornato</h4>
-                <p>Iscriviti alla newsletter per ricevere aggiornamenti e consigli</p>
-                <div class="newsletter-form">
-                    <input type="email" placeholder="La tua email">
-                    <button id="newsletter-btn">Iscriviti</button>
-                </div>
-            </div>
-        </div>
-       
-        <div class="footer-bottom">
-            <p>&copy; 2025 PrepEsame ITIS Pininfarina. Tutti i diritti riservati.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PrepEsame ITIS Pininfarina. Tutti i diritti riservati.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <!-- Modals -->
+    <!-- Summary Modal -->
+    <div id="summary-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="summary-title">Riassunto</h2>
+            <div id="summary-content">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div id="quiz-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="quiz-title">Quiz</h2>
+            <div id="quiz-content" class="quiz-container">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Exercise Modal -->
+    <div id="exercise-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="exercise-content">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Simulation Modal -->
+    <div id="simulation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="simulation-content">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Subject data with detailed content
+        const subjectData = {
+            italiano: {
+                name: "Italiano",
+                topics: [
+                    "Giosuè Carducci - Odi barbare, San Martino",
+                    "Giovanni Verga - I Malavoglia, Mastro don Gesualdo, Rosso Malpelo",
+                    "Giovanni Pascoli - Myricae, Il fanciullino, X Agosto, Lavandare",
+                    "Gabriele D'Annunzio - Il piacere, Alcyone, La pioggia nel pineto",
+                    "Luigi Pirandello - Il fu Mattia Pascal, Uno, nessuno e centomila, La giara",
+                    "Italo Svevo - La coscienza di Zeno, Senilità",
+                    "Giuseppe Ungaretti - L'Allegria, Veglia, San Martino del Carso",
+                    "Eugenio Montale - Ossi di seppia, Spesso il male di vivere",
+                    "Primo Levi - Se questo è un uomo",
+                    "Neorealismo - Cesare Pavese, Italo Calvino"
+                ],
+                summary: `LETTERATURA ITALIANA DEL XIX E XX SECOLO - GUIDA COMPLETA PER L'ESAME
+
+**GIOSUÈ CARDUCCI (1835-1907)**
+Poeta del classicismo e della tradizione italiana, premio Nobel per la letteratura nel 1906.
+
+Opere principali:
+• Odi barbare (1877-1889): sperimentazione metrica con ritmi della poesia latina e greca
+• Rime nuove (1887): temi patriottici e autobiografici
+
+Temi centrali:
+- Nostalgia per il mondo classico e medievale
+- Anticlericalismo e ideali risorgimentali
+- Amore per la natura e la patria
+- Sperimentazione metrica (versi barbari)
+
+Analisi "San Martino": descrizione autunnale della Maremma toscana, con immagini sensoriali che evocano il ciclo della vita e della morte.
+
+**GIOVANNI VERGA (1840-1922) - IL VERISMO**
+Massimo esponente del Verismo italiano, influenzato dal Naturalismo francese di Zola.
+
+Principi del Verismo:
+- Impersonalità narrativa (eclissi dell'autore)
+- Regressione del narratore al livello culturale dei personaggi
+- Discorso indiretto libero
+- Pessimismo deterministico
+
+"I Malavoglia" (1881):
+Trama: storia della famiglia Toscano di Aci Trezza, rovinata dal naufragio della Provvidenza
+Temi: ideale dell'ostrica (attaccamento alle tradizioni), religione della famiglia, fatalismo
+Tecnica: narratore popolare, linguaggio regionale, tempo ciclico
+
+"Mastro don Gesualdo" (1889):
+Protagonista: Gesualdo Motta, muratore arricchito che aspira al riconoscimento sociale
+Tema centrale: impossibilità di cambiare classe sociale, solitudine del self-made man
+Tecnica narrativa: focalizzazione interna, analisi psicologica più approfondita
+
+Novelle principali:
+• "Rosso Malpelo": determinismo sociale, ambiente disumano della cava
+• "La lupa": passione distruttiva, ambiente rurale siciliano
+• "Cavalleria rusticana": onore e gelosia nel mondo contadino
+
+**GIOVANNI PASCOLI (1855-1912) - IL SIMBOLISMO**
+Poeta del Decadentismo italiano, teorico del "fanciullino".
+
+Poetica del fanciullino:
+- Il poeta conserva in sé l'anima infantile
+- Capacità di stupirsi e vedere il mondo con occhi nuovi
+- Linguaggio pre-grammaticale e onomatopeico
+- Poesia come conoscenza intuitiva
+
+"Myricae" (1891-1911):
+Titolo: da Virgilio, "umili arbusti" = poesia delle piccole cose
+Temi: natura, famiglia, morte, campagna romagnola
+Stile: impressionismo, fonosimbolismo, sinestesie
+
+Analisi "X Agosto":
+- Commemorazione del padre assassinato
+- Parallelismo uomo-rondine
+- Tema del nido violato
+- Simbolismo cristiano (stelle = lacrime)
+
+"Lavandare": quadretto impressionistico, malinconia autunnale, solitudine femminile
+
+Innovazioni linguistiche:
+- Onomatopee (don don, din don dan)
+- Linguaggio tecnico-scientifico
+- Termini dialettali e gergali
+- Sperimentalismo metrico
+
+**GABRIELE D'ANNUNZIO (1863-1938) - L'ESTETISMO**
+Poeta, romanziere e drammaturgo, incarnazione del superuomo nietzschiano.
+
+Fasi della produzione:
+1. Estetismo: culto della bellezza, arte per l'arte
+2. Superomismo: influenza di Nietzsche, volontà di potenza
+3. Panismo: fusione panica con la natura
+
+"Il piacere" (1889):
+Protagonista: Andrea Sperelli, esteta decadente
+Temi: estetismo, inettitudine, doppio amore (Elena-Maria)
+Influenze: Huysmans, Baudelaire, cultura fin de siècle
+
+"Alcyone" (1903):
+Capolavoro della poesia dannunziana
+Tema: estate in Versilia, panismo, metamorfosi
+Stile: virtuosismo tecnico, musicalità, sinestesie
+
+"La pioggia nel pineto":
+- Dialogo d'amore nella natura
+- Metamorfosi panica (uomo-natura)
+- Musicalità e ritmo
+- Linguaggio prezioso e ricercato
+
+Caratteristiche stilistiche:
+- Estetismo e preziosismo
+- Sperimentalismo metrico
+- Linguaggio aulico e arcaizzante
+- Sensualità e vitalismo
+
+**LUIGI PIRANDELLO (1867-1936) - LA CRISI DELL'IO**
+Narratore e drammaturgo, premio Nobel 1934, precursore della modernità.
+
+Visione del mondo:
+- Relativismo conoscitivo
+- Incomunicabilità
+- Frantumazione dell'io
+- Contrasto vita/forma
+- Umorismo (sentimento del contrario)
+
+"Il fu Mattia Pascal" (1904):
+Trama: Mattia Pascal simula la propria morte e assume nuova identità (Adriano Meis)
+Temi: crisi d'identità, impossibilità di cambiare vita, prigionia delle convenzioni sociali
+Tecnica: narratore autodiegetico, metalessi, riflessioni filosofiche
+
+"Uno, nessuno e centomila" (1926):
+Protagonista: Vitangelo Moscarda scopre di non conoscere se stesso
+Tema: molteplicità dell'io, relatività della conoscenza
+Conclusione: dissoluzione dell'identità, vita nel presente
+
+Novelle per un anno:
+• "La patente": paradosso dell'iettatore Chiarchiaro
+• "Il treno ha fischiato": evasione mentale di Belluca
+• "La giara": conflitto tra Don Lollo e Zi' Dima
+
+Teatro:
+- Trilogia metateatrale: "Sei personaggi in cerca d'autore"
+- Tema: rapporto arte/vita, illusione/realtà
+- Tecnica: teatro nel teatro, coinvolgimento del pubblico
+
+**ITALO SVEVO (1861-1928) - LA PSICANALISI**
+Narratore triestino, influenzato da Freud, Joyce, Schopenhauer.
+
+"La coscienza di Zeno" (1923):
+Struttura: memoriale psicoanalitico di Zeno Cosini
+Temi: inettitudine, autoanalisi, rapporto con il padre, matrimonio, lavoro, fumo
+Tecnica: monologo interiore, tempo misto, inattendibilità del narratore
+Influenza freudiana: inconscio, lapsus, sogni, rimozione
+
+Caratteristiche del protagonista:
+- Inetto moderno (diverso da inetti veristi)
+- Autoironia e autocoscienza
+- Malattia come condizione esistenziale
+- Adattamento alla società borghese
+
+Innovazioni narrative:
+- Flusso di coscienza
+- Tempo psicologico
+- Narratore inattendibile
+- Linguaggio dell'inconscio
+
+**GIUSEPPE UNGARETTI (1888-1970) - L'ERMETISMO**
+Poeta della Grande Guerra, iniziatore dell'Ermetismo italiano.
+
+"L'Allegria" (1931):
+Genesi: poesie scritte in trincea (1914-1919)
+Temi: guerra, morte, fraternità, ricerca di Dio
+Stile: verso libero, analogia, essenzialità espressiva
+
+"Veglia" (Cima Quattro, 23 dicembre 1915):
+- Notte accanto al compagno morto
+- Contrasto morte/vita
+- Scoperta dell'attaccamento alla vita
+- Linguaggio essenziale ed evocativo
+
+"San Martino del Carso":
+- Distruzione della guerra
+- Paesaggio interiore/esteriore
+- Memoria dei caduti
+- Simbolismo delle macerie
+
+Caratteristiche poetiche:
+- Verso libero e frantumato
+- Analogia e simbolismo
+- Parola pura ed essenziale
+- Sperimentalismo tipografico
+
+**EUGENIO MONTALE (1896-1981) - IL MALE DI VIVERE**
+Poeta ligure, premio Nobel 1975, voce del disagio esistenziale novecentesco.
+
+"Ossi di seppia" (1925):
+Paesaggio: Riviera ligure, natura arida e pietrosa
+Temi: male di vivere, ricerca del varco, impossibilità di conoscenza
+Stile: correlativo oggettivo, linguaggio aspro e prosastico
+
+"Spesso il male di vivere ho incontrato":
+- Pessimismo esistenziale
+- Correlativo oggettivo (rivo strozzato, foglia riarsa, cavallo stramazzato)
+- Contrasto male di vivere/divina indifferenza
+- Endecasillabi tradizionali
+
+"Non chiederci la parola":
+- Poetica del non sapere
+- Rifiuto della poesia come messaggio
+- Sillabe secche come foglie
+- Scetticismo conoscitivo
+
+Evoluzione poetica:
+1. "Ossi di seppia": paesaggio ligure, male di vivere
+2. "Le occasioni": poesia dell'assenza, figura femminile
+3. "La bufera e altro": storia e metastoria, Clizia
+4. "Satura": poesia prosastica, ironia
+
+**PRIMO LEVI (1919-1987) - LA TESTIMONIANZA**
+Scrittore e chimico, testimone della Shoah.
+
+"Se questo è un uomo" (1947):
+- Testimonianza dell'esperienza ad Auschwitz
+- Analisi lucida della disumanizzazione
+- Stile sobrio e scientifico
+- Valore etico della memoria
+
+Temi centrali:
+- Dignità umana in condizioni estreme
+- Dovere della testimonianza
+- Zona grigia (ambiguità morale)
+- Importanza della cultura e della solidarietà
+
+**IL NEOREALISMO (1945-1960)**
+Movimento letterario del secondo dopoguerra.
+
+Caratteristiche:
+- Impegno civile e sociale
+- Rappresentazione della realtà popolare
+- Linguaggio semplice e diretto
+- Temi: Resistenza, guerra, ricostruzione
+
+Cesare Pavese (1908-1950):
+- "La casa in collina": guerra e responsabilità
+- Mito dell'America e ritorno alle origini
+- Simbolismo e realismo
+
+Italo Calvino (1923-1985):
+- "Il sentiero dei nidi di ragno": Resistenza vista da un bambino
+- Evoluzione verso il fantastico e la metanarrazione
+- Sperimentalismo postmoderno
+
+**TECNICHE NARRATIVE DEL NOVECENTO**
+- Monologo interiore e flusso di coscienza
+- Discorso indiretto libero
+- Narratore inattendibile
+- Tempo misto (fabula/intreccio)
+- Metalessi e metanarrazione
+- Correlativo oggettivo
+- Analogia e simbolismo
+
+**CONTESTO STORICO-CULTURALE**
+- Crisi della Belle Époque
+- Prima Guerra Mondiale
+- Avvento dei totalitarismi
+- Seconda Guerra Mondiale e Resistenza
+- Ricostruzione e boom economico
+- Influenze culturali: psicanalisi, filosofia della crisi, avanguardie artistiche`,
+                quiz: [
+                    {
+                        question: "Chi è l'autore de 'I Malavoglia'?",
+                        options: ["Luigi Pirandello", "Giovanni Verga", "Italo Svevo", "Gabriele D'Annunzio"],
+                        correct: 1
+                    },
+                    {
+                        question: "Quale corrente letteraria rappresenta Gabriele D'Annunzio?",
+                        options: ["Verismo", "Decadentismo", "Ermetismo", "Futurismo"],
+                        correct: 1
+                    },
+                    {
+                        question: "Il 'fanciullino' è una teoria poetica di:",
+                        options: ["Pascoli", "Carducci", "Ungaretti", "Montale"],
+                        correct: 0
+                    },
+                    {
+                        question: "Quale tecnica narrativa caratterizza 'La coscienza di Zeno'?",
+                        options: ["Narratore onnisciente", "Monologo interiore", "Discorso indiretto libero", "Tutte le precedenti"],
+                        correct: 3
+                    },
+                    {
+                        question: "L'Ermetismo è caratterizzato da:",
+                        options: ["Linguaggio complesso", "Linguaggio essenziale", "Realismo sociale", "Estetismo"],
+                        correct: 1
+                    }
+                ]
+            },
+            inglese: {
+                name: "Inglese",
+                topics: [
+                    "Computer Hardware: CPU, Memory, Motherboard, Storage devices",
+                    "Software: Operating Systems, Programming Languages (C, C++, Java, Python)",
+                    "Programming Paradigms: Procedural, Object-oriented, Functional",
+                    "Database Systems: Relational databases, SQL, NoSQL",
+                    "Web Technologies: HTML, CSS, JavaScript, HTTP protocol",
+                    "Network Security: Encryption, VPN, Cybersecurity threats",
+                    "Artificial Intelligence: Machine Learning, Neural Networks",
+                    "The Industrial Revolution and technological progress",
+                    "The Roaring Twenties and the Great Depression",
+                    "George Orwell: '1984' and dystopian literature",
+                    "F. Scott Fitzgerald: 'The Great Gatsby' and the American Dream",
+                    "Digital Society: Social networks, Privacy, GDPR",
+                    "Big Data and Data Analytics",
+                    "Internet of Things (IoT)",
+                    "Cloud Computing and distributed systems"
+                ],
+                summary: `ENGLISH FOR COMPUTER SCIENCE - COMPREHENSIVE STUDY GUIDE
+
+**COMPUTER HARDWARE FUNDAMENTALS**
+
+**Central Processing Unit (CPU)**
+The CPU is the brain of the computer, responsible for executing instructions and performing calculations.
+
+Key components:
+• Control Unit (CU): manages instruction execution cycle
+• Arithmetic Logic Unit (ALU): performs mathematical and logical operations
+• Registers: high-speed storage locations within the CPU
+• Cache memory: fast memory that stores frequently accessed data
+
+CPU Architecture:
+- Von Neumann architecture: single memory space for instructions and data
+- Harvard architecture: separate memory spaces for instructions and data
+- RISC (Reduced Instruction Set Computer): simple instructions, faster execution
+- CISC (Complex Instruction Set Computer): complex instructions, more functionality per instruction
+
+Performance factors:
+- Clock speed (measured in GHz): number of cycles per second
+- Number of cores: parallel processing capabilities
+- Cache size: faster access to frequently used data
+- Instruction pipeline: overlapping instruction execution phases
+
+**Memory Hierarchy**
+Computer memory is organized in a hierarchy based on speed, cost, and capacity:
+
+1. Registers: fastest, smallest capacity, most expensive
+2. Cache memory: L1, L2, L3 caches with increasing size and decreasing speed
+3. Main memory (RAM): Random Access Memory, volatile storage
+4. Secondary storage: hard drives, SSDs, optical discs, non-volatile
+
+Types of RAM:
+• SRAM (Static RAM): faster, more expensive, used for cache
+• DRAM (Dynamic RAM): slower, cheaper, used for main memory
+• DDR (Double Data Rate): improved DRAM with higher bandwidth
+
+**Motherboard Components**
+The motherboard connects all computer components:
+- CPU socket: houses the processor
+- Memory slots: for RAM modules
+- Expansion slots: PCI, PCIe for additional cards
+- Chipset: northbridge and southbridge controllers
+- BIOS/UEFI: firmware for system initialization
+- Power connectors: supply electricity to components
+
+**SOFTWARE SYSTEMS**
+
+**Operating Systems**
+An operating system manages computer hardware and provides services for applications.
+
+Functions:
+• Process management: scheduling, synchronization, communication
+• Memory management: allocation, virtual memory, paging
+• File system management: storage organization, access control
+• Device management: drivers, I/O operations
+• User interface: command line or graphical interface
+
+Types of operating systems:
+- Single-user, single-tasking: MS-DOS
+- Single-user, multi-tasking: Windows, macOS
+- Multi-user: Unix, Linux
+- Real-time: embedded systems, industrial control
+- Distributed: cluster computing, cloud systems
+
+**Programming Languages**
+
+**C Programming Language**
+Developed by Dennis Ritchie in 1972, C is a procedural programming language.
+
+Characteristics:
+• Low-level access to memory through pointers
+• Structured programming with functions
+• Portable across different platforms
+• Efficient execution and small memory footprint
+• Manual memory management
+
+Applications: system programming, embedded systems, operating systems
+
+**C++ Programming Language**
+Extension of C with object-oriented programming features.
+
+Key features:
+• Classes and objects: encapsulation, inheritance, polymorphism
+• Function overloading: multiple functions with same name
+• Operator overloading: custom behavior for operators
+• Templates: generic programming
+• Standard Template Library (STL): containers, algorithms, iterators
+
+**Java Programming Language**
+Object-oriented language designed for platform independence.
+
+Features:
+• "Write once, run anywhere" philosophy
+• Automatic memory management (garbage collection)
+• Strong type system and exception handling
+• Multithreading support
+• Rich standard library
+
+Java Virtual Machine (JVM): executes Java bytecode on any platform
+
+**Python Programming Language**
+High-level, interpreted language emphasizing code readability.
+
+Characteristics:
+• Simple, clean syntax
+• Dynamic typing and automatic memory management
+• Extensive standard library
+• Support for multiple programming paradigms
+• Large ecosystem of third-party packages
+
+Applications: web development, data science, artificial intelligence, automation
+
+**DATABASE SYSTEMS**
+
+**Relational Databases**
+Based on the relational model proposed by Edgar F. Codd.
+
+Key concepts:
+• Tables (relations): organized data in rows and columns
+• Primary keys: unique identifiers for table rows
+• Foreign keys: references to primary keys in other tables
+• Normalization: reducing data redundancy and dependency
+
+**SQL (Structured Query Language)**
+Standard language for managing relational databases.
+
+SQL categories:
+• DDL (Data Definition Language): CREATE, ALTER, DROP
+• DML (Data Manipulation Language): INSERT, UPDATE, DELETE
+• DQL (Data Query Language): SELECT statements
+• DCL (Data Control Language): GRANT, REVOKE permissions
+
+Advanced SQL features:
+- Joins: INNER, LEFT, RIGHT, FULL OUTER
+- Subqueries: nested SELECT statements
+- Aggregate functions: COUNT, SUM, AVG, MIN, MAX
+- Window functions: ROW_NUMBER, RANK, PARTITION BY
+
+**NoSQL Databases**
+Alternative to relational databases for specific use cases.
+
+Types:
+• Document databases: MongoDB, CouchDB
+• Key-value stores: Redis, DynamoDB
+• Column-family: Cassandra, HBase
+• Graph databases: Neo4j, Amazon Neptune
+
+Advantages: scalability, flexibility, performance for specific data models
+
+**WEB TECHNOLOGIES**
+
+**HTML (HyperText Markup Language)**
+Standard markup language for creating web pages.
+
+Structure:
+• Elements: building blocks defined by tags
+• Attributes: additional information about elements
+• Semantic HTML: meaningful structure (header, nav, main, footer)
+• Forms: user input collection
+• Multimedia: images, audio, video embedding
+
+HTML5 features:
+- New semantic elements
+- Canvas for graphics
+- Local storage capabilities
+- Geolocation API
+- WebSocket support
+
+**CSS (Cascading Style Sheets)**
+Language for describing the presentation of HTML documents.
+
+Key concepts:
+• Selectors: targeting HTML elements
+• Properties: styling attributes (color, font, layout)
+• Box model: content, padding, border, margin
+• Responsive design: media queries, flexible layouts
+• CSS Grid and Flexbox: modern layout systems
+
+**JavaScript**
+Programming language for web interactivity and dynamic content.
+
+Features:
+• Event-driven programming: responding to user actions
+• DOM manipulation: modifying HTML structure and content
+• AJAX: asynchronous communication with servers
+• ES6+ features: arrow functions, promises, modules
+• Frameworks: React, Angular, Vue.js
+
+**HTTP Protocol**
+Application layer protocol for web communication.
+
+Methods:
+• GET: retrieve data from server
+• POST: send data to server
+• PUT: update existing resource
+• DELETE: remove resource
+• PATCH: partial update
+
+Status codes:
+- 200: OK (successful request)
+- 404: Not Found (resource doesn't exist)
+- 500: Internal Server Error (server-side error)
+
+**NETWORK SECURITY**
+
+**Encryption**
+Process of converting plaintext into ciphertext to protect data.
+
+Types:
+• Symmetric encryption: same key for encryption and decryption (AES)
+• Asymmetric encryption: public-private key pairs (RSA)
+• Hash functions: one-way transformation (SHA-256)
+• Digital signatures: authentication and non-repudiation
+
+**VPN (Virtual Private Network)**
+Secure connection over public networks.
+
+Benefits:
+• Data encryption: protecting information in transit
+• IP address masking: privacy and anonymity
+• Access control: secure remote access to private networks
+• Bypassing geographical restrictions
+
+**Cybersecurity Threats**
+Common security risks in digital environments:
+
+• Malware: viruses, worms, trojans, ransomware
+• Phishing: fraudulent attempts to obtain sensitive information
+• SQL injection: exploiting database vulnerabilities
+• Cross-site scripting (XSS): injecting malicious scripts
+• Man-in-the-middle attacks: intercepting communications
+• DDoS attacks: overwhelming systems with traffic
+
+**ARTIFICIAL INTELLIGENCE**
+
+**Machine Learning**
+Subset of AI that enables computers to learn without explicit programming.
+
+Types:
+• Supervised learning: training with labeled data
+• Unsupervised learning: finding patterns in unlabeled data
+• Reinforcement learning: learning through trial and error
+
+Applications: image recognition, natural language processing, recommendation systems
+
+**Neural Networks**
+Computing systems inspired by biological neural networks.
+
+Components:
+• Neurons: processing units
+• Layers: input, hidden, output layers
+• Weights and biases: learnable parameters
+• Activation functions: introduce non-linearity
+
+Deep learning: neural networks with multiple hidden layers
+
+**HISTORICAL CONTEXT**
+
+**Industrial Revolution (1760-1840)**
+Period of major technological and social change.
+
+Key innovations:
+• Steam engine: mechanization of production
+• Factory system: mass production methods
+• Transportation: railways, steamships
+• Communication: telegraph
+
+Impact: urbanization, social class changes, economic transformation
+
+**The Roaring Twenties (1920s)**
+Period of economic prosperity and cultural change in America.
+
+Characteristics:
+• Economic boom: mass production, consumer culture
+• Technological advances: automobiles, radio, cinema
+• Social changes: women's rights, jazz age, prohibition
+• Stock market speculation: leading to 1929 crash
+
+**The Great Depression (1929-1939)**
+Severe worldwide economic downturn.
+
+Causes:
+• Stock market crash of 1929
+• Bank failures and reduced lending
+• Decreased consumer spending
+• International trade decline
+
+Effects: unemployment, poverty, social unrest, government intervention
+
+**LITERATURE AND SOCIETY**
+
+**George Orwell - "1984" (1949)**
+Dystopian novel depicting totalitarian surveillance state.
+
+Themes:
+• Totalitarianism: absolute government control
+• Surveillance: Big Brother watching citizens
+• Language manipulation: Newspeak limiting thought
+• Reality control: Ministry of Truth altering history
+• Individual vs. state: Winston's rebellion and defeat
+
+Relevance today: privacy concerns, government surveillance, fake news
+
+**F. Scott Fitzgerald - "The Great Gatsby" (1925)**
+Novel exploring the American Dream in the Jazz Age.
+
+Themes:
+• American Dream: pursuit of wealth and status
+• Social class: old money vs. new money
+• Moral decay: corruption beneath glamorous surface
+• Past and present: "you can't repeat the past"
+• Symbolism: green light, eyes of Dr. T.J. Eckleburg
+
+**DIGITAL SOCIETY**
+
+**Social Networks**
+Online platforms connecting people globally.
+
+Impact:
+• Communication: instant global connectivity
+• Information sharing: rapid news dissemination
+• Business: digital marketing, e-commerce
+• Privacy concerns: data collection, surveillance
+• Social issues: cyberbullying, misinformation
+
+**GDPR (General Data Protection Regulation)**
+European Union regulation on data protection and privacy.
+
+Key principles:
+• Consent: explicit permission for data processing
+• Right to access: individuals can request their data
+• Right to erasure: "right to be forgotten"
+• Data portability: transferring data between services
+• Privacy by design: built-in privacy protection
+
+**Big Data**
+Large, complex datasets requiring specialized tools for analysis.
+
+Characteristics (5 Vs):
+• Volume: massive amounts of data
+• Velocity: high-speed data generation
+• Variety: different data types and formats
+• Veracity: data quality and accuracy
+• Value: extracting meaningful insights
+
+Applications: business intelligence, scientific research, personalized services
+
+**Internet of Things (IoT)**
+Network of interconnected devices with sensors and connectivity.
+
+Components:
+• Sensors: collecting environmental data
+• Connectivity: Wi-Fi, Bluetooth, cellular networks
+• Data processing: edge computing, cloud analytics
+• User interface: mobile apps, web dashboards
+
+Applications: smart homes, industrial automation, healthcare monitoring
+
+**Cloud Computing**
+Delivery of computing services over the internet.
+
+Service models:
+• IaaS (Infrastructure as a Service): virtual machines, storage
+• PaaS (Platform as a Service): development platforms
+• SaaS (Software as a Service): web-based applications
+
+Benefits: scalability, cost-effectiveness, accessibility, automatic updates
+
+**TECHNICAL VOCABULARY**
+
+Essential terms for computer science discussions:
+• Algorithm: step-by-step problem-solving procedure
+• API (Application Programming Interface): software communication protocol
+• Bandwidth: data transmission capacity
+• Compiler: translates source code to machine code
+• Debugging: finding and fixing software errors
+• Encryption: data protection through encoding
+• Framework: reusable software platform
+• GUI (Graphical User Interface): visual interaction system
+• IDE (Integrated Development Environment): software development tool
+• Protocol: rules for data communication
+• Repository: centralized data storage location
+• Scalability: ability to handle increased workload
+• Version control: tracking changes in software development`,
+                quiz: [
+                    {
+                        question: "What does CPU stand for?",
+                        options: ["Central Processing Unit", "Computer Processing Unit", "Central Program Unit", "Computer Program Unit"],
+                        correct: 0
+                    },
+                    {
+                        question: "Which novel depicts a dystopian surveillance society?",
+                        options: ["The Great Gatsby", "1984", "Brave New World", "Animal Farm"],
+                        correct: 1
+                    },
+                    {
+                        question: "What does GDPR regulate?",
+                        options: ["Network protocols", "Data protection", "Software licensing", "Hardware standards"],
+                        correct: 1
+                    },
+                    {
+                        question: "VPN stands for:",
+                        options: ["Virtual Private Network", "Very Private Network", "Virtual Public Network", "Variable Private Network"],
+                        correct: 0
+                    },
+                    {
+                        question: "The 'Roaring Twenties' refers to:",
+                        options: ["1910s", "1920s", "1930s", "1940s"],
+                        correct: 1
+                    }
+                ]
+            },
+            matematica: {
+                name: "Matematica",
+                topics: [
+                    "Integrali indefiniti e tecniche di integrazione",
+                    "Integrazione per parti e per sostituzione",
+                    "Integrazione di funzioni razionali fratte",
+                    "Integrali definiti e teorema fondamentale del calcolo",
+                    "Calcolo di aree e volumi con gli integrali",
+                    "Integrali impropri e convergenza",
+                    "Geometria solida: poliedri e solidi di rotazione",
+                    "Principio di Cavalieri e calcolo dei volumi",
+                    "Probabilità: eventi, spazio campionario, definizioni",
+                    "Teoremi della probabilità: somma e prodotto",
+                    "Probabilità condizionata e teorema di Bayes",
+                    "Variabili aleatorie discrete e continue",
+                    "Distribuzioni di probabilità: binomiale, normale",
+                    "Statistica descrittiva e inferenziale"
+                ],
+                summary: `MATEMATICA PER L'ESAME DI STATO - GUIDA COMPLETA
+
+**CALCOLO INTEGRALE**
+
+**Integrali Indefiniti**
+L'integrale indefinito di una funzione f(x) è l'insieme di tutte le primitive di f(x).
+
+Definizione: ∫f(x)dx = F(x) + c, dove F'(x) = f(x) e c è una costante arbitraria.
+
+**Integrali Immediati Fondamentali:**
+• ∫x^n dx = x^(n+1)/(n+1) + c (n ≠ -1)
+• ∫1/x dx = ln|x| + c
+• ∫e^x dx = e^x + c
+• ∫a^x dx = a^x/ln(a) + c (a > 0, a ≠ 1)
+• ∫sin(x) dx = -cos(x) + c
+• ∫cos(x) dx = sin(x) + c
+• ∫1/cos²(x) dx = tan(x) + c
+• ∫1/sin²(x) dx = -cot(x) + c
+• ∫1/√(1-x²) dx = arcsin(x) + c
+• ∫1/(1+x²) dx = arctan(x) + c
+
+**Proprietà degli Integrali:**
+• Linearità: ∫[af(x) + bg(x)]dx = a∫f(x)dx + b∫g(x)dx
+• Se F'(x) = f(x), allora ∫f(x)dx = F(x) + c
+
+**Tecniche di Integrazione**
+
+**1. Integrazione per Sostituzione**
+Metodo per semplificare integrali complessi attraverso un cambio di variabile.
+
+Procedimento:
+1. Scegliere una sostituzione t = g(x)
+2. Calcolare dt = g'(x)dx
+3. Sostituire nell'integrale
+4. Integrare rispetto a t
+5. Sostituire t con g(x)
+
+Esempio: ∫2x(x²+1)³ dx
+Sostituzione: t = x²+1, dt = 2x dx
+∫t³ dt = t⁴/4 + c = (x²+1)⁴/4 + c
+
+**Sostituzioni Standard:**
+• Per √(a²-x²): x = a sin(t)
+• Per √(a²+x²): x = a tan(t)
+• Per √(x²-a²): x = a sec(t)
+
+**2. Integrazione per Parti**
+Formula: ∫u dv = uv - ∫v du
+
+Strategia di scelta:
+• u: funzione che si semplifica derivando (polinomi, logaritmi, arcotangenti)
+• dv: funzione che si integra facilmente (esponenziali, trigonometriche)
+
+Esempio: ∫x e^x dx
+u = x, du = dx
+dv = e^x dx, v = e^x
+∫x e^x dx = x e^x - ∫e^x dx = x e^x - e^x + c = e^x(x-1) + c
+
+**3. Integrazione di Funzioni Razionali Fratte**
+Per integrali del tipo ∫P(x)/Q(x) dx dove P(x) e Q(x) sono polinomi.
+
+Procedimento:
+1. Se grado P(x) ≥ grado Q(x): divisione polinomiale
+2. Scomporre Q(x) in fattori
+3. Decomposizione in frazioni parziali
+4. Integrare ogni frazione
+
+Tipi di frazioni parziali:
+• 1/(x-a) → ln|x-a|
+• 1/(x-a)² → -1/(x-a)
+• (Ax+B)/(x²+px+q) con Δ < 0 → combinazione di ln e arctan
+
+**Integrali Definiti**
+
+**Teorema Fondamentale del Calcolo Integrale**
+Se f(x) è continua in [a,b] e F(x) è una primitiva di f(x), allora:
+∫[a,b] f(x)dx = F(b) - F(a) = [F(x)]ᵇₐ
+
+**Proprietà degli Integrali Definiti:**
+• ∫[a,a] f(x)dx = 0
+• ∫[a,b] f(x)dx = -∫[b,a] f(x)dx
+• ∫[a,c] f(x)dx = ∫[a,b] f(x)dx + ∫[b,c] f(x)dx
+• Se f(x) ≥ 0 in [a,b], allora ∫[a,b] f(x)dx ≥ 0
+
+**Teorema della Media Integrale**
+Se f(x) è continua in [a,b], esiste c ∈ [a,b] tale che:
+∫[a,b] f(x)dx = f(c)(b-a)
+
+Il valore medio di f(x) in [a,b] è: μ = 1/(b-a) ∫[a,b] f(x)dx
+
+**Applicazioni Geometriche degli Integrali**
+
+**Calcolo di Aree**
+• Area sotto una curva: A = ∫[a,b] f(x)dx (se f(x) ≥ 0)
+• Area tra due curve: A = ∫[a,b] |f(x) - g(x)|dx
+• Area in coordinate polari: A = 1/2 ∫[α,β] r²(θ)dθ
+
+**Calcolo di Volumi**
+• Volume di un solido di rotazione (metodo dei dischi):
+  V = π ∫[a,b] [f(x)]² dx (rotazione attorno all'asse x)
+• Volume di un solido di rotazione (metodo delle rondelle):
+  V = π ∫[a,b] ([f(x)]² - [g(x)]²) dx
+• Volume con il metodo delle sezioni:
+  V = ∫[a,b] A(x) dx, dove A(x) è l'area della sezione
+
+**Integrali Impropri**
+
+**Definizione**
+Integrali con estremi infiniti o con integrandi che presentano discontinuità.
+
+**Tipi:**
+1. ∫[a,+∞] f(x)dx = lim[t→+∞] ∫[a,t] f(x)dx
+2. ∫[-∞,b] f(x)dx = lim[t→-∞] ∫[t,b] f(x)dx
+3. ∫[-∞,+∞] f(x)dx = ∫[-∞,c] f(x)dx + ∫[c,+∞] f(x)dx
+
+**Convergenza:**
+Un integrale improprio converge se il limite esiste ed è finito.
+
+**Criteri di Convergenza:**
+• Criterio del confronto
+• Criterio del confronto asintotico
+• Criterio dell'integrale per le serie
+
+**GEOMETRIA SOLIDA**
+
+**Poliedri Regolari**
+Solidi le cui facce sono poligoni regolari congruenti.
+
+**I cinque poliedri regolari (solidi platonici):**
+1. Tetraedro: 4 facce triangolari
+2. Cubo (esaedro): 6 facce quadrate
+3. Ottaedro: 8 facce triangolari
+4. Dodecaedro: 12 facce pentagonali
+5. Icosaedro: 20 facce triangolari
+
+**Formule per il cubo di spigolo a:**
+• Volume: V = a³
+• Superficie totale: S = 6a²
+• Diagonale: d = a√3
+
+**Piramide**
+• Volume: V = 1/3 × Area_base × altezza
+• Superficie laterale: S_lat = 1/2 × perimetro_base × apotema
+
+**Prisma**
+• Volume: V = Area_base × altezza
+• Superficie totale: S = 2 × Area_base + Superficie_laterale
+
+**Solidi di Rotazione**
+
+**Cilindro circolare retto (raggio r, altezza h):**
+• Volume: V = πr²h
+• Superficie totale: S = 2πr² + 2πrh = 2πr(r + h)
+
+**Cono circolare retto (raggio r, altezza h, apotema a):**
+• Volume: V = 1/3 πr²h
+• Superficie totale: S = πr² + πra = πr(r + a)
+• Relazione: a² = r² + h²
+
+**Sfera (raggio r):**
+• Volume: V = 4/3 πr³
+• Superficie: S = 4πr²
+
+**Principio di Cavalieri**
+Se due solidi hanno la stessa altezza e le sezioni ottenute con piani paralleli alla base hanno sempre la stessa area, allora i due solidi hanno lo stesso volume.
+
+**PROBABILITÀ**
+
+**Concetti Fondamentali**
+
+**Esperimento Aleatorio**
+Esperimento il cui esito non è prevedibile con certezza.
+
+**Spazio Campionario (Ω)**
+Insieme di tutti i possibili esiti di un esperimento aleatorio.
+
+**Evento**
+Sottoinsieme dello spazio campionario.
+• Evento elementare: costituito da un solo esito
+• Evento certo: Ω
+• Evento impossibile: ∅
+
+**Definizioni di Probabilità**
+
+**1. Definizione Classica (Laplace)**
+Se tutti gli esiti sono equiprobabili:
+P(E) = numero di casi favorevoli / numero di casi possibili
+
+**2. Definizione Frequentista**
+P(E) = lim[n→∞] (frequenza relativa di E in n prove)
+
+**3. Definizione Assiomatica (Kolmogorov)**
+La probabilità è una funzione P: P(Ω) → [0,1] tale che:
+• P(Ω) = 1
+• P(E) ≥ 0 per ogni evento E
+• Se E₁, E₂, ... sono eventi disgiunti, allora P(E₁ ∪ E₂ ∪ ...) = P(E₁) + P(E₂) + ...
+
+**Teoremi Fondamentali**
+
+**Teorema della Probabilità Totale (Somma)**
+P(A ∪ B) = P(A) + P(B) - P(A ∩ B)
+
+Per eventi disgiunti: P(A ∪ B) = P(A) + P(B)
+
+**Teorema del Prodotto**
+P(A ∩ B) = P(A) × P(B|A) = P(B) × P(A|B)
+
+Per eventi indipendenti: P(A ∩ B) = P(A) × P(B)
+
+**Probabilità Condizionata**
+P(A|B) = P(A ∩ B) / P(B), con P(B) > 0
+
+Significato: probabilità che si verifichi A sapendo che si è verificato B.
+
+**Teorema di Bayes**
+P(A|B) = P(B|A) × P(A) / P(B)
+
+Applicazione: aggiornamento delle probabilità alla luce di nuove informazioni.
+
+**Variabili Aleatorie**
+
+**Variabile Aleatoria Discreta**
+Funzione X: Ω → ℝ che assume un numero finito o numerabile di valori.
+
+**Distribuzione di Probabilità:**
+P(X = xᵢ) = pᵢ, con Σpᵢ = 1
+
+**Valore Atteso (Media):**
+E[X] = Σ xᵢ × P(X = xᵢ)
+
+**Varianza:**
+Var(X) = E[(X - E[X])²] = E[X²] - (E[X])²
+
+**Distribuzione Binomiale**
+X ~ B(n, p): numero di successi in n prove indipendenti con probabilità p.
+
+P(X = k) = C(n,k) × p^k × (1-p)^(n-k)
+
+E[X] = np, Var(X) = np(1-p)
+
+**Variabile Aleatoria Continua**
+Variabile che può assumere qualsiasi valore in un intervallo.
+
+**Funzione di Densità f(x):**
+• f(x) ≥ 0 per ogni x
+• ∫[-∞,+∞] f(x)dx = 1
+• P(a ≤ X ≤ b) = ∫[a,b] f(x)dx
+
+**Distribuzione Normale (Gaussiana)**
+X ~ N(μ, σ²)
+
+Funzione di densità:
+f(x) = 1/(σ√(2π)) × e^(-(x-μ)²/(2σ²))
+
+**Distribuzione Normale Standard:**
+Z ~ N(0, 1): μ = 0, σ = 1
+
+Standardizzazione: Z = (X - μ)/σ
+
+**STATISTICA**
+
+**Statistica Descrittiva**
+Raccolta, organizzazione e presentazione dei dati.
+
+**Indici di Posizione:**
+• Media aritmetica: x̄ = (Σxᵢ)/n
+• Mediana: valore centrale della distribuzione ordinata
+• Moda: valore più frequente
+
+**Indici di Variabilità:**
+• Range: differenza tra massimo e minimo
+• Varianza campionaria: s² = Σ(xᵢ - x̄)²/(n-1)
+• Deviazione standard: s = √s²
+• Coefficiente di variazione: CV = s/x̄
+
+**Statistica Inferenziale**
+Trarre conclusioni su una popolazione basandosi su un campione.
+
+**Stima Puntuale:**
+Uso di una statistica campionaria per stimare un parametro della popolazione.
+
+**Intervallo di Confidenza:**
+Intervallo che contiene il parametro con una probabilità specificata.
+
+**Test di Ipotesi:**
+Procedura per decidere se accettare o rifiutare un'ipotesi sulla popolazione.
+
+**APPLICAZIONI PRATICHE**
+
+**Problemi di Ottimizzazione**
+Uso del calcolo differenziale e integrale per trovare massimi e minimi.
+
+**Modelli Matematici**
+Rappresentazione matematica di fenomeni reali attraverso funzioni e equazioni.
+
+**Analisi dei Dati**
+Applicazione di metodi statistici per interpretare informazioni quantitative.
+
+**Calcolo delle Probabilità in Contesti Reali**
+• Controllo qualità in produzione
+• Analisi del rischio in finanza
+• Modelli epidemiologici
+• Teoria dei giochi`,
+                quiz: [
+                    {
+                        question: "L'integrale di x² dx è:",
+                        options: ["x³/3 + c", "2x + c", "x³ + c", "3x² + c"],
+                        correct: 0
+                    },
+                    {
+                        question: "Il teorema fondamentale del calcolo integrale collega:",
+                        options: ["Derivate e limiti", "Derivate e integrali", "Integrali e limiti", "Funzioni e derivate"],
+                        correct: 1
+                    },
+                    {
+                        question: "La probabilità condizionata P(A|B) è:",
+                        options: ["P(A∩B)/P(B)", "P(A)/P(B)", "P(A)·P(B)", "P(A∪B)/P(B)"],
+                        correct: 0
+                    },
+                    {
+                        question: "Il volume di una sfera di raggio r è:",
+                        options: ["4πr²", "4πr³/3", "πr²", "2πr³"],
+                        correct: 1
+                    },
+                    {
+                        question: "Un integrale improprio converge quando:",
+                        options: ["Il limite esiste ed è finito", "Il limite è infinito", "La funzione è continua", "L'intervallo è limitato"],
+                        correct: 0
+                    }
+                ]
+            },
+            sistemi: {
+                name: "Sistemi e Reti",
+                topics: [
+                    "Indirizzamento IP: classi A, B, C e subnetting",
+                    "Modello TCP/IP e livelli di rete",
+                    "Protocolli di livello applicazione: HTTP, HTTPS, FTP, SMTP",
+                    "DNS: risoluzione dei nomi e gerarchia",
+                    "DHCP: assegnazione automatica degli indirizzi",
+                    "NAT e PAT: traduzione degli indirizzi",
+                    "VLAN: reti virtuali e segmentazione",
+                    "Routing: protocolli e algoritmi",
+                    "Crittografia: simmetrica, asimmetrica, hash",
+                    "Cybersecurity: minacce e contromisure",
+                    "VPN: reti private virtuali",
+                    "Firewall e sistemi di sicurezza",
+                    "Wireless: Wi-Fi, sicurezza wireless",
+                    "Cablaggio strutturato e topologie di rete"
+                ],
+                summary: `SISTEMI E RETI - GUIDA COMPLETA PER L'ESAME
+
+**INDIRIZZAMENTO IP E SUBNETTING**
+
+**Indirizzi IP versione 4 (IPv4)**
+Indirizzo a 32 bit rappresentato in notazione decimale puntata (es. 192.168.1.1).
+
+**Classi di Indirizzi IP:**
+
+**Classe A:**
+• Range: 1.0.0.0 - 126.255.255.255
+• Subnet mask predefinita: 255.0.0.0 (/8)
+• Primo ottetto: 1-126
+• Host per rete: 16.777.214 (2²⁴ - 2)
+• Uso: reti molto grandi (ISP, grandi organizzazioni)
+
+**Classe B:**
+• Range: 128.0.0.0 - 191.255.255.255
+• Subnet mask predefinita: 255.255.0.0 (/16)
+• Primo ottetto: 128-191
+• Host per rete: 65.534 (2¹⁶ - 2)
+• Uso: reti medie (università, aziende)
+
+**Classe C:**
+• Range: 192.0.0.0 - 223.255.255.255
+• Subnet mask predefinita: 255.255.255.0 (/24)
+• Primo ottetto: 192-223
+• Host per rete: 254 (2⁸ - 2)
+• Uso: reti piccole (LAN aziendali)
+
+**Indirizzi Speciali:**
+• 127.0.0.1: loopback (localhost)
+• 0.0.0.0: indirizzo nullo
+• 255.255.255.255: broadcast limitato
+• Indirizzi privati (RFC 1918):
+  - Classe A: 10.0.0.0/8
+  - Classe B: 172.16.0.0/12
+  - Classe C: 192.168.0.0/16
+
+**Subnetting**
+Processo di divisione di una rete in sottoreti più piccole.
+
+**CIDR (Classless Inter-Domain Routing):**
+Notazione che indica il numero di bit della subnet mask (es. /24).
+
+**Calcolo Subnetting:**
+1. Determinare il numero di sottoreti necessarie
+2. Calcolare i bit necessari: 2ⁿ ≥ numero sottoreti
+3. Modificare la subnet mask
+4. Calcolare gli indirizzi di rete e broadcast
+
+**Esempio:** Dividere 192.168.1.0/24 in 4 sottoreti
+• Bit necessari: 2² = 4 sottoreti
+• Nuova subnet mask: /26 (255.255.255.192)
+• Sottoreti:
+  - 192.168.1.0/26 (host: 1-62, broadcast: 63)
+  - 192.168.1.64/26 (host: 65-126, broadcast: 127)
+  - 192.168.1.128/26 (host: 129-190, broadcast: 191)
+  - 192.168.1.192/26 (host: 193-254, broadcast: 255)
+
+**MODELLO TCP/IP**
+
+**Architettura a 4 Livelli:**
+
+**1. Livello di Accesso alla Rete (Physical/Data Link)**
+• Trasmissione fisica dei dati
+• Protocolli: Ethernet, Wi-Fi, PPP
+• Indirizzamento MAC (48 bit)
+• Frame, collision detection, CSMA/CD
+
+**2. Livello Internet (Network)**
+• Instradamento dei pacchetti
+• Protocollo principale: IP (Internet Protocol)
+• Altri protocolli: ICMP, ARP, RARP
+• Routing, frammentazione, riassemblaggio
+
+**3. Livello di Trasporto (Transport)**
+• Comunicazione end-to-end
+• Protocolli: TCP, UDP
+• Controllo di flusso, rilevamento errori
+• Multiplexing/demultiplexing
+
+**4. Livello Applicazione (Application)**
+• Servizi per le applicazioni utente
+• Protocolli: HTTP, FTP, SMTP, DNS, DHCP
+• Interfaccia con l'utente finale
+
+**PROTOCOLLI DI LIVELLO TRASPORTO**
+
+**TCP (Transmission Control Protocol)**
+Protocollo affidabile, orientato alla connessione.
+
+**Caratteristiche:**
+• Three-way handshake per stabilire connessione
+• Controllo di flusso con sliding window
+• Rilevamento e correzione errori
+• Ritrasmissione automatica
+• Controllo di congestione
+
+**Fasi della connessione TCP:**
+1. SYN: client richiede connessione
+2. SYN-ACK: server conferma e richiede connessione
+3. ACK: client conferma, connessione stabilita
+
+**UDP (User Datagram Protocol)**
+Protocollo non affidabile, senza connessione.
+
+**Caratteristiche:**
+• Trasmissione veloce
+• Overhead minimo
+• Nessun controllo di flusso
+• Nessuna garanzia di consegna
+• Uso: streaming, DNS, DHCP
+
+**PROTOCOLLI DI LIVELLO APPLICAZIONE**
+
+**HTTP (HyperText Transfer Protocol)**
+Protocollo per il trasferimento di pagine web.
+
+**Caratteristiche:**
+• Protocollo stateless
+• Porta 80 (HTTP), 443 (HTTPS)
+• Metodi: GET, POST, PUT, DELETE, HEAD
+• Codici di stato: 200 (OK), 404 (Not Found), 500 (Server Error)
+
+**HTTPS (HTTP Secure)**
+Versione sicura di HTTP con crittografia SSL/TLS.
+
+**FTP (File Transfer Protocol)**
+Protocollo per il trasferimento di file.
+
+**Caratteristiche:**
+• Due connessioni: controllo (porta 21) e dati (porta 20)
+• Modalità attiva e passiva
+• Autenticazione username/password
+• Comandi: USER, PASS, LIST, RETR, STOR
+
+**SMTP (Simple Mail Transfer Protocol)**
+Protocollo per l'invio di email.
+
+**Caratteristiche:**
+• Porta 25 (standard), 587 (submission)
+• Protocollo push (invio)
+• Comandi: HELO, MAIL FROM, RCPT TO, DATA
+• Complementari: POP3 (porta 110), IMAP (porta 143)
+
+**DNS (Domain Name System)**
+
+**Funzione:**
+Traduzione nomi di dominio in indirizzi IP.
+
+**Gerarchia DNS:**
+• Root servers (.)
+• Top-level domains (TLD): .com, .org, .it
+• Second-level domains: google.com
+• Subdomains: www.google.com
+
+**Tipi di Record DNS:**
+• A: indirizzo IPv4
+• AAAA: indirizzo IPv6
+• CNAME: alias canonico
+• MX: mail exchange
+• NS: name server
+• PTR: reverse lookup
+• SOA: start of authority
+
+**Processo di Risoluzione:**
+1. Query al resolver locale
+2. Query ai root servers
+3. Query ai TLD servers
+4. Query ai authoritative servers
+5. Risposta con indirizzo IP
+
+**DHCP (Dynamic Host Configuration Protocol)**
+
+**Funzione:**
+Assegnazione automatica di configurazioni IP.
+
+**Processo DORA:**
+1. **Discover:** client cerca server DHCP
+2. **Offer:** server offre configurazione
+3. **Request:** client richiede configurazione specifica
+4. **Acknowledge:** server conferma assegnazione
+
+**Parametri Assegnati:**
+• Indirizzo IP
+• Subnet mask
+• Default gateway
+• Server DNS
+• Lease time (durata assegnazione)
+
+**NAT E PAT**
+
+**NAT (Network Address Translation)**
+Traduzione degli indirizzi IP privati in pubblici.
+
+**Tipi di NAT:**
+• **Static NAT:** mappatura 1:1 fissa
+• **Dynamic NAT:** mappatura 1:1 da pool
+• **PAT (Port Address Translation):** mappatura molti:1 con porte
+
+**Vantaggi NAT:**
+• Conservazione indirizzi IP pubblici
+• Sicurezza (hiding della rete interna)
+• Flessibilità nella numerazione interna
+
+**Svantaggi NAT:**
+• Problemi con alcuni protocolli
+• Complessità nel troubleshooting
+• Limitazioni per server interni
+
+**VLAN (Virtual Local Area Network)**
+
+**Definizione:**
+Segmentazione logica di una rete fisica in reti virtuali.
+
+**Vantaggi:**
+• Segmentazione del traffico
+• Miglioramento delle prestazioni
+• Maggiore sicurezza
+• Flessibilità nella gestione
+• Riduzione dei domini di broadcast
+
+**Tipi di VLAN:**
+• **Port-based:** assegnazione per porta
+• **MAC-based:** assegnazione per indirizzo MAC
+• **Protocol-based:** assegnazione per protocollo
+
+**VLAN Trunking:**
+Trasporto di multiple VLAN su un singolo link.
+• Protocollo: 802.1Q (IEEE)
+• VLAN tagging con 4 byte aggiuntivi
+
+**ROUTING**
+
+**Definizione:**
+Processo di instradamento dei pacchetti tra reti diverse.
+
+**Tipi di Routing:**
+• **Static Routing:** route configurate manualmente
+• **Dynamic Routing:** route apprese automaticamente
+
+**Protocolli di Routing:**
+
+**RIP (Routing Information Protocol)**
+• Distance vector protocol
+• Metrica: hop count (max 15)
+• Aggiornamenti ogni 30 secondi
+• Convergenza lenta
+
+**OSPF (Open Shortest Path First)**
+• Link state protocol
+• Metrica: costo basato su bandwidth
+• Convergenza veloce
+• Supporto per VLSM e CIDR
+
+**BGP (Border Gateway Protocol)**
+• Path vector protocol
+• Routing tra Autonomous Systems
+• Protocollo dell'Internet globale
+
+**CRITTOGRAFIA E SICUREZZA**
+
+**Crittografia Simmetrica**
+Stessa chiave per cifratura e decifratura.
+
+**Algoritmi:**
+• **DES:** 56 bit, obsoleto
+• **3DES:** triplo DES, più sicuro
+• **AES:** standard attuale, 128/192/256 bit
+
+**Vantaggi:** velocità, efficienza
+**Svantaggi:** distribuzione delle chiavi
+
+**Crittografia Asimmetrica**
+Coppia di chiavi: pubblica e privata.
+
+**Algoritmi:**
+• **RSA:** basato su fattorizzazione
+• **ECC:** curve ellittiche, più efficiente
+• **Diffie-Hellman:** scambio chiavi
+
+**Applicazioni:**
+• Firma digitale
+• Scambio chiavi
+• Autenticazione
+
+**Funzioni Hash**
+Trasformazione unidirezionale di dati.
+
+**Proprietà:**
+• Deterministica
+• Resistente alle collisioni
+• Effetto valanga
+• Irreversibile
+
+**Algoritmi:**
+• **MD5:** 128 bit, vulnerabile
+• **SHA-1:** 160 bit, deprecato
+• **SHA-256:** 256 bit, sicuro
+
+**CYBERSECURITY**
+
+**Principi di Sicurezza:**
+• **Confidenzialità:** protezione da accesso non autorizzato
+• **Integrità:** protezione da modifiche non autorizzate
+• **Disponibilità:** accesso quando necessario
+• **Autenticazione:** verifica identità
+• **Non ripudio:** impossibilità di negare azioni
+
+**Minacce Comuni:**
+
+**Malware:**
+• **Virus:** si replica infettando file
+• **Worm:** si replica autonomamente
+• **Trojan:** si nasconde in software legittimo
+• **Ransomware:** cripta dati per riscatto
+• **Spyware:** raccoglie informazioni
+
+**Attacchi di Rete:**
+• **DoS/DDoS:** sovraccarico di risorse
+• **Man-in-the-Middle:** intercettazione comunicazioni
+• **Packet Sniffing:** cattura traffico di rete
+• **IP Spoofing:** falsificazione indirizzi IP
+• **ARP Poisoning:** manipolazione tabelle ARP
+
+**Attacchi Applicativi:**
+• **SQL Injection:** manipolazione query database
+• **Cross-Site Scripting (XSS):** iniezione script
+• **Buffer Overflow:** sovrascrittura memoria
+• **Phishing:** inganno per ottenere credenziali
+
+**VPN (Virtual Private Network)**
+
+**Definizione:**
+Rete privata virtuale su infrastruttura pubblica.
+
+**Tipi di VPN:**
+• **Site-to-Site:** connessione tra sedi
+• **Remote Access:** accesso remoto utenti
+• **Client-to-Site:** client verso rete aziendale
+
+**Protocolli VPN:**
+• **IPSec:** sicurezza a livello IP
+• **L2TP:** tunneling livello 2
+• **PPTP:** point-to-point tunneling
+• **OpenVPN:** soluzione open source
+• **WireGuard:** protocollo moderno e veloce
+
+**Componenti IPSec:**
+• **AH (Authentication Header):** autenticazione
+• **ESP (Encapsulating Security Payload):** cifratura
+• **IKE (Internet Key Exchange):** gestione chiavi
+
+**FIREWALL**
+
+**Definizione:**
+Sistema di sicurezza che controlla il traffico di rete.
+
+**Tipi di Firewall:**
+
+**Packet Filter:**
+• Filtraggio basato su header IP/TCP/UDP
+• Stateless: ogni pacchetto valutato singolarmente
+• Veloce ma limitato
+
+**Stateful Inspection:**
+• Mantiene stato delle connessioni
+• Decisioni basate su contesto
+• Maggiore sicurezza
+
+**Application Gateway (Proxy):**
+• Filtraggio a livello applicazione
+• Analisi contenuto
+• Maggiore overhead
+
+**Next-Generation Firewall (NGFW):**
+• Deep Packet Inspection (DPI)
+• Intrusion Prevention System (IPS)
+• Application awareness
+• Threat intelligence
+
+**Regole Firewall:**
+• **Allow:** permetti traffico
+• **Deny:** blocca traffico
+• **Log:** registra evento
+• Ordine di valutazione importante
+
+**WIRELESS E WI-FI**
+
+**Standard IEEE 802.11:**
+• **802.11a:** 5 GHz, 54 Mbps
+• **802.11b:** 2.4 GHz, 11 Mbps
+• **802.11g:** 2.4 GHz, 54 Mbps
+• **802.11n:** 2.4/5 GHz, 600 Mbps
+• **802.11ac:** 5 GHz, 6.93 Gbps
+• **802.11ax (Wi-Fi 6):** 2.4/5 GHz, 9.6 Gbps
+
+**Sicurezza Wireless:**
+
+**WEP (Wired Equivalent Privacy):**
+• Crittografia RC4 a 64/128 bit
+• Vulnerabile, deprecato
+
+**WPA (Wi-Fi Protected Access):**
+• TKIP (Temporal Key Integrity Protocol)
+• Miglioramento rispetto a WEP
+
+**WPA2:**
+• AES-CCMP encryption
+• Standard di sicurezza attuale
+• PSK (Pre-Shared Key) o Enterprise
+
+**WPA3:**
+• Sicurezza migliorata
+• SAE (Simultaneous Authentication of Equals)
+• Protezione contro attacchi offline
+
+**CABLAGGIO STRUTTURATO**
+
+**Standard TIA/EIA-568:**
+Specifiche per cablaggio di telecomunicazioni.
+
+**Componenti:**
+• **Entrance Facility:** punto di ingresso
+• **Equipment Room:** sala apparati
+• **Backbone Cabling:** cablaggio verticale
+• **Telecommunications Room:** armadi di piano
+• **Horizontal Cabling:** cablaggio orizzontale
+• **Work Area:** postazioni utente
+
+**Categorie Cavi:**
+• **Cat 5e:** 100 MHz, Gigabit Ethernet
+• **Cat 6:** 250 MHz, 10 Gigabit (55m)
+• **Cat 6a:** 500 MHz, 10 Gigabit (100m)
+• **Cat 7:** 600 MHz, schermato
+• **Cat 8:** 2000 MHz, 25/40 Gigabit
+
+**Topologie di Rete:**
+
+**Topologia Fisica:**
+• **Bus:** tutti i nodi su un cavo comune
+• **Star:** nodi collegati a hub centrale
+• **Ring:** nodi collegati in anello
+• **Mesh:** collegamenti multipli tra nodi
+
+**Topologia Logica:**
+• Come i dati fluiscono nella rete
+• Può differire dalla topologia fisica
+• Esempi: Ethernet (logicamente bus), Token Ring`,
+                quiz: [
+                    {
+                        question: "Quale classe di indirizzi IP ha subnet mask 255.255.0.0?",
+                        options: ["Classe A", "Classe B", "Classe C", "Classe D"],
+                        correct: 1
+                    },
+                    {
+                        question: "DHCP serve per:",
+                        options: ["Risoluzione nomi", "Assegnazione IP automatica", "Routing", "Sicurezza"],
+                        correct: 1
+                    },
+                    {
+                        question: "Una VPN garantisce:",
+                        options: ["Solo riservatezza", "Solo autenticazione", "Riservatezza e autenticazione", "Solo integrità"],
+                        correct: 2
+                    },
+                    {
+                        question: "Il protocollo HTTPS usa la porta:",
+                        options: ["80", "443", "21", "25"],
+                        correct: 1
+                    },
+                    {
+                        question: "NAT sta per:",
+                        options: ["Network Address Translation", "Network Access Table", "Network Authentication Token", "Network Application Transfer"],
+                        correct: 0
+                    }
+                ]
+            },
+            tpsit: {
+                name: "TPSIT",
+                topics: [
+                    "Architetture distribuite: client-server, multi-tier",
+                    "Protocolli di comunicazione: TCP, UDP, HTTP",
+                    "Socket programming: implementazione client/server",
+                    "Tecnologie web: HTML5, CSS3, JavaScript ES6+",
+                    "Linguaggi server-side: PHP, Python, Node.js",
+                    "Database e persistenza: SQL, NoSQL, ORM",
+                    "API REST e servizi web",
+                    "AJAX e comunicazione asincrona",
+                    "Sicurezza applicativa: autenticazione, autorizzazione",
+                    "Framework e librerie: React, Angular, Express",
+                    "Metodologie di sviluppo: Agile, DevOps",
+                    "Testing e debugging",
+                    "Deployment e cloud computing",
+                    "Microservizi e containerizzazione"
+                ],
+                summary: `TECNOLOGIE E PROGETTAZIONE DI SISTEMI INFORMATICI E TELECOMUNICAZIONI - GUIDA COMPLETA
+
+**ARCHITETTURE DISTRIBUITE**
+
+**Evoluzione delle Architetture Software**
+
+**Architettura Monolitica:**
+• Applicazione come singola unità deployabile
+• Tutti i componenti in un unico processo
+• Database condiviso
+• Vantaggi: semplicità sviluppo e deployment
+• Svantaggi: scalabilità limitata, tecnologie vincolate
+
+**Architettura Client-Server**
+Separazione tra client (presentazione) e server (logica/dati).
+
+**Caratteristiche:**
+• Client: interfaccia utente, validazione input
+• Server: elaborazione, accesso dati, business logic
+• Comunicazione tramite protocolli di rete
+• Centralizzazione risorse e controllo
+
+**Vantaggi:**
+• Centralizzazione dati e logica
+• Sicurezza migliorata
+• Manutenzione semplificata
+• Controllo accessi centralizzato
+
+**Svantaggi:**
+• Single point of failure
+• Carico di rete elevato
+• Scalabilità limitata
+
+**Architetture Multi-Tier**
+
+**2-Tier (Client-Server tradizionale):**
+• Presentation Tier: interfaccia utente
+• Data Tier: database e storage
+
+**3-Tier:**
+• **Presentation Tier:** interfaccia utente (browser, app mobile)
+• **Application Tier:** logica di business (server applicazioni)
+• **Data Tier:** gestione dati (database server)
+
+**Vantaggi 3-Tier:**
+• Separazione responsabilità
+• Scalabilità migliorata
+• Riusabilità componenti
+• Manutenzione indipendente
+
+**N-Tier:**
+• Ulteriore suddivisione livelli
+• Microservizi specializzati
+• Maggiore complessità ma flessibilità
+
+**Service-Oriented Architecture (SOA):**
+• Servizi indipendenti e riusabili
+• Comunicazione tramite interfacce standard
+• Loose coupling tra componenti
+• Enterprise Service Bus (ESB)
+
+**Microservizi:**
+• Decomposizione in servizi piccoli e indipendenti
+• Deployment indipendente
+• Tecnologie eterogenee
+• Comunicazione via API REST/messaging
+
+**PROTOCOLLI DI COMUNICAZIONE**
+
+**Modello OSI vs TCP/IP**
+
+**Livelli TCP/IP:**
+1. **Network Access:** Ethernet, Wi-Fi
+2. **Internet:** IP, ICMP, ARP
+3. **Transport:** TCP, UDP
+4. **Application:** HTTP, FTP, SMTP
+
+**TCP (Transmission Control Protocol)**
+
+**Caratteristiche:**
+• Orientato alla connessione
+• Affidabile (acknowledgment, ritrasmissione)
+• Controllo di flusso (sliding window)
+• Controllo di congestione
+• Ordinamento pacchetti
+
+**Three-Way Handshake:**
+1. Client → Server: SYN
+2. Server → Client: SYN-ACK
+3. Client → Server: ACK
+
+**Chiusura Connessione:**
+1. Client → Server: FIN
+2. Server → Client: ACK
+3. Server → Client: FIN
+4. Client → Server: ACK
+
+**UDP (User Datagram Protocol)**
+
+**Caratteristiche:**
+• Connectionless (senza connessione)
+• Non affidabile (no acknowledgment)
+• Veloce e leggero
+• No controllo di flusso
+• No ordinamento garantito
+
+**Uso:** streaming, DNS, DHCP, gaming online
+
+**HTTP (HyperText Transfer Protocol)**
+
+**Caratteristiche:**
+• Protocollo stateless
+• Request-response pattern
+• Basato su TCP (porta 80)
+• Formato testuale
+
+**Metodi HTTP:**
+• **GET:** recupera risorsa
+• **POST:** invia dati al server
+• **PUT:** aggiorna risorsa completa
+• **PATCH:** aggiorna risorsa parziale
+• **DELETE:** elimina risorsa
+• **HEAD:** come GET ma solo header
+• **OPTIONS:** metodi supportati
+
+**Codici di Stato:**
+• **1xx:** Informational
+• **2xx:** Success (200 OK, 201 Created)
+• **3xx:** Redirection (301 Moved, 304 Not Modified)
+• **4xx:** Client Error (400 Bad Request, 404 Not Found)
+• **5xx:** Server Error (500 Internal Error, 503 Unavailable)
+
+**HTTP/2 e HTTP/3:**
+• Multiplexing: richieste parallele
+• Server push: invio proattivo risorse
+• Compressione header
+• HTTP/3: basato su QUIC (UDP)
+
+**SOCKET PROGRAMMING**
+
+**Concetti Fondamentali**
+
+**Socket:**
+Endpoint di comunicazione tra processi su rete.
+
+**Tipi di Socket:**
+• **Stream Socket (TCP):** affidabile, ordinato
+• **Datagram Socket (UDP):** veloce, non affidabile
+• **Raw Socket:** accesso diretto a protocolli
+
+**Programmazione Socket TCP**
+
+**Server TCP (Python):**
+```python
+import socket
+
+# Creazione socket
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Binding a indirizzo e porta
+server_socket.bind(('localhost', 8080))
+
+# Ascolto connessioni
+server_socket.listen(5)
+
+while True:
+    # Accettazione connessione
+    client_socket, address = server_socket.accept()
+    
+    # Ricezione dati
+    data = client_socket.recv(1024)
+    
+    # Elaborazione e risposta
+    response = process_data(data)
+    client_socket.send(response)
+    
+    # Chiusura connessione client
+    client_socket.close()
