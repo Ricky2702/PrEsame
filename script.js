@@ -1,4 +1,658 @@
+// Dati delle materie con riassunti e quiz
+const materieData = {
+    italiano: {
+        riassunto: `ITALIANO - Punti chiave per l'esame:
+
+• VERISMO (Verga):
+  - Rappresentazione oggettiva della realtà
+  - Tecniche: regressione, impersonalità, discorso indiretto libero
+  - "I Malavoglia": ciclo dei vinti, ideale dell'ostrica
+  - "Mastro don Gesualdo": ascesa sociale e solitudine
+
+• DECADENTISMO:
+  - D'Annunzio: estetismo, superuomo, panismo
+  - "Il Piacere": Andrea Sperelli, culto della 
+  - D'Annunzio: estetismo, superuomo, panismo
+  - "Il Piacere": Andrea Sperelli, culto della bellezza
+  - Pascoli: simbolismo, fonosimbolismo, "fanciullino"
+  - "Myricae": natura, morte, famiglia
+
+• CRISI DELL'IO (Pirandello):
+  - Relativismo, umorismo, teatro nel teatro
+  - "Il fu Mattia Pascal": crisi identità, lanterninosofia
+  - "La Giara": umorismo, grottesco siciliano
+
+• PSICANALISI (Svevo):
+  - Influenza freudiana, inettitudine, tempo misto
+  - "La Coscienza di Zeno": monologo interiore, ironia
+
+• ERMETISMO:
+  - Ungaretti: parola pura, analogia, guerra
+  - Montale: correlativo oggettivo, male di vivere
+  - Linguaggio essenziale, simbolismo`,
+
+        quiz: [
+            {
+                domanda: "Chi è l'autore de 'I Malavoglia'?",
+                opzioni: ["Luigi Pirandello", "Giovanni Verga", "Italo Svevo", "Gabriele D'Annunzio"],
+                risposta: 1
+            },
+            {
+                domanda: "Quale corrente letteraria rappresenta Gabriele D'Annunzio?",
+                opzioni: ["Verismo", "Decadentismo", "Ermetismo", "Futurismo"],
+                risposta: 1
+            },
+            {
+                domanda: "Il 'fanciullino' è un'opera di:",
+                opzioni: ["Pascoli", "Carducci", "Ungaretti", "Montale"],
+                risposta: 0
+            },
+            {
+                domanda: "Quale tecnica narrativa caratterizza 'La coscienza di Zeno'?",
+                opzioni: ["Narratore onnisciente", "Monologo interiore", "Discorso indiretto libero", "Tutte le precedenti"],
+                risposta: 3
+            },
+            {
+                domanda: "L'Ermetismo è caratterizzato da:",
+                opzioni: ["Linguaggio complesso", "Linguaggio essenziale", "Realismo sociale", "Estetismo"],
+                risposta: 1
+            }
+        ]
+    },
+
+    storia: {
+        riassunto: `STORIA - Punti chiave per l'esame:
+
+• SOCIETÀ DI MASSA (inizio '900):
+  - Industrializzazione, urbanizzazione
+  - Nascita partiti di massa, sindacati
+  - Cultura di massa, stampa popolare
+
+• PRIMA GUERRA MONDIALE (1914-1918):
+  - Cause: nazionalismi, imperialismo, sistema alleanze
+  - Triplice Alleanza vs Triplice Intesa
+  - Guerra di trincea, nuove tecnologie
+  - Conseguenze: crollo imperi, nuovi stati
+
+• RIVOLUZIONE RUSSA (1917):
+  - Rivoluzione di febbraio: caduta zar
+  - Rivoluzione d'ottobre: bolscevichi al potere
+  - Lenin, Stalin: costruzione stato socialista
+
+• FASCISMO (1922-1943):
+  - Marcia su Roma, dittatura
+  - Stato totalitario, propaganda
+  - Leggi razziali, alleanza con Hitler
+
+• SECONDA GUERRA MONDIALE (1939-1945):
+  - Cause: espansionismo nazi-fascista
+  - Fasi: guerra lampo, Stalingrado, sbarco Normandia
+  - Shoah, Resistenza, liberazione
+
+• GUERRA FREDDA (1945-1989):
+  - Bipolarismo USA-URSS
+  - Cortina di ferro, deterrenza nucleare
+  - Decolonizzazione, non allineati`,
+
+        quiz: [
+            {
+                domanda: "La Prima Guerra Mondiale iniziò nel:",
+                opzioni: ["1913", "1914", "1915", "1916"],
+                risposta: 1
+            },
+            {
+                domanda: "La Rivoluzione d'Ottobre fu guidata da:",
+                opzioni: ["Kerenskij", "Lenin", "Stalin", "Trotsky"],
+                risposta: 1
+            },
+            {
+                domanda: "Il Fascismo salì al potere in Italia nel:",
+                opzioni: ["1920", "1921", "1922", "1923"],
+                risposta: 2
+            },
+            {
+                domanda: "La Guerra Fredda iniziò:",
+                opzioni: ["Durante la Seconda Guerra Mondiale", "Subito dopo la Seconda Guerra Mondiale", "Negli anni '50", "Negli anni '60"],
+                risposta: 1
+            },
+            {
+                domanda: "L'Affare Dreyfus riguardava:",
+                opzioni: ["La Germania", "L'Italia", "La Francia", "L'Inghilterra"],
+                risposta: 2
+            }
+        ]
+    },
+
+    inglese: {
+        riassunto: `INGLESE - Key points for the exam:
+
+• COMPUTER ARCHITECTURE:
+  - CPU: Central Processing Unit, control unit, ALU
+  - Memory hierarchy: RAM, ROM, cache, storage
+  - Motherboard: connects all components
+
+• PROGRAMMING LANGUAGES:
+  - C/C++: system programming, performance
+  - Java: object-oriented, platform independent
+  - Python: high-level, versatile, AI/data science
+  - PHP: server-side web development
+
+• HISTORICAL CONTEXT:
+  - Early 1900s: industrial revolution, technology boom
+  - Roaring 20s: economic prosperity, cultural change
+  - Great Depression: economic crisis, social impact
+
+• LITERATURE:
+  - "The Great Gatsby": American Dream, social criticism
+  - "1984" by Orwell: dystopia, surveillance, totalitarianism
+  - Themes: technology vs humanity, freedom vs control
+
+• DIGITAL SOCIETY:
+  - Internet evolution: WWW, browsers, search engines
+  - Social networks: communication revolution
+  - Big Data & GDPR: privacy protection, data rights
+  - Cybersecurity: threats, protection measures
+
+• NETWORKS:
+  - Types: LAN, WAN, VPN
+  - Topologies: star, ring, mesh
+  - Protocols: TCP/IP, HTTP, HTTPS`,
+
+        quiz: [
+            {
+                domanda: "What does CPU stand for?",
+                opzioni: ["Central Processing Unit", "Computer Processing Unit", "Central Program Unit", "Computer Program Unit"],
+                risposta: 0
+            },
+            {
+                domanda: "Which novel depicts a dystopian surveillance society?",
+                opzioni: ["The Great Gatsby", "1984", "Brave New World", "Animal Farm"],
+                risposta: 1
+            },
+            {
+                domanda: "What does GDPR regulate?",
+                opzioni: ["Network protocols", "Data protection", "Software licensing", "Hardware standards"],
+                risposta: 1
+            },
+            {
+                domanda: "VPN stands for:",
+                opzioni: ["Virtual Private Network", "Very Private Network", "Virtual Public Network", "Variable Private Network"],
+                risposta: 0
+            },
+            {
+                domanda: "The 'Roaring Twenties' refers to:",
+                opzioni: ["1910s", "1920s", "1930s", "1940s"],
+                risposta: 1
+            }
+        ]
+    },
+
+    matematica: {
+        riassunto: `MATEMATICA - Punti chiave per l'esame:
+
+• CALCOLO INTEGRALE:
+  - Integrali indefiniti: primitive, costante integrazione
+  - Tecniche: per parti, sostituzione, frazioni parziali
+  - Integrali definiti: teorema fondamentale calcolo
+  - Teorema della media: valore medio funzione
+
+• APPLICAZIONI GEOMETRICHE:
+  - Calcolo aree: tra curve, sotto curve
+  - Volumi: solidi di rotazione, metodo gusci
+  - Lunghezza archi di curva
+
+• INTEGRALI IMPROPRI:
+  - Intervalli illimitati: convergenza/divergenza
+  - Funzioni illimitate: singolarità
+  - Criteri di convergenza
+
+• GEOMETRIA SOLIDA:
+  - Poliedri: piramidi, prismi, tronchi
+  - Solidi di rotazione: cilindri, coni, sfere
+  - Principio di Cavalieri: equivalenza volumi
+
+• PROBABILITÀ:
+  - Eventi: certi, impossibili, contrari
+  - Teoremi: somma logica, prodotto logico
+  - Probabilità condizionata: P(A|B) = P(A∩B)/P(B)
+  - Teorema di Bayes: probabilità a posteriori
+
+• DISTRIBUZIONI:
+  - Binomiale, normale, Poisson
+  - Valore atteso, varianza, deviazione standard`,
+
+        quiz: [
+            {
+                domanda: "L'integrale di x² dx è:",
+                opzioni: ["x³/3 + c", "2x + c", "x³ + c", "3x² + c"],
+                risposta: 0
+            },
+            {
+                domanda: "Il teorema fondamentale del calcolo integrale collega:",
+                opzioni: ["Derivate e limiti", "Derivate e integrali", "Integrali e limiti", "Funzioni e derivate"],
+                risposta: 1
+            },
+            {
+                domanda: "La probabilità condizionata P(A|B) è:",
+                opzioni: ["P(A∩B)/P(B)", "P(A)/P(B)", "P(A)·P(B)", "P(A∪B)/P(B)"],
+                risposta: 0
+            },
+            {
+                domanda: "Il volume di una sfera di raggio r è:",
+                opzioni: ["4πr²", "4πr³/3", "πr²", "2πr³"],
+                risposta: 1
+            },
+            {
+                domanda: "Un integrale improprio converge quando:",
+                opzioni: ["Il limite esiste ed è finito", "Il limite è infinito", "La funzione è continua", "L'intervallo è limitato"],
+                risposta: 0
+            }
+        ]
+    },
+
+    informatica: {
+        riassunto: `INFORMATICA - Punti chiave per l'esame:
+
+• PROGETTAZIONE DATABASE:
+  - Modello E/R: entità, attributi, relazioni
+  - Modello relazionale: tabelle, chiavi, vincoli
+  - Normalizzazione: 1NF, 2NF, 3NF (eliminare ridondanze)
+  - Integrità referenziale: foreign key, cascade
+
+• SQL AVANZATO:
+  - DDL: CREATE, ALTER, DROP
+  - DML: INSERT, UPDATE, DELETE
+  - QL: SELECT, JOIN (inner, outer, cross)
+  - Funzioni aggregate: COUNT, SUM, AVG, MAX, MIN
+  - Subquery, viste, stored procedure
+
+• SVILUPPO WEB:
+  - HTML5: struttura semantica, form, multimedia
+  - CSS3: layout, responsive design, animazioni
+  - PHP: server-side, sessioni, cookie
+  - JavaScript: client-side, DOM manipulation, AJAX
+
+• ARCHITETTURE WEB:
+  - Pattern MVC: separazione logica
+  - XAMPP: Apache, MySQL, PHP, phpMyAdmin
+  - Sicurezza: SQL injection, XSS, autenticazione
+  - Session management: login, logout, controllo accessi
+
+• OTTIMIZZAZIONE:
+  - Indici: B-tree, hash, bitmap
+  - Query optimization: explain plan
+  - Performance tuning: cache, connection pooling
+
+• TRANSAZIONI:
+  - Proprietà ACID: atomicità, consistenza, isolamento, durabilità
+  - Concorrenza: lock, deadlock, isolation levels`,
+
+        quiz: [
+            {
+                domanda: "La normalizzazione serve per:",
+                opzioni: ["Aumentare le prestazioni", "Eliminare ridondanze", "Semplificare le query", "Tutte le precedenti"],
+                risposta: 3
+            },
+            {
+                domanda: "ACID sta per:",
+                opzioni: ["Atomicity, Consistency, Isolation, Durability", "Accuracy, Consistency, Integrity, Durability", "Atomicity, Correctness, Isolation, Durability", "Accuracy, Consistency, Isolation, Dependability"],
+                risposta: 0
+            },
+            {
+                domanda: "Un JOIN INNER restituisce:",
+                opzioni: ["Tutti i record della prima tabella", "Tutti i record della seconda tabella", "Solo i record che hanno corrispondenza", "Tutti i record di entrambe le tabelle"],
+                risposta: 2
+            },
+            {
+                domanda: "PHP è un linguaggio:",
+                opzioni: ["Client-side", "Server-side", "Compilato", "Assembler"],
+                risposta: 1
+            },
+            {
+                domanda: "Un indice in un database serve per:",
+                opzioni: ["Ordinare i dati", "Velocizzare le ricerche", "Garantire l'integrità", "Tutte le precedenti"],
+                risposta: 1
+            }
+        ]
+    },
+
+    sistemi: {
+        riassunto: `SISTEMI E RETI - Punti chiave per l'esame:
+
+• INDIRIZZAMENTO IP:
+  - Classi A (255.0.0.0), B (255.255.0.0), C (255.255.255.0)
+  - Subnetting: divisione reti, CIDR notation
+  - IP privati: 192.168.x.x, 172.16-31.x.x, 10.x.x.x
+  - IPv6: 128 bit, notazione esadecimale
+
+• PROTOCOLLI TCP/IP:
+  - Livello applicazione: HTTP, HTTPS, FTP, SMTP, POP3, IMAP
+  - Livello trasporto: TCP (affidabile), UDP (veloce)
+  - Livello rete: IP, ICMP, ARP
+  - DHCP: assegnazione automatica IP
+  - DNS: risoluzione nomi in IP
+
+• SICUREZZA:
+  - Crittografia simmetrica: AES, DES
+  - Crittografia asimmetrica: RSA, chiavi pubbliche/private
+  - Firma digitale: autenticazione, integrità, non ripudio
+  - VPN: tunnel sicuri, protocolli IPSec, L2TP
+  - Firewall: packet filtering, stateful inspection
+
+• ARCHITETTURE DI RETE:
+  - LAN: Ethernet, switch, VLAN
+  - WAN: router, protocolli routing
+  - Topologie: stella, anello, mesh, bus
+  - Cablaggio strutturato: UTP, fibra ottica
+
+• NAT/PAT:
+  - Network Address Translation: IP privati → pubblici
+  - Port Address Translation: condivisione IP pubblico
+  - DMZ: zona demilitarizzata per server pubblici`,
+
+        quiz: [
+            {
+                domanda: "Quale classe di indirizzi IP ha subnet mask 255.255.0.0?",
+                opzioni: ["Classe A", "Classe B", "Classe C", "Classe D"],
+                risposta: 1
+            },
+            {
+                domanda: "DHCP serve per:",
+                opzioni: ["Risoluzione nomi", "Assegnazione IP automatica", "Routing", "Sicurezza"],
+                risposta: 1
+            },
+            {
+                domanda: "Una VPN garantisce:",
+                opzioni: ["Solo riservatezza", "Solo autenticazione", "Riservatezza e autenticazione", "Solo integrità"],
+                risposta: 2
+            },
+            {
+                domanda: "Il protocollo HTTPS usa la porta:",
+                opzioni: ["80", "443", "21", "25"],
+                risposta: 1
+            },
+            {
+                domanda: "NAT sta per:",
+                opzioni: ["Network Address Translation", "Network Access Table", "Network Authentication Token", "Network Application Transfer"],
+                risposta: 0
+            }
+        ]
+    },
+
+    tpsit: {
+        riassunto: `TPSIT - Punti chiave per l'esame:
+
+• ARCHITETTURE DISTRIBUITE:
+  - Client-Server: richiesta-risposta, stateless/stateful
+  - Multi-tier: presentation, business logic, data
+  - Microservizi: servizi indipendenti, scalabilità
+  - SOA: Service Oriented Architecture
+
+• PROTOCOLLI COMUNICAZIONE:
+  - TCP: connection-oriented, affidabile, stream
+  - UDP: connectionless, veloce, datagram
+  - HTTP: stateless, metodi GET/POST/PUT/DELETE
+  - WebSocket: comunicazione bidirezionale real-time
+
+• TECNOLOGIE WEB:
+  - HTML5: semantic web, canvas, local storage
+  - CSS3: responsive design, flexbox, grid
+  - JavaScript: DOM, eventi, AJAX, fetch API
+  - PHP: server-side, sessioni, database connection
+
+• API E SERVIZI:
+  - REST: Representational State Transfer
+  - JSON: JavaScript Object Notation, lightweight
+  - XML: eXtensible Markup Language, DTD validation
+  - SOAP: Simple Object Access Protocol
+
+• PROGRAMMAZIONE DI RETE:
+  - Socket: endpoint comunicazione, TCP/UDP
+  - Thread: programmazione concorrente, sincronizzazione
+  - Processi: comunicazione inter-process
+  - Server Echo/Tris: esempi implementazione
+
+• SICUREZZA APPLICATIVA:
+  - Autenticazione: verifica identità
+  - Autorizzazione: controllo accessi
+  - Crittografia: protezione dati in transito
+  - Hash: integrità dati, password hashing`,
+
+        quiz: [
+            {
+                domanda: "JSON sta per:",
+                opzioni: ["JavaScript Object Notation", "Java Standard Object Notation", "JavaScript Oriented Notation", "Java Script Object Network"],
+                risposta: 0
+            },
+            {
+                domanda: "Un'architettura a 3 tier comprende:",
+                opzioni: ["Client, Server, Database", "Presentation, Logic, Data", "Frontend, Backend, Database", "Tutte le precedenti"],
+                risposta: 3
+            },
+            {
+                domanda: "AJAX permette:",
+                opzioni: ["Comunicazione sincrona", "Comunicazione asincrona", "Solo GET request", "Solo POST request"],
+                risposta: 1
+            },
+            {
+                domanda: "Un socket è:",
+                opzioni: ["Un protocollo", "Un endpoint di comunicazione", "Un tipo di dato", "Un algoritmo"],
+                risposta: 1
+            },
+            {
+                domanda: "CGI sta per:",
+                opzioni: ["Common Gateway Interface", "Computer Graphics Interface", "Common Graphics Interface", "Computer Gateway Interface"],
+                risposta: 0
+            }
+        ]
+    },
+
+    gpoi: {
+        riassunto: `GPOI - Punti chiave per l'esame:
+
+• PROJECT MANAGEMENT:
+  - Definizione progetto: temporaneo, unico, progressivo
+  - Fasi: avvio, pianificazione, esecuzione, controllo, chiusura
+  - Vincoli: tempo, costi, qualità (triangolo del PM)
+  - Stakeholder: sponsor, team, clienti, utenti finali
+
+• STRUMENTI PIANIFICAZIONE:
+  - WBS: Work Breakdown Structure, scomposizione attività
+  - Diagramma di Gantt: timeline, dipendenze, milestone
+  - PERT: Program Evaluation Review Technique
+  - CPM: Critical Path Method, percorso critico
+
+• GESTIONE RISORSE:
+  - Risorse umane: competenze, disponibilità, costi
+  - Risorse materiali: attrezzature, software, hardware
+  - Budget: stima costi, controllo spese, varianze
+  - Tempo: scheduling, buffer, ottimizzazione
+
+• ANALISI ECONOMICA:
+  - Costi fissi vs variabili: comportamento al variare produzione
+  - Break-even point: pareggio ricavi-costi
+  - ROI: Return on Investment, redditività
+  - NPV: Net Present Value, valore attuale netto
+
+• QUALITÀ SOFTWARE:
+  - Standard ISO 9001, CMMI
+  - Metriche: difetti, copertura test, performance
+  - Testing: unit, integration, system, acceptance
+  - Documentazione: requisiti, design, manuale utente
+
+• METODOLOGIE AGILE:
+  - Scrum: sprint, backlog, daily standup, retrospective
+  - Kanban: flusso continuo, WIP limits
+  - Extreme Programming: pair programming, TDD`,
+
+        quiz: [
+            {
+                domanda: "WBS sta per:",
+                opzioni: ["Work Breakdown Structure", "Work Building System", "Web Based System", "Work Business Structure"],
+                risposta: 0
+            },
+            {
+                domanda: "Il diagramma di Gantt mostra:",
+                opzioni: ["I costi del progetto", "La sequenza temporale delle attività", "Le risorse umane", "I rischi del progetto"],
+                risposta: 1
+            },
+            {
+                domanda: "PERT è una tecnica per:",
+                opzioni: ["Calcolare i costi", "Gestire i rischi", "Pianificare i tempi", "Valutare la qualità"],
+                risposta: 2
+            },
+            {
+                domanda: "Il punto di pareggio (break-even) è quando:",
+                opzioni: ["Ricavi = Costi", "Ricavi > Costi", "Costi > Ricavi", "Profitto = 0"],
+                risposta: 0
+            },
+            {
+                domanda: "Scrum è:",
+                opzioni: ["Un linguaggio di programmazione", "Una metodologia Agile", "Un database", "Un framework web"],
+                risposta: 1
+            }
+        ]
+    },
+
+    'scienze-motorie': {
+        riassunto: `SCIENZE MOTORIE - Punti chiave per l'esame:
+
+• PARAMETRI ALLENANTI:
+  - Intensità: percentuale sforzo massimo
+  - Volume: quantità totale lavoro
+  - Densità: rapporto lavoro/recupero
+  - Frequenza: numero sedute per periodo
+
+• CAPACITÀ MOTORIE:
+  - Condizionali: forza, resistenza, velocità, mobilità
+  - Coordinative: equilibrio, ritmo, orientamento, differenziazione
+  - Sviluppo età evolutiva: fasi sensibili
+
+• VELOCITÀ:
+  - Reazione: tempo risposta stimolo
+  - Accelerazione: incremento velocità
+  - Massima: picco velocità raggiungibile
+  - Resistenza: mantenimento velocità elevata
+
+• MOBILITÀ ARTICOLARE:
+  - Attiva: movimento volontario muscoli agonisti
+  - Passiva: movimento con aiuto esterno
+  - Fattori limitanti: struttura articolare, elasticità muscolare
+  - Metodi allenamento: stretching statico/dinamico
+
+• COORDINAZIONE:
+  - Generale: base per apprendimenti motori
+  - Speciale: specifica per disciplina sportiva
+  - Oculo-manuale/podalica: precisione movimenti
+  - Spazio-temporale: orientamento e ritmo`,
+
+        quiz: [
+            {
+                domanda: "I parametri allenanti sono:",
+                opzioni: ["Intensità, volume, densità, frequenza", "Forza, resistenza, velocità", "Solo intensità e volume", "Coordinazione e equilibrio"],
+                risposta: 0
+            },
+            {
+                domanda: "Le capacità condizionali includono:",
+                opzioni: ["Equilibrio e ritmo", "Forza, resistenza, velocità, mobilità", "Solo forza e resistenza", "Coordinazione generale"],
+                risposta: 1
+            },
+            {
+                domanda: "La velocità di reazione è:",
+                opzioni: ["Il picco di velocità", "Il tempo di risposta a uno stimolo", "La resistenza alla velocità", "L'accelerazione massima"],
+                risposta: 1
+            },
+            {
+                domanda: "La mobilità articolare passiva è:",
+                opzioni: ["Movimento volontario", "Movimento con aiuto esterno", "Solo stretching dinamico", "Coordinazione speciale"],
+                risposta: 1
+            },
+            {
+                domanda: "La coordinazione oculo-manuale riguarda:",
+                opzioni: ["L'equilibrio", "La precisione dei movimenti", "La resistenza", "La velocità massima"],
+                risposta: 1
+            }
+        ]
+    },
+
+    'educazione-civica': {
+        riassunto: `EDUCAZIONE CIVICA - Punti chiave per l'esame:
+
+• COSTITUZIONE ITALIANA:
+  - Principi fondamentali (art. 1-12): democrazia, lavoro, uguaglianza
+  - Diritti e doveri: libertà personali, rapporti civili, politici, economici
+  - Ordinamento: Parlamento, Governo, Magistratura, Presidente Repubblica
+  - Autonomie locali: Regioni, Province, Comuni
+
+• UNIONE EUROPEA:
+  - Istituzioni: Parlamento, Consiglio, Commissione, Corte Giustizia
+  - Trattati: Roma (1957), Maastricht (1992), Lisbona (2009)
+  - Cittadinanza europea: diritti, libertà circolazione
+  - Politiche comuni: agricola, monetaria, estera
+
+• CITTADINANZA DIGITALE:
+  - Diritti online: accesso informazione, libertà espressione
+  - Doveri: rispetto privacy, lotta fake news, cyberbullismo
+  - Digital divide: divario accesso tecnologie
+  - Identità digitale: SPID, firma elettronica
+
+• PRIVACY E PROTEZIONE DATI:
+  - GDPR: General Data Protection Regulation (2018)
+  - Principi: consenso, minimizzazione, trasparenza
+  - Diritti: accesso, rettifica, cancellazione, portabilità
+  - Autorità Garante: controllo, sanzioni
+
+• SVILUPPO SOSTENIBILE:
+  - Agenda 2030: 17 Obiettivi Sviluppo Sostenibile (SDGs)
+  - Dimensioni: ambientale, sociale, economica
+  - Economia circolare: riduzione sprechi, riciclo
+  - Green IT: sostenibilità digitale, efficienza energetica
+
+• DIRITTI UMANI:
+  - Dichiarazione Universale (1948): dignità, libertà, uguaglianza
+  - Convenzioni internazionali: civili, politici, economici, sociali
+  - Tutele: Corte Europea Diritti Uomo, ONU`,
+
+        quiz: [
+            {
+                domanda: "La Costituzione italiana è entrata in vigore nel:",
+                opzioni: ["1946", "1947", "1948", "1949"],
+                risposta: 2
+            },
+            {
+                domanda: "GDPR sta per:",
+                opzioni: ["General Data Protection Regulation", "Global Data Privacy Rules", "General Digital Protection Rights", "Global Digital Privacy Regulation"],
+                risposta: 0
+            },
+            {
+                domanda: "L'Agenda 2030 comprende:",
+                opzioni: ["15 obiettivi", "17 obiettivi", "20 obiettivi", "25 obiettivi"],
+                risposta: 1
+            },
+            {
+                domanda: "Il Parlamento Europeo ha sede a:",
+                opzioni: ["Bruxelles", "Strasburgo", "Lussemburgo", "Tutte le precedenti"],
+                risposta: 3
+            },
+            {
+                domanda: "Il digital divide riguarda:",
+                opzioni: ["La sicurezza informatica", "L'accesso alle tecnologie", "La privacy online", "I diritti d'autore"],
+                risposta: 1
+            }
+        ]
+    }
+};
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Funzionalità bottoni hero
+    document.getElementById('inizia-ora-btn').addEventListener('click', function() {
+        document.getElementById('orale').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('scopri-di-piu-btn').addEventListener('click', function() {
+        document.getElementById('esame-overview').scrollIntoView({ behavior: 'smooth' });
+    });
+
     // Toggle menu per dispositivi mobili
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
@@ -100,6 +754,118 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // Gestione bottoni riassunto
+    const summaryButtons = document.querySelectorAll('.summary-btn');
+    const summaryModal = document.getElementById('summary-modal');
+    const summaryContent = document.getElementById('summary-content');
+
+    summaryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const materia = this.getAttribute('data-materia');
+            const materiaData = materieData[materia];
+            
+            if (materiaData) {
+                summaryContent.innerHTML = `
+                    <h2>Riassunto - ${materia.charAt(0).toUpperCase() + materia.slice(1).replace('-', ' ')}</h2>
+                    <div class="summary-text">
+                        <pre>${materiaData.riassunto}</pre>
+                    </div>
+                `;
+                summaryModal.style.display = 'flex';
+            }
+        });
+    });
+
+    // Gestione bottoni quiz
+    const quizButtons = document.querySelectorAll('.quiz-btn');
+    const quizModal = document.getElementById('quiz-modal');
+    const quizContent = document.getElementById('quiz-content');
+
+    quizButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const materia = this.getAttribute('data-materia');
+            const materiaData = materieData[materia];
+            
+            if (materiaData && materiaData.quiz) {
+                let quizHTML = `
+                    <h2>Quiz - ${materia.charAt(0).toUpperCase() + materia.slice(1).replace('-', ' ')}</h2>
+                    <div class="quiz-container">
+                        <div class="quiz-questions">
+                `;
+
+                materiaData.quiz.forEach((domanda, index) => {
+                    quizHTML += `
+                        <div class="quiz-question" data-question="${index}">
+                            <h3>Domanda ${index + 1}</h3>
+                            <p>${domanda.domanda}</p>
+                            <div class="quiz-options">
+                    `;
+
+                    domanda.opzioni.forEach((opzione, optIndex) => {
+                        quizHTML += `
+                            <label class="quiz-option">
+                                <input type="radio" name="q${index}" value="${optIndex}">
+                                <span>${opzione}</span>
+                            </label>
+                        `;
+                    });
+
+                    quizHTML += `
+                            </div>
+                        </div>
+                    `;
+                });
+
+                quizHTML += `
+                        </div>
+                        <div class="quiz-actions">
+                            <button class="submit-quiz-btn" data-materia="${materia}">Invia Quiz</button>
+                            <div class="quiz-result" style="display: none;"></div>
+                        </div>
+                    </div>
+                `;
+
+                quizContent.innerHTML = quizHTML;
+                quizModal.style.display = 'flex';
+
+                // Gestione invio quiz
+                const submitQuizBtn = quizContent.querySelector('.submit-quiz-btn');
+                submitQuizBtn.addEventListener('click', function() {
+                    const materiaQuiz = this.getAttribute('data-materia');
+                    const questions = quizContent.querySelectorAll('.quiz-question');
+                    let correct = 0;
+                    let total = questions.length;
+
+                    questions.forEach((question, index) => {
+                        const selectedOption = question.querySelector('input[type="radio"]:checked');
+                        if (selectedOption) {
+                            const selectedValue = parseInt(selectedOption.value);
+                            if (selectedValue === materieData[materiaQuiz].quiz[index].risposta) {
+                                correct++;
+                                question.style.backgroundColor = '#d4edda';
+                            } else {
+                                question.style.backgroundColor = '#f8d7da';
+                            }
+                        } else {
+                            question.style.backgroundColor = '#fff3cd';
+                        }
+                    });
+
+                    const percentage = Math.round((correct / total) * 100);
+                    const resultDiv = quizContent.querySelector('.quiz-result');
+                    resultDiv.innerHTML = `
+                        <h3>Risultato Quiz</h3>
+                        <p>Hai risposto correttamente a <strong>${correct}</strong> domande su <strong>${total}</strong></p>
+                        <p>Percentuale: <strong>${percentage}%</strong></p>
+                        ${percentage >= 60 ? '<p style="color: green;">Ottimo lavoro!</p>' : '<p style="color: red;">Continua a studiare!</p>'}
+                    `;
+                    resultDiv.style.display = 'block';
+                    this.style.display = 'none';
+                });
+            }
+        });
+    });
    
     // Countdown per l'esame di stato (19 giugno 2025)
     function updateCountdown() {
@@ -174,6 +940,8 @@ document.addEventListener('DOMContentLoaded', function() {
             exerciseModal.style.display = 'none';
             resourceModal.style.display = 'none';
             simulazioneModal.style.display = 'none';
+            summaryModal.style.display = 'none';
+            quizModal.style.display = 'none';
         });
     });
     
@@ -190,6 +958,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (event.target === simulazioneModal) {
             simulazioneModal.style.display = 'none';
+        }
+        if (event.target === summaryModal) {
+            summaryModal.style.display = 'none';
+        }
+        if (event.target === quizModal) {
+            quizModal.style.display = 'none';
         }
     });
     
@@ -538,274 +1312,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
                 break;
                 
-            case 'database':
-                exerciseHTML = `
-                    <h2>Esercitazione Database</h2>
-                    <div class="exercise-container">
-                        <div class="exercise-text">
-                            <h3>Progettazione di un database per un sistema scolastico</h3>
-                            <p>
-                                Un istituto scolastico ti ha incaricato di progettare un database per la gestione delle attività didattiche. Il sistema deve gestire:
-                            </p>
-                            <ul>
-                                <li>Studenti (dati anagrafici, classe di appartenenza, curriculum)</li>
-                                <li>Docenti (dati anagrafici, materie insegnate, classi assegnate)</li>
-                                <li>Classi (anno, sezione, indirizzo)</li>
-                                <li>Materie (nome, monte ore, docenti)</li>
-                                <li>Valutazioni (studente, materia, voto, data, tipologia)</li>
-                                <li>Presenze/assenze (studente, data, giustificazione)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="exercise-questions">
-                            <h3>Consegne</h3>
-                            <ol>
-                                <li>Realizza il modello E/R del database, identificando entità, attributi e relazioni.</li>
-                                <li>Deriva il modello logico relazionale, specificando chiavi primarie e vincoli di integrità referenziale.</li>
-                                <li>Scrivi il codice SQL per la creazione delle tabelle (DDL).</li>
-                                <li>Implementa le seguenti query SQL:
-                                    <ul>
-                                        <li>Elenco degli studenti di una classe con relative medie per materia</li>
-                                        <li>Docenti che insegnano più di una materia</li>
-                                        <li>Studenti con più di 5 assenze non giustificate</li>
-                                        <li>Media dei voti per classe e materia</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-                        
-                        <div class="exercise-answer">
-                            <h3>Svolgimento</h3>
-                            <div class="tabs">
-                                <button class="tab-btn active" data-tab="er">Modello E/R</button>
-                                <button class="tab-btn" data-tab="relational">Modello Relazionale</button>
-                                <button class="tab-btn" data-tab="ddl">SQL DDL</button>
-                                <button class="tab-btn" data-tab="queries">SQL Query</button>
-                            </div>
-                            
-                            <div class="tab-content active" id="er-content">
-                                <textarea rows="10" placeholder="Descrivi qui il tuo modello E/R o carica un'immagine..."></textarea>
-                                <input type="file" accept="image/*">
-                            </div>
-                            
-                            <div class="tab-content" id="relational-content">
-                                <textarea rows="10" placeholder="Descrivi qui il tuo modello relazionale..."></textarea>
-                            </div>
-                            
-                            <div class="tab-content" id="ddl-content">
-                                <textarea rows="10" placeholder="Scrivi qui il codice SQL DDL..."></textarea>
-                            </div>
-                            
-                            <div class="tab-content" id="queries-content">
-                                <textarea rows="10" placeholder="Scrivi qui le query SQL..."></textarea>
-                            </div>
-                            
-                            <button class="submit-btn">Invia svolgimento</button>
-                        </div>
-                    </div>
-                `;
-                break;
-                
-            case 'programmazione':
-                exerciseHTML = `
-                    <h2>Esercitazione Programmazione</h2>
-                    <div class="exercise-container">
-                        <div class="exercise-text">
-                            <h3>Sviluppo di un'applicazione per la gestione degli studenti</h3>
-                            <p>
-                                Sviluppa un'applicazione web per la gestione degli studenti di un istituto scolastico. L'applicazione deve permettere di:
-                            </p>
-                            <ul>
-                                <li>Visualizzare l'elenco degli studenti</li>
-                                <li>Aggiungere, modificare ed eliminare uno studente</li>
-                                <li>Visualizzare i dettagli di uno studente (dati anagrafici, classe, voti)</li>
-                                <li>Registrare le presenze/assenze</li>
-                                <li>Inserire e visualizzare i voti per materia</li>
-                                <li>Generare report statistici (media voti, andamento, ecc.)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="exercise-questions">
-                            <h3>Consegne</h3>
-                            <ol>
-                                <li>Progetta l'architettura dell'applicazione (pattern MVC).</li>
-                                <li>Definisci il modello dei dati e le classi principali.</li>
-                                <li>Implementa le funzionalità di base (CRUD) per la gestione degli studenti.</li>
-                                <li>Sviluppa l'interfaccia utente responsive.</li>
-                                <li>Implementa la logica per il calcolo delle statistiche.</li>
-                                <li>Gestisci l'autenticazione e l'autorizzazione degli utenti.</li>
-                            </ol>
-                        </div>
-                        
-                        <div class="exercise-answer">
-                            <h3>Svolgimento</h3>
-                            <div class="tabs">
-                                <button class="tab-btn active" data-tab="architecture">Architettura</button>
-                                <button class="tab-btn" data-tab="model">Modello Dati</button>
-                                <button class="tab-btn" data-tab="backend">Backend</button>
-                                <button class="tab-btn" data-tab="frontend">Frontend</button>
-                            </div>
-                            
-                            <div class="tab-content active" id="architecture-content">
-                                <textarea rows="10" placeholder="Descrivi qui l'architettura dell'applicazione..."></textarea>
-                            </div>
-                            
-                            <div class="tab-content" id="model-content">
-                                <textarea rows="10" placeholder="Definisci qui il modello dei dati e le classi..."></textarea>
-                            </div>
-                            
-                            <div class="tab-content" id="backend-content">
-                                <textarea rows="10" placeholder="Implementa qui il codice backend..."></textarea>
-                            </div>
-                            
-                            <div class="tab-content" id="frontend-content">
-                                <textarea rows="10" placeholder="Implementa qui il codice frontend..."></textarea>
-                            </div>
-                            
-                            <button class="submit-btn">Invia svolgimento</button>
-                        </div>
-                    </div>
-                `;
-                break;
-                
-            case 'algoritmi':
-                exerciseHTML = `
-                    <h2>Esercitazione Algoritmi</h2>
-                    <div class="exercise-container">
-                        <div class="exercise-text">
-                            <h3>Implementazione di algoritmi di ordinamento</h3>
-                            <p>
-                                Gli algoritmi di ordinamento sono fondamentali nell'informatica. In questa esercitazione dovrai implementare e analizzare diversi algoritmi di ordinamento.
-                            </p>
-                        </div>
-                        
-                        <div class="exercise-questions">
-                            <h3>Consegne</h3>
-                            <ol>
-                                <li>Implementa i seguenti algoritmi di ordinamento:
-                                    <ul>
-                                        <li>Bubble Sort</li>
-                                        <li>Insertion Sort</li>
-                                        <li>Selection Sort</li>
-                                        <li>Quick Sort</li>
-                                        <li>Merge Sort</li>
-                                    </ul>
-                                </li>
-                                <li>Per ciascun algoritmo:
-                                    <ul>
-                                        <li>Analizza la complessità computazionale (caso migliore, medio, peggiore)</li>
-                                        <li>Valuta l'efficienza in termini di spazio</li>
-                                        <li>Identifica vantaggi e svantaggi</li>
-                                    </ul>
-                                </li>
-                                <li>Confronta le prestazioni degli algoritmi su dataset di diverse dimensioni.</li>
-                                <li>Implementa una funzione che scelga automaticamente l'algoritmo più efficiente in base alle caratteristiche del dataset.</li>
-                            </ol>
-                        </div>
-                        
-                        <div class="exercise-answer">
-                            <h3>Svolgimento</h3>
-                            <div class="tabs">
-                                <button class="tab-btn active" data-tab="implementation">Implementazione</button>
-                                <button class="tab-btn" data-tab="analysis">Analisi</button>
-                                <button class="tab-btn" data-tab="comparison">Confronto</button>
-                                <button class="tab-btn" data-tab="selector">Selettore</button>
-                            </div>
-                            
-                            <div class="tab-content active" id="implementation-content">
-                                <textarea rows="15" placeholder="Implementa qui gli algoritmi di ordinamento..."></textarea>
-                            </div>
-                            
-                            <div class="tab-content" id="analysis-content">
-                                <textarea rows="15" placeholder="Analizza qui la complessità degli algoritmi..."></textarea>
-                            </div>
-                            
-                            <div class="tab-content" id="comparison-content">
-                                <textarea rows="15" placeholder="Confronta qui le prestazioni degli algoritmi..."></textarea>
-                            </div>
-                            
-                            <div class="tab-content" id="selector-content">
-                                <textarea rows="15" placeholder="Implementa qui la funzione di selezione automatica..."></textarea>
-                            </div>
-                            
-                            <button class="submit-btn">Invia svolgimento</button>
-                        </div>
-                    </div>
-                `;
-                break;
-                
-            case 'italiano-quiz':
-            case 'storia-quiz':
-            case 'inglese-quiz':
-            case 'ed-civica-quiz':
-                exerciseHTML = `
-                    <h2>Quiz di ${getSubjectName(exerciseType.split('-')[0])}</h2>
-                    <div class="exercise-container">
-                        <div class="quiz-container">
-                            <div class="quiz-progress">
-                                <div class="progress-bar">
-                                    <div class="progress" style="width: 0%"></div>
-                                </div>
-                                <div class="progress-text">Domanda 1 di 10</div>
-                            </div>
-                            
-                            <div class="quiz-question">
-                                <h3>Domanda 1</h3>
-                                <p>Chi è l'autore de "I Malavoglia"?</p>
-                                
-                                <div class="quiz-options">
-                                    <label class="quiz-option">
-                                        <input type="radio" name="q1" value="a">
-                                        <span>Luigi Pirandello</span>
-                                    </label>
-                                    <label class="quiz-option">
-                                        <input type="radio" name="q1" value="b">
-                                        <span>Giovanni Verga</span>
-                                    </label>
-                                    <label class="quiz-option">
-                                        <input type="radio" name="q1" value="c">
-                                        <span>Italo Svevo</span>
-                                    </label>
-                                    <label class="quiz-option">
-                                        <input type="radio" name="q1" value="d">
-                                        <span>Gabriele D'Annunzio</span>
-                                    </label>
-                                </div>
-                            </div>
-                            
-                            <div class="quiz-navigation">
-                                <button class="quiz-btn" disabled>Precedente</button>
-                                <button class="quiz-btn">Successiva</button>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                break;
-                
-            case 'matematica-esercizi':
-            case 'informatica-sql':
-            case 'sistemi-subnetting':
-            case 'tpsit-socket':
-            case 'gpoi-wbs':
-                exerciseHTML = `
-                    <h2>Esercizi di ${getSubjectName(exerciseType.split('-')[0])}</h2>
-                    <div class="exercise-container">
-                        <div class="exercise-text">
-                            <h3>Esercizio 1</h3>
-                            <p>
-                                ${getExerciseText(exerciseType)}
-                            </p>
-                        </div>
-                        
-                        <div class="exercise-answer">
-                            <h3>Svolgimento</h3>
-                            <textarea rows="10" placeholder="Scrivi qui il tuo svolgimento..."></textarea>
-                            <button class="submit-btn">Invia svolgimento</button>
-                        </div>
-                    </div>
-                `;
-                break;
-                
             default:
                 exerciseHTML = `
                     <h2>Esercitazione</h2>
@@ -815,29 +1321,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         document.getElementById('exercise-content').innerHTML = exerciseHTML;
         
-        // Aggiungi event listener per i tab nelle esercitazioni
-        const tabButtons = document.querySelectorAll('.tab-btn');
-        if (tabButtons.length > 0) {
-            tabButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const tab = this.getAttribute('data-tab');
-                    
-                    // Attiva tab
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Mostra contenuto tab
-                    const tabContents = document.querySelectorAll('.tab-content');
-                    tabContents.forEach(content => {
-                        content.classList.remove('active');
-                        if (content.id === `${tab}-content`) {
-                            content.classList.add('active');
-                        }
-                    });
-                });
-            });
-        }
-        
         // Aggiungi event listener per i bottoni di submit
         const submitButtons = document.querySelectorAll('.submit-btn');
         submitButtons.forEach(button => {
@@ -845,77 +1328,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Svolgimento inviato con successo! Riceverai un feedback a breve.');
             });
         });
-        
-        // Aggiungi event listener per i bottoni del quiz
-        const quizButtons = document.querySelectorAll('.quiz-btn');
-        if (quizButtons.length > 0) {
-            let currentQuestion = 1;
-            const totalQuestions = 10;
-            
-            quizButtons[1].addEventListener('click', function() {
-                if (currentQuestion < totalQuestions) {
-                    currentQuestion++;
-                    updateQuizProgress(currentQuestion, totalQuestions);
-                    
-                    // Disabilita il pulsante "Successiva" all'ultima domanda
-                    if (currentQuestion === totalQuestions) {
-                        this.textContent = 'Termina';
-                    }
-                    
-                    // Abilita il pulsante "Precedente"
-                    quizButtons[0].disabled = false;
-                } else {
-                    // Termina il quiz
-                    alert('Quiz completato! Punteggio: 8/10');
-                    exerciseModal.style.display = 'none';
-                }
-            });
-            
-            quizButtons[0].addEventListener('click', function() {
-                if (currentQuestion > 1) {
-                    currentQuestion--;
-                    updateQuizProgress(currentQuestion, totalQuestions);
-                    
-                    // Disabilita il pulsante "Precedente" alla prima domanda
-                    if (currentQuestion === 1) {
-                        this.disabled = true;
-                    }
-                    
-                    // Cambia il testo del pulsante "Termina" a "Successiva"
-                    quizButtons[1].textContent = 'Successiva';
-                }
-            });
-        }
-    }
-    
-    // Funzione per aggiornare la progress bar del quiz
-    function updateQuizProgress(current, total) {
-        const progressBar = document.querySelector('.progress');
-        const progressText = document.querySelector('.progress-text');
-        
-        if (progressBar && progressText) {
-            const percentage = (current / total) * 100;
-            progressBar.style.width = `${percentage}%`;
-            progressText.textContent = `Domanda ${current} di ${total}`;
-        }
-    }
-    
-    // Funzione per ottenere il testo dell'esercizio
-    function getExerciseText(exerciseType) {
-        switch(exerciseType) {
-            case 'matematica-esercizi':
-                return 'Calcola la derivata della seguente funzione: f(x) = x³ · ln(x) - 2x² + 5';
-            case 'informatica-sql':
-                return 'Data la tabella Prodotti(ID, Nome, Prezzo, Categoria, Quantità) e la tabella Ordini(ID, ClienteID, Data, Totale), scrivi una query SQL per trovare i 5 prodotti più venduti nell\'ultimo mese.';
-            case 'sistemi-subnetting':
-                return 'Data la rete 192.168.10.0/24, suddividila in 4 sottoreti di uguale dimensione. Per ciascuna sottorete, indica indirizzo di rete, broadcast, range di indirizzi assegnabili e subnet mask.';
-            case 'tpsit-socket':
-                return 'Implementa un\'applicazione client-server utilizzando i socket TCP. Il server deve essere in grado di gestire più client contemporaneamente e rispondere a richieste di calcolo matematico inviate dai client.';
-            case 'gpoi-wbs':
-                return 'Crea una Work Breakdown Structure (WBS) per un progetto di sviluppo di un\'applicazione web per un e-commerce. Identifica le fasi principali, le attività e le sottoattività, assegnando tempi e risorse.';
-            default:
-                return 'Svolgi l\'esercizio seguendo le indicazioni.';
-        }
     }
     
     // Gestione bottoni risorse
@@ -926,441 +1338,10 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const resourceType = this.getAttribute('data-resource');
             if (resourceType) {
-                loadResource(resourceType);
-                resourceModal.style.display = 'flex';
+                alert('Risorsa non ancora disponibile. Sarà implementata presto!');
             }
         });
     });
-    
-    // Funzione per caricare la risorsa
-    function loadResource(resourceType) {
-        let resourceHTML = '';
-        
-        switch(resourceType) {
-            case 'italiano-riassunto':
-            case 'italiano-analisi':
-            case 'storia-cronologia':
-            case 'storia-mappe':
-            case 'inglese-vocab':
-            case 'inglese-reading':
-            case 'matematica-formulario':
-            case 'matematica-esercizi':
-            case 'informatica-db':
-            case 'informatica-sql':
-            case 'sistemi-teoria':
-            case 'sistemi-subnetting':
-            case 'tpsit-teoria':
-            case 'tpsit-codice':
-            case 'gpoi-teoria':
-            case 'gpoi-progetti':
-            case 'riassunti-materie':
-            case 'simulazioni-precedenti':
-            case 'checklist-esame':
-                resourceHTML = `
-                    <h2>${getResourceTitle(resourceType)}</h2>
-                    <div class="resource-preview">
-                        <div class="pdf-preview">
-                            <img src="https://via.placeholder.com/600x800?text=Anteprima+PDF" alt="Anteprima PDF">
-                        </div>
-                        <div class="resource-actions">
-                            <p>Documento PDF - 2.4 MB</p>
-                            <button class="download-btn">Scarica <i class="fas fa-download"></i></button>
-                            <button class="view-btn">Visualizza <i class="fas fa-eye"></i></button>
-                        </div>
-                    </div>
-                `;
-                break;
-                
-            case 'italiano-video':
-            case 'storia-video':
-            case 'inglese-listening':
-            case 'matematica-video':
-            case 'informatica-video':
-            case 'sistemi-video':
-            case 'tpsit-video':
-            case 'gpoi-video':
-            case 'video-lezioni':
-                resourceHTML = `
-                    <h2>${getResourceTitle(resourceType)}</h2>
-                    <div class="resource-preview">
-                        <div class="video-preview">
-                            <div class="video-container">
-                                <img src="https://via.placeholder.com/800x450?text=Anteprima+Video" alt="Anteprima video">
-                                <div class="video-play-button">
-                                    <i class="fas fa-play"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="resource-actions">
-                            <p>Video - 15:24 - Qualità HD</p>
-                            <button class="view-btn">Guarda <i class="fas fa-play"></i></button>
-                            <button class="download-btn">Scarica <i class="fas fa-download"></i></button>
-                        </div>
-                    </div>
-                `;
-                break;
-                
-            case 'italiano-mappe':
-            case 'storia-riassunti':
-            case 'inglese-grammar':
-            case 'matematica-mappe':
-            case 'informatica-progetti':
-            case 'sistemi-packet':
-            case 'tpsit-progetti':
-            case 'gpoi-casi':
-                resourceHTML = `
-                    <h2>${getResourceTitle(resourceType)}</h2>
-                    <div class="resource-preview">
-                        <div class="resource-gallery">
-                            <div class="gallery-item">
-                                <img src="https://via.placeholder.com/300x200?text=Risorsa+1" alt="Risorsa 1">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="https://via.placeholder.com/300x200?text=Risorsa+2" alt="Risorsa 2">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="https://via.placeholder.com/300x200?text=Risorsa+3" alt="Risorsa 3">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="https://via.placeholder.com/300x200?text=Risorsa+4" alt="Risorsa 4">
-                            </div>
-                        </div>
-                        <div class="resource-actions">
-                            <p>Raccolta di risorse - 4 elementi</p>
-                            <button class="download-btn">Scarica tutto <i class="fas fa-download"></i></button>
-                        </div>
-                    </div>
-                `;
-                break;
-                
-            case 'pcto-template':
-                resourceHTML = `
-                    <h2>Template PowerPoint per PCTO</h2>
-                    <div class="resource-preview">
-                        <div class="template-preview">
-                            <div class="template-slides">
-                                <img src="https://via.placeholder.com/800x450?text=Slide+1" alt="Slide 1">
-                                <div class="template-navigation">
-                                    <button><i class="fas fa-chevron-left"></i></button>
-                                    <span>Slide 1 di 10</span>
-                                    <button><i class="fas fa-chevron-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="resource-actions">
-                            <p>Presentazione PowerPoint - 10 slide - 1.8 MB</p>
-                            <button class="download-btn">Scarica template <i class="fas fa-download"></i></button>
-                        </div>
-                    </div>
-                `;
-                break;
-                
-            case 'esempi-codice':
-                resourceHTML = `
-                    <h2>Esempi di Codice</h2>
-                    <div class="resource-preview">
-                        <div class="code-browser">
-                            <div class="code-browser-header">
-                                <div class="code-browser-tabs">
-                                    <div class="code-tab active">Java</div>
-                                    <div class="code-tab">PHP</div>
-                                    <div class="code-tab">JavaScript</div>
-                                    <div class="code-tab">SQL</div>
-                                </div>
-                            </div>
-                            <div class="code-browser-content">
-                                <pre><code>public class GestioneStudenti {
-    private List&lt;Studente&gt; studenti;
-    
-    public GestioneStudenti() {
-        this.studenti = new ArrayList&lt;&gt;();
-    }
-    
-    public void aggiungiStudente(Studente studente) {
-        studenti.add(studente);
-    }
-    
-    public List&lt;Studente&gt; cercaPerClasse(String classe) {
-        return studenti.stream()
-                .filter(s -> s.getClasse().equals(classe))
-                .collect(Collectors.toList());
-    }
-    
-    public double calcolaMediaVoti(int studenteId) {
-        Studente studente = trovaPerId(studenteId);
-        if (studente == null) return 0;
-        
-        return studente.getVoti().stream()
-                .mapToDouble(Voto::getValore)
-                .average()
-                .orElse(0);
-    }
-}</code></pre>
-                            </div>
-                        </div>
-                        <div class="resource-actions">
-                            <p>Raccolta di esempi di codice in diversi linguaggi</p>
-                            <button class="download-btn">Scarica tutto <i class="fas fa-download"></i></button>
-                        </div>
-                    </div>
-                `;
-                break;
-                
-            case 'progetti-completi':
-                resourceHTML = `
-                    <h2>Progetti Completi</h2>
-                    <div class="resource-preview">
-                        <div class="projects-list">
-                            <div class="project-item">
-                                <div class="project-icon">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </div>
-                                <div class="project-info">
-                                    <h3>E-commerce</h3>
-                                    <p>Applicazione web completa per un negozio online</p>
-                                    <p class="project-tech">Java, Spring Boot, MySQL, React</p>
-                                </div>
-                                <div class="project-actions">
-                                    <button class="download-btn">Scarica</button>
-                                </div>
-                            </div>
-                            
-                            <div class="project-item">
-                                <div class="project-icon">
-                                    <i class="fas fa-calendar-alt"></i>
-                                </div>
-                                <div class="project-info">
-                                    <h3>Gestione Prenotazioni</h3>
-                                    <p>Sistema di prenotazione per strutture ricettive</p>
-                                    <p class="project-tech">PHP, Laravel, MySQL, Vue.js</p>
-                                </div>
-                                <div class="project-actions">
-                                    <button class="download-btn">Scarica</button>
-                                </div>
-                            </div>
-                            
-                            <div class="project-item">
-                                <div class="project-icon">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <div class="project-info">
-                                    <h3>Registro Elettronico</h3>
-                                    <p>Applicazione per la gestione scolastica</p>
-                                    <p class="project-tech">C#, ASP.NET Core, SQL Server, Angular</p>
-                                </div>
-                                <div class="project-actions">
-                                    <button class="download-btn">Scarica</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                break;
-                
-            case 'forum-discussione':
-                resourceHTML = `
-                    <h2>Forum di Discussione</h2>
-                    <div class="resource-preview">
-                        <div class="forum-preview">
-                            <div class="forum-header">
-                                <h3>Discussioni recenti</h3>
-                                <button class="new-topic-btn">Nuovo argomento</button>
-                            </div>
-                            <div class="forum-topics">
-                                <div class="forum-topic">
-                                    <div class="topic-info">
-                                        <h4>Dubbi sulla seconda prova di informatica</h4>
-                                        <p>Avrei bisogno di chiarimenti sulla parte di progettazione database...</p>
-                                        <div class="topic-meta">
-                                            <span><i class="fas fa-user"></i> Marco P.</span>
-                                            <span><i class="fas fa-clock"></i> 2 ore fa</span>
-                                            <span><i class="fas fa-comments"></i> 12 risposte</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="forum-topic">
-                                    <div class="topic-info">
-                                        <h4>Consigli per l'orale di storia</h4>
-                                        <p>Come state preparando i collegamenti tra le due guerre mondiali?</p>
-                                        <div class="topic-meta">
-                                            <span><i class="fas fa-user"></i> Giulia M.</span>
-                                            <span><i class="fas fa-clock"></i> Ieri</span>
-                                            <span><i class="fas fa-comments"></i> 8 risposte</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="forum-topic">
-                                    <div class="topic-info">
-                                        <h4>Simulazione prima prova: confronto risultati</h4>
-                                        <p>Vorrei confrontare i risultati della simulazione di italiano...</p>
-                                        <div class="topic-meta">
-                                            <span><i class="fas fa-user"></i> Alessandro B.</span>
-                                            <span><i class="fas fa-clock"></i> 3 giorni fa</span>
-                                            <span><i class="fas fa-comments"></i> 24 risposte</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="resource-actions">
-                            <button class="join-btn">Partecipa al forum <i class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                `;
-                break;
-                
-            case 'quiz-interattivi':
-                resourceHTML = `
-                    <h2>Quiz Interattivi</h2>
-                    <div class="resource-preview">
-                        <div class="quiz-categories">
-                            <div class="quiz-category">
-                                <div class="category-icon">
-                                    <i class="fas fa-book"></i>
-                                </div>
-                                <h3>Italiano</h3>
-                                <p>10 quiz disponibili</p>
-                                <button class="view-btn">Inizia</button>
-                            </div>
-                            
-                            <div class="quiz-category">
-                                <div class="category-icon">
-                                    <i class="fas fa-landmark"></i>
-                                </div>
-                                <h3>Storia</h3>
-                                <p>8 quiz disponibili</p>
-                                <button class="view-btn">Inizia</button>
-                            </div>
-                            
-                            <div class="quiz-category">
-                                <div class="category-icon">
-                                    <i class="fas fa-laptop-code"></i>
-                                </div>
-                                <h3>Informatica</h3>
-                                <p>12 quiz disponibili</p>
-                                <button class="view-btn">Inizia</button>
-                            </div>
-                            
-                            <div class="quiz-category">
-                                <div class="category-icon">
-                                    <i class="fas fa-network-wired"></i>
-                                </div>
-                                <h3>Sistemi e Reti</h3>
-                                <p>9 quiz disponibili</p>
-                                <button class="view-btn">Inizia</button>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                break;
-                
-            default:
-                resourceHTML = `
-                    <h2>Risorsa</h2>
-                    <p>Risorsa non disponibile. Riprova più tardi.</p>
-                `;
-        }
-        
-        document.getElementById('resource-content').innerHTML = resourceHTML;
-        
-        // Aggiungi event listener per i bottoni nella risorsa
-        const resourceButtons = document.querySelectorAll('#resource-content .download-btn, #resource-content .view-btn, #resource-content .join-btn');
-        resourceButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                alert('Download/visualizzazione avviata!');
-            });
-        });
-    }
-    
-    // Funzione per ottenere il titolo della risorsa
-    function getResourceTitle(resourceType) {
-        switch(resourceType) {
-            case 'italiano-riassunto':
-                return 'Riassunto autori del \'900';
-            case 'italiano-analisi':
-                return 'Analisi testi principali';
-            case 'italiano-video':
-                return 'Videolezioni sul Neorealismo';
-            case 'italiano-mappe':
-                return 'Mappe concettuali di Italiano';
-            case 'storia-cronologia':
-                return 'Cronologia del \'900';
-            case 'storia-mappe':
-                return 'Mappe concettuali di Storia';
-            case 'storia-video':
-                return 'Documentari storici';
-            case 'storia-riassunti':
-                return 'Riassunti per periodo storico';
-            case 'inglese-vocab':
-                return 'Technical vocabulary';
-            case 'inglese-reading':
-                return 'Reading comprehension';
-            case 'inglese-listening':
-                return 'Listening exercises';
-            case 'inglese-grammar':
-                return 'Grammar review';
-            case 'matematica-formulario':
-                return 'Formulario completo di Matematica';
-            case 'matematica-esercizi':
-                return 'Esercizi svolti di Matematica';
-            case 'matematica-video':
-                return 'Videolezioni di Matematica';
-            case 'matematica-mappe':
-                return 'Mappe concettuali di Matematica';
-            case 'informatica-db':
-                return 'Teoria dei database';
-            case 'informatica-sql':
-                return 'Esercizi SQL';
-            case 'informatica-video':
-                return 'Videolezioni di Informatica';
-            case 'informatica-progetti':
-                return 'Esempi di progetti informatici';
-            case 'sistemi-teoria':
-                return 'Teoria delle reti';
-            case 'sistemi-subnetting':
-                return 'Esercizi di subnetting';
-            case 'sistemi-video':
-                return 'Videolezioni di Sistemi e Reti';
-            case 'sistemi-packet':
-                return 'Simulazioni Packet Tracer';
-            case 'tpsit-teoria':
-                return 'Teoria architetture';
-            case 'tpsit-codice':
-                return 'Esempi di codice';
-            case 'tpsit-video':
-                return 'Videolezioni di TPSIT';
-            case 'tpsit-progetti':
-                return 'Progetti guidati';
-            case 'gpoi-teoria':
-                return 'Teoria project management';
-            case 'gpoi-progetti':
-                return 'Esempi di progetti';
-            case 'gpoi-video':
-                return 'Videolezioni di GPOI';
-            case 'gpoi-casi':
-                return 'Casi di studio';
-            case 'riassunti-materie':
-                return 'Riassunti delle materie';
-            case 'simulazioni-precedenti':
-                return 'Simulazioni anni precedenti';
-            case 'video-lezioni':
-                return 'Video lezioni';
-            case 'esempi-codice':
-                return 'Esempi di codice';
-            case 'progetti-completi':
-                return 'Progetti completi';
-            case 'forum-discussione':
-                return 'Forum di discussione';
-            case 'checklist-esame':
-                return 'Checklist per l\'esame';
-            case 'quiz-interattivi':
-                return 'Quiz interattivi';
-            default:
-                return 'Risorsa';
-        }
-    }
     
     // Gestione bottoni simulazioni
     const simulazioneButtons = document.querySelectorAll('.simulazione-btn');
@@ -1368,661 +1349,9 @@ document.addEventListener('DOMContentLoaded', function() {
     simulazioneButtons.forEach(button => {
         button.addEventListener('click', function() {
             const simulazioneType = this.getAttribute('data-simulazione');
-            loadSimulazione(simulazioneType);
-            simulazioneModal.style.display = 'flex';
+            alert(`Simulazione ${simulazioneType} non ancora disponibile. Sarà implementata presto!`);
         });
     });
-    
-    // Funzione per caricare la simulazione
-    function loadSimulazione(simulazioneType) {
-        let simulazioneHTML = '';
-        
-        switch(simulazioneType) {
-            case 'prima-prova':
-                simulazioneHTML = `
-                    <h2>Simulazione Prima Prova - Italiano</h2>
-                    <div class="exercise-container">
-                        <div class="tabs">
-                            <button class="tab-btn active" data-tab="tipologia-a-sim">Tipologia A</button>
-                            <button class="tab-btn" data-tab="tipologia-b-sim">Tipologia B</button>
-                            <button class="tab-btn" data-tab="tipologia-c-sim">Tipologia C</button>
-                            <button class="tab-btn" data-tab="istruzioni-sim">Istruzioni</button>
-                        </div>
-                        
-                        <div class="tab-content active" id="tipologia-a-sim-content">
-                            <div class="exercise-text">
-                                <h3>Analisi del testo - Eugenio Montale, "Meriggiare pallido e assorto"</h3>
-                                <p class="text-excerpt">
-                                    Meriggiare pallido e assorto<br>
-                                    presso un rovente muro d'orto,<br>
-                                    ascoltare tra i pruni e gli sterpi<br>
-                                    schiocchi di merli, frusci di serpi.<br>
-                                    <br>
-                                    Nelle crepe del suolo o su la veccia<br>
-                                    spiar le file di rosse formiche<br>
-                                    ch'ora si rompono ed ora s'intrecciano<br>
-                                    a sommo di minuscole biche.<br>
-                                    <br>
-                                    Osservare tra frondi il palpitare<br>
-                                    lontano di scaglie di mare<br>
-                                    mentre si levano tremuli scricchi<br>
-                                    di cicale dai calvi picchi.<br>
-                                    <br>
-                                    E andando nel sole che abbaglia<br>
-                                    sentire con triste meraviglia<br>
-                                    com'è tutta la vita e il suo travaglio<br>
-                                    in questo seguitare una muraglia<br>
-                                    che ha in cima cocci aguzzi di bottiglia.
-                                </p>
-                            </div>
-                            
-                            <div class="exercise-questions">
-                                <h3>Consegne</h3>
-                                <ol>
-                                    <li>Comprensione del testo
-                                        <ul>
-                                            <li>Riassumi il contenuto informativo della lirica.</li>
-                                        </ul>
-                                    </li>
-                                    <li>Analisi del testo
-                                        <ul>
-                                            <li>Analizza il titolo e la sua relazione con il contenuto del testo.</li>
-                                            <li>Individua le figure retoriche e spiegane l'effetto.</li>
-                                            <li>Analizza la struttura metrica e il ritmo.</li>
-                                            <li>Spiega il significato dell'immagine finale della muraglia con i cocci di bottiglia.</li>
-                                        </ul>
-                                    </li>
-                                    <li>Interpretazione complessiva e approfondimenti
-                                        <ul>
-                                            <li>Elabora una tua interpretazione complessiva del testo, approfondendo il tema dell'esistenza nella poetica di Montale.</li>
-                                        </ul>
-                                    </li>
-                                </ol>
-                            </div>
-                            
-                            <div class="exercise-answer">
-                                <h3>Svolgimento</h3>
-                                <textarea rows="15" placeholder="Scrivi qui il tuo svolgimento..."></textarea>
-                                <button class="submit-btn">Invia svolgimento</button>
-                            </div>
-                        </div>
-                        
-                        <div class="tab-content" id="tipologia-b-sim-content">
-                            <div class="exercise-text">
-                                <h3>Testo argomentativo - Il ruolo dell'intelligenza artificiale nella società contemporanea</h3>
-                                <p class="text-excerpt">
-                                    L'intelligenza artificiale (IA) rappresenta una delle più significative rivoluzioni tecnologiche del nostro tempo, con implicazioni profonde che si estendono ben oltre il campo puramente tecnico. Negli ultimi anni, i progressi in questo settore hanno accelerato notevolmente, portando a sviluppi che solo un decennio fa sarebbero stati considerati fantascientifici.
-                                    <br><br>
-                                    I sistemi di IA oggi permeano numerosi aspetti della nostra quotidianità: dagli assistenti virtuali che utilizziamo sui nostri smartphone, agli algoritmi che personalizzano la nostra esperienza sui social media, fino ai sistemi avanzati che supportano diagnosi mediche o previsioni finanziarie. Questa diffusione capillare solleva interrogativi fondamentali sul rapporto tra uomo e macchina, sul futuro del lavoro, sulla privacy e sull'etica.
-                                    <br><br>
-                                    Da un lato, l'IA offre opportunità senza precedenti per risolvere problemi complessi: può analizzare enormi quantità di dati in tempi ridottissimi, identificare pattern non evidenti all'occhio umano, automatizzare processi ripetitivi liberando risorse per attività più creative. In ambito medico, per esempio, algoritmi di apprendimento automatico possono rilevare segni precoci di malattie in immagini diagnostiche con una precisione talvolta superiore a quella dei medici esperti.
-                                    <br><br>
-                                    Dall'altro lato, emergono preoccupazioni legittime riguardo all'impatto sociale di questa tecnologia. La prima riguarda il mercato del lavoro: mentre l'automazione ha storicamente creato più posti di lavoro di quanti ne abbia eliminati, la velocità e la portata dell'attuale rivoluzione tecnologica potrebbero non consentire un adattamento altrettanto rapido. Inoltre, questioni come la trasparenza degli algoritmi, i bias nei dati di addestramento e la concentrazione di potere nelle mani di poche aziende tecnologiche sollevano interrogativi sulla governance di queste tecnologie.
-                                    <br><br>
-                                    Il dibattito sull'IA non è quindi meramente tecnico, ma profondamente politico e filosofico. Riguarda il tipo di società che vogliamo costruire e il ruolo che intendiamo assegnare alla tecnologia nel nostro futuro collettivo. La sfida consiste nel trovare un equilibrio che permetta di sfruttare i benefici dell'IA minimizzandone i rischi, attraverso un approccio che coinvolga non solo esperti tecnici, ma l'intera società civile.
-                                </p>
-                            </div>
-                            
-                            <div class="exercise-questions">
-                                <h3>Consegne</h3>
-                                <ol>
-                                    <li>Comprensione e analisi
-                                        <ul>
-                                            <li>Individua la tesi dell'autore e gli argomenti a sostegno.</li>
-                                            <li>Quali sono i benefici e i rischi dell'IA presentati nel testo?</li>
-                                            <li>Analizza la struttura argomentativa del testo.</li>
-                                            <li>Perché l'autore sostiene che il dibattito sull'IA è "profondamente politico e filosofico"?</li>
-                                        </ul>
-                                    </li>
-                                    <li>Produzione
-                                        <ul>
-                                            <li>Elabora un testo argomentativo in cui esponi la tua posizione sul tema dell'intelligenza artificiale e il suo impatto sulla società, utilizzando conoscenze ed esperienze personali.</li>
-                                        </ul>
-                                    </li>
-                                </ol>
-                            </div>
-                            
-                            <div class="exercise-answer">
-                                <h3>Svolgimento</h3>
-                                <textarea rows="15" placeholder="Scrivi qui il tuo svolgimento..."></textarea>
-                                <button class="submit-btn">Invia svolgimento</button>
-                            </div>
-                        </div>
-                        
-                        <div class="tab-content" id="tipologia-c-sim-content">
-                            <div class="exercise-text">
-                                <h3>Tema di attualità - La sostenibilità ambientale: sfide e opportunità per le nuove generazioni</h3>
-                                <p class="text-excerpt">
-                                    Il cambiamento climatico rappresenta una delle sfide più urgenti e complesse del nostro tempo. Gli effetti del riscaldamento globale sono già visibili: eventi meteorologici estremi, innalzamento del livello dei mari, perdita di biodiversità. Secondo il rapporto dell'IPCC (Intergovernmental Panel on Climate Change), è necessario limitare l'aumento della temperatura globale a 1,5°C rispetto ai livelli preindustriali per evitare conseguenze catastrofiche.
-                                    <br><br>
-                                    Di fronte a questa emergenza, le nuove generazioni si trovano in una posizione particolare: da un lato, sono quelle che subiranno maggiormente le conseguenze delle azioni (o inazioni) presenti; dall'altro, rappresentano una forza di cambiamento senza precedenti, come dimostrato dai movimenti giovanili per il clima emersi negli ultimi anni.
-                                    <br><br>
-                                    La transizione verso un modello di sviluppo sostenibile richiede trasformazioni profonde in molteplici settori: energia, trasporti, agricoltura, industria, edilizia. Questa transizione comporta sfide significative, ma offre anche opportunità di innovazione, creazione di nuovi posti di lavoro e miglioramento della qualità della vita.
-                                    <br><br>
-                                    Il concetto di sostenibilità, tuttavia, non si limita alla dimensione ambientale, ma include anche aspetti sociali ed economici. Un futuro veramente sostenibile deve garantire equità, inclusione e benessere per tutti, senza lasciare indietro nessuno.
-                                </p>
-                            </div>
-                            
-                            <div class="exercise-questions">
-                                <h3>Consegne</h3>
-                                <p>Rifletti sul tema proposto elaborando un testo che presenti le tue opinioni, supportate da argomenti ed esempi concreti. Puoi articolare il tuo elaborato in paragrafi opportunamente titolati e presentare la trattazione con un titolo complessivo che ne esprima sinteticamente il contenuto.</p>
-                                <p>Alcuni spunti di riflessione:</p>
-                                <ul>
-                                    <li>Quali sono le principali sfide ambientali che la tua generazione dovrà affrontare?</li>
-                                    <li>In che modo le nuove tecnologie possono contribuire alla sostenibilità?</li>
-                                    <li>Quale ruolo possono svolgere i giovani nel promuovere un futuro più sostenibile?</li>
-                                    <li>Come conciliare sviluppo economico e tutela dell'ambiente?</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="exercise-answer">
-                                <h3>Svolgimento</h3>
-                                <textarea rows="15" placeholder="Scrivi qui il tuo svolgimento..."></textarea>
-                                <button class="submit-btn">Invia svolgimento</button>
-                            </div>
-                        </div>
-                        
-                        <div class="tab-content" id="istruzioni-sim-content">
-                            <h3>Istruzioni per la simulazione</h3>
-                            <div class="info-box">
-                                <h4>Durata della prova</h4>
-                                <p>La prova ha una durata massima di 6 ore.</p>
-                                
-                                <h4>Materiali consentiti</h4>
-                                <ul>
-                                    <li>Dizionario della lingua italiana</li>
-                                    <li>Dizionario dei sinonimi e contrari</li>
-                                </ul>
-                                
-                                <h4>Indicazioni generali</h4>
-                                <ul>
-                                    <li>Scegli una delle tre tipologie (A, B o C)</li>
-                                    <li>Leggi attentamente il testo e le consegne</li>
-                                    <li>Pianifica il tuo elaborato prima di iniziare a scrivere</li>
-                                    <li>Cura l'organizzazione del testo, la correttezza linguistica e l'uso di un registro adeguato</li>
-                                    <li>Rivedi il tuo elaborato prima di consegnarlo</li>
-                                </ul>
-                                
-                                <h4>Valutazione</h4>
-                                <p>L'elaborato sarà valutato secondo i seguenti criteri:</p>
-                                <ul>
-                                    <li>Aderenza alla traccia e alle consegne</li>
-                                    <li>Organizzazione e coerenza del testo</li>
-                                    <li>Correttezza linguistica (ortografia, morfosintassi, lessico)</li>
-                                    <li>Capacità di analisi, interpretazione e approfondimento</li>
-                                    <li>Originalità e creatività</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                break;
-                
-            case 'seconda-prova':
-                simulazioneHTML = `
-                    <h2>Simulazione Seconda Prova - Informatica</h2>
-                    <div class="exercise-container">
-                        <div class="tabs">
-                            <button class="tab-btn active" data-tab="traccia-sim">Traccia</button>
-                            <button class="tab-btn" data-tab="materiali-sim">Materiali</button>
-                            <button class="tab-btn" data-tab="istruzioni-sim">Istruzioni</button>
-                        </div>
-                        
-                        <div class="tab-content active" id="traccia-sim-content">
-                            <div class="exercise-text">
-                                <h3>Sistema di gestione per un e-commerce</h3>
-                                <p>
-                                    Un'azienda che vende prodotti online necessita di un sistema informatico per la gestione del proprio e-commerce. Il sistema deve gestire:
-                                </p>
-                                <ul>
-                                    <li>Catalogo prodotti (categorie, sottocategorie, prodotti)</li>
-                                    <li>Gestione utenti (registrazione, autenticazione, profili)</li>
-                                    <li>Carrello e ordini</li>
-                                    <li>Pagamenti</li>
-                                    <li>Spedizioni e tracking</li>
-                                    <li>Recensioni e valutazioni</li>
-                                    <li>Statistiche di vendita</li>
-                                </ul>
-                                
-                                <p>
-                                    Ogni prodotto è caratterizzato da un codice univoco, nome, descrizione, prezzo, disponibilità, categoria, immagini, specifiche tecniche. I prodotti possono essere soggetti a sconti o promozioni.
-                                </p>
-                                
-                                <p>
-                                    Gli utenti possono registrarsi fornendo email, password, nome, cognome, indirizzo di spedizione e fatturazione, numero di telefono. Gli utenti registrati possono salvare prodotti nei preferiti, visualizzare lo storico ordini, gestire più indirizzi di spedizione.
-                                </p>
-                                
-                                <p>
-                                    Il sistema deve gestire l'intero processo di acquisto: aggiunta prodotti al carrello, checkout, pagamento, conferma ordine, tracking della spedizione.
-                                </p>
-                                
-                                <p>
-                                    È richiesta anche un'area amministrativa per la gestione del catalogo, degli ordini, delle promozioni e per la visualizzazione di statistiche e report.
-                                </p>
-                            </div>
-                            
-                            <div class="exercise-questions">
-                                <h3>Consegne</h3>
-                                <ol>
-                                    <li>Progettazione del database:
-                                        <ul>
-                                            <li>Realizza il modello E/R</li>
-                                            <li>Deriva il modello logico relazionale</li>
-                                            <li>Implementa il database in SQL (DDL)</li>
-                                        </ul>
-                                    </li>
-                                    <li>Implementazione delle query SQL per:
-                                        <ul>
-                                            <li>Elenco prodotti di una categoria con disponibilità > 0, ordinati per prezzo</li>
-                                            <li>Ricerca prodotti per parola chiave nella descrizione</li>
-                                            <li>Elenco ordini di un utente con dettaglio prodotti</li>
-                                            <li>Report vendite mensili per categoria</li>
-                                        </ul>
-                                    </li>
-                                    <li>Progettazione dell'applicazione:
-                                        <ul>
-                                            <li>Descrivi l'architettura del sistema (pattern MVC)</li>
-                                            <li>Implementa le classi principali del modello</li>
-                                            <li>Sviluppa l'API REST per la gestione del carrello</li>
-                                            <li>Implementa la pagina di dettaglio prodotto (HTML, CSS, JavaScript)</li>
-                                        </ul>
-                                    </li>
-                                </ol>
-                            </div>
-                            
-                            <div class="exercise-answer">
-                                <h3>Svolgimento</h3>
-                                <div class="tabs">
-                                    <button class="tab-btn active" data-tab="er-sim">Modello E/R</button>
-                                    <button class="tab-btn" data-tab="relational-sim">Modello Relazionale</button>
-                                    <button class="tab-btn" data-tab="sql-sim">SQL</button>
-                                    <button class="tab-btn" data-tab="app-sim">Applicazione</button>
-                                </div>
-                                
-                                <div class="tab-content active" id="er-sim-content">
-                                    <textarea rows="15" placeholder="Descrivi qui il tuo modello E/R o carica un'immagine..."></textarea>
-                                    <input type="file" accept="image/*">
-                                </div>
-                                
-                                <div class="tab-content" id="relational-sim-content">
-                                    <textarea rows="15" placeholder="Descrivi qui il tuo modello relazionale..."></textarea>
-                                </div>
-                                
-                                <div class="tab-content" id="sql-sim-content">
-                                    <textarea rows="15" placeholder="Scrivi qui il codice SQL (DDL e query)..."></textarea>
-                                </div>
-                                
-                                <div class="tab-content" id="app-sim-content">
-                                    <textarea rows="15" placeholder="Descrivi l'architettura e implementa le classi richieste..."></textarea>
-                                </div>
-                                
-                                <button class="submit-btn">Invia svolgimento</button>
-                            </div>
-                        </div>
-                        
-                        <div class="tab-content" id="materiali-sim-content">
-                            <h3>Materiali di supporto</h3>
-                            <div class="info-box">
-                                <h4>Esempio di schema E/R</h4>
-                                <img src="https://via.placeholder.com/800x400?text=Esempio+Schema+E/R" alt="Esempio Schema E/R">
-                                
-                                <h4>Template SQL</h4>
-                                <pre><code>-- Creazione tabella Prodotti
-CREATE TABLE Prodotti (
-    ID INT PRIMARY KEY AUTO_INCREMENT,
-    Nome VARCHAR(100) NOT NULL,
-    Descrizione TEXT,
-    Prezzo DECIMAL(10,2) NOT NULL,
-    Disponibilita INT NOT NULL DEFAULT 0,
-    CategoriaID INT,
-    FOREIGN KEY (CategoriaID) REFERENCES Categorie(ID)
-);
-
--- Esempio di query
-SELECT p.Nome, p.Prezzo, c.Nome AS Categoria
-FROM Prodotti p
-JOIN Categorie c ON p.CategoriaID = c.ID
-WHERE p.Disponibilita > 0
-ORDER BY p.Prezzo;</code></pre>
-                                
-                                <h4>Esempio di classe Java</h4>
-                                <pre><code>public class Prodotto {
-    private int id;
-    private String nome;
-    private String descrizione;
-    private double prezzo;
-    private int disponibilita;
-    private Categoria categoria;
-    private List&lt;Immagine&gt; immagini;
-    
-    // Costruttori, getter e setter
-    
-    public boolean isDisponibile() {
-        return disponibilita > 0;
-    }
-    
-    public double getPrezzoScontato(Promozione promozione) {
-        if (promozione == null) return prezzo;
-        return prezzo * (1 - promozione.getPercentualeSconto() / 100.0);
-    }
-}</code></pre>
-                            </div>
-                        </div>
-                        
-                        <div class="tab-content" id="istruzioni-sim-content">
-                            <h3>Istruzioni per la simulazione</h3>
-                            <div class="info-box">
-                                <h4>Durata della prova</h4>
-                                <p>La prova ha una durata massima di 6 ore.</p>
-                                
-                                <h4>Materiali consentiti</h4>
-                                <ul>
-                                    <li>Manuali tecnici</li>
-                                    <li>Documentazione di linguaggi e framework</li>
-                                    <li>Calcolatrice non programmabile</li>
-                                </ul>
-                                
-                                <h4>Indicazioni generali</h4>
-                                <ul>
-                                    <li>Leggi attentamente la traccia e le consegne</li>
-                                    <li>Pianifica il tuo lavoro prima di iniziare</li>
-                                    <li>Commenta adeguatamente il codice</li>
-                                    <li>Motiva le scelte progettuali</li>
-                                    <li>Verifica la correttezza delle soluzioni proposte</li>
-                                </ul>
-                                
-                                <h4>Valutazione</h4>
-                                <p>L'elaborato sarà valutato secondo i seguenti criteri:</p>
-                                <ul>
-                                    <li>Correttezza della soluzione</li>
-                                    <li>Completezza rispetto alle consegne</li>
-                                    <li>Efficienza e ottimizzazione</li>
-                                    <li>Chiarezza e leggibilità del codice</li>
-                                    <li>Documentazione e commenti</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                break;
-                
-            case 'colloquio':
-                simulazioneHTML = `
-                    <h2>Simulazione Colloquio Orale</h2>
-                    <div class="exercise-container">
-                        <div class="tabs">
-                            <button class="tab-btn active" data-tab="materiale-sim">Materiale di partenza</button>
-                            <button class="tab-btn" data-tab="percorso-sim">Percorso multidisciplinare</button>
-                            <button class="tab-btn" data-tab="pcto-sim">PCTO</button>
-                            <button class="tab-btn" data-tab="ed-civica-sim">Educazione Civica</button>
-                            <button class="tab-btn" data-tab="consigli-sim">Consigli</button>
-                        </div>
-                        
-                        <div class="tab-content active" id="materiale-sim-content">
-                            <h3>Materiale di partenza</h3>
-                            <div class="info-box">
-                                <p>Il colloquio inizia con l'analisi di un materiale scelto dalla commissione. Di seguito è riportato un esempio di materiale che potrebbe essere proposto:</p>
-                                
-                                <div class="material-example">
-                                    <img src="https://via.placeholder.com/800x400?text=Immagine:+Intelligenza+Artificiale+e+Società" alt="Intelligenza Artificiale e Società">
-                                    <p class="caption">L'immagine rappresenta l'interazione tra intelligenza artificiale e società umana, evidenziando aspetti come l'automazione, la privacy, l'etica e le trasformazioni sociali.</p>
-                                </div>
-                                
-                                <h4>Consegna</h4>
-                                <p>A partire dal materiale fornito, sviluppa un percorso multidisciplinare che colleghi diverse materie del tuo piano di studi, evidenziando le connessioni tra i vari ambiti disciplinari.</p>
-                            </div>
-                            
-                            <div class="exercise-answer">
-                                <h3>Svolgimento</h3>
-                                <textarea rows="10" placeholder="Descrivi qui come inizieresti il tuo colloquio a partire da questo materiale..."></textarea>
-                            </div>
-                        </div>
-                        
-                        <div class="tab-content" id="percorso-sim-content">
-                            <h3>Percorso multidisciplinare</h3>
-                            <div class="info-box">
-                                <p>Partendo dal materiale fornito, ecco un esempio di possibile percorso multidisciplinare:</p>
-                                
-                                <h4>Informatica</h4>
-                                <ul>
-                                    <li>Intelligenza artificiale: algoritmi di machine learning e deep learning</li>
-                                    <li>Big data e data mining</li>
-                                    <li>Etica dell'IA e bias algoritmici</li>
-                                </ul>
-                                
-                                <h4>Sistemi e Reti</h4>
-                                <ul>
-                                    <li>Sicurezza dei dati e privacy</li>
-                                    <li>Cloud computing e distribuzione dei sistemi di IA</li>
-                                    <li>IoT e raccolta dati</li>
-                                </ul>
-                                
-                                <h4>TPSIT</h4>
-                                <ul>
-                                    <li>Architetture software per sistemi di IA</li>
-                                    <li>Microservizi e scalabilità</li>
-                                    <li>Interfacce uomo-macchina</li>
-                                </ul>
-                                
-                                <h4>Matematica</h4>
-                                <ul>
-                                    <li>Statistica e probabilità nei modelli predittivi</li>
-                                    <li>Algebra lineare e reti neurali</li>
-                                    <li>Ottimizzazione matematica</li>
-                                </ul>
-                                
-                                <h4>Inglese</h4>
-                                <ul>
-                                    <li>Terminologia tecnica dell'IA</li>
-                                    <li>Letteratura distopica (es. "1984" di Orwell, "Brave New World" di Huxley)</li>
-                                    <li>Dibattito etico in lingua inglese</li>
-                                </ul>
-                                
-                                <h4>Italiano</h4>
-                                <ul>
-                                    <li>Il tema della tecnologia nella letteratura italiana del '900</li>
-                                    <li>Futurismo e rapporto uomo-macchina</li>
-                                    <li>Comunicazione nell'era digitale</li>
-                                </ul>
-                                
-                                <h4>Storia</h4>
-                                <ul>
-                                    <li>Rivoluzioni industriali e tecnologiche</li>
-                                    <li>Impatto sociale delle innovazioni</li>
-                                    <li>Guerra fredda e corsa tecnologica</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="exercise-answer">
-                                <h3>Svolgimento</h3>
-                                <textarea rows="10" placeholder="Sviluppa qui il tuo percorso multidisciplinare, evidenziando i collegamenti tra le materie..."></textarea>
-                            </div>
-                        </div>
-                        
-                        <div class="tab-content" id="pcto-sim-content">
-                            <h3>Presentazione PCTO</h3>
-                            <div class="info-box">
-                                <p>Durante il colloquio dovrai presentare la tua esperienza di PCTO (Percorsi per le Competenze Trasversali e l'Orientamento). Ecco alcuni punti da includere:</p>
-                                
-                                <h4>Struttura della presentazione</h4>
-                                <ol>
-                                    <li>Introduzione
-                                        <ul>
-                                            <li>Presentazione dell'azienda/ente ospitante</li>
-                                            <li>Periodo e durata dell'esperienza</li>
-                                            <li>Obiettivi del percorso</li>
-                                        </ul>
-                                    </li>
-                                    <li>Attività svolte
-                                        <ul>
-                                            <li>Descrizione dettagliata dei compiti e delle responsabilità</li>
-                                            <li>Progetti a cui hai partecipato</li>
-                                            <li>Strumenti e tecnologie utilizzate</li>
-                                        </ul>
-                                    </li>
-                                    <li>Competenze acquisite
-                                        <ul>
-                                            <li>Competenze tecniche</li>
-                                            <li>Competenze trasversali (soft skills)</li>
-                                            <li>Collegamenti con il percorso di studi</li>
-                                        </ul>
-                                    </li>
-                                    <li>Riflessione critica
-                                        <ul>
-                                            <li>Punti di forza dell'esperienza</li>
-                                            <li>Difficoltà incontrate e come le hai superate</li>
-                                            <li>Impatto sul tuo percorso formativo e professionale</li>
-                                        </ul>
-                                    </li>
-                                    <li>Conclusioni
-                                        <ul>
-                                            <li>Valutazione complessiva dell'esperienza</li>
-                                            <li>Influenza sulle tue scelte future</li>
-                                        </ul>
-                                    </li>
-                                </ol>
-                            </div>
-                            
-                            <div class="exercise-answer">
-                                <h3>Svolgimento</h3>
-                                <textarea rows="10" placeholder="Prepara qui una bozza della tua presentazione PCTO..."></textarea>
-                            </div>
-                        </div>
-                        
-                        <div class="tab-content" id="ed-civica-sim-content">
-                            <h3>Educazione Civica</h3>
-                            <div class="info-box">
-                                <p>Durante il colloquio potresti essere interrogato su temi di Educazione Civica. Ecco alcuni argomenti rilevanti per l'indirizzo informatico:</p>
-                                
-                                <h4>Cittadinanza digitale</h4>
-                                <ul>
-                                    <li>Privacy e protezione dei dati personali (GDPR)</li>
-                                    <li>Identità digitale e SPID</li>
-                                    <li>Cyberbullismo e comportamenti online</li>
-                                    <li>Digital divide e inclusione digitale</li>
-                                </ul>
-                                
-                                <h4>Costituzione e istituzioni</h4>
-                                <ul>
-                                    <li>Principi fondamentali della Costituzione italiana</li>
-                                    <li>Unione Europea e istituzioni internazionali</li>
-                                    <li>Diritti e doveri dei cittadini</li>
-                                    <li>Legalità e contrasto alla criminalità informatica</li>
-                                </ul>
-                                
-                                <h4>Sviluppo sostenibile</h4>
-                                <ul>
-                                    <li>Agenda 2030 e obiettivi di sviluppo sostenibile</li>
-                                    <li>Green IT e sostenibilità digitale</li>
-                                    <li>Economia circolare e riciclo dei dispositivi elettronici</li>
-                                    <li>Smart cities e mobilità sostenibile</li>
-                                </ul>
-                                
-                                <h4>Etica dell'informatica</h4>
-                                <ul>
-                                    <li>Proprietà intellettuale e copyright</li>
-                                    <li>Open source e condivisione della conoscenza</li>
-                                    <li>Etica dell'intelligenza artificiale</li>
-                                    <li>Digital labor e diritti dei lavoratori digitali</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="exercise-answer">
-                                <h3>Svolgimento</h3>
-                                <textarea rows="10" placeholder="Sviluppa qui una riflessione su uno dei temi di Educazione Civica proposti..."></textarea>
-                            </div>
-                        </div>
-                        
-                        <div class="tab-content" id="consigli-sim-content">
-                            <h3>Consigli per il colloquio</h3>
-                            <div class="info-box">
-                                <h4>Preparazione</h4>
-                                <ul>
-                                    <li>Rivedi gli argomenti principali di tutte le materie</li>
-                                    <li>Prepara collegamenti interdisciplinari</li>
-                                    <li>Esercitati a parlare ad alta voce</li>
-                                    <li>Prepara una presentazione efficace del PCTO</li>
-                                    <li>Informati su temi di attualità rilevanti</li>
-                                </ul>
-                                
-                                <h4>Durante il colloquio</h4>
-                                <ul>
-                                    <li>Mantieni un atteggiamento positivo e professionale</li>
-                                    <li>Parla con un tono di voce chiaro e un ritmo adeguato</li>
-                                    <li>Usa un linguaggio appropriato e specifico della disciplina</li>
-                                    <li>Mostra interesse e passione per gli argomenti</li>
-                                    <li>Sii onesto: se non conosci qualcosa, ammettilo</li>
-                                    <li>Ascolta attentamente le domande prima di rispondere</li>
-                                </ul>
-                                
-                                <h4>Gestione dell'ansia</h4>
-                                <ul>
-                                    <li>Pratica tecniche di respirazione</li>
-                                    <li>Visualizza il colloquio in modo positivo</li>
-                                    <li>Dormi a sufficienza la notte prima</li>
-                                    <li>Arriva con anticipo per ambientarti</li>
-                                    <li>Ricorda che la commissione vuole aiutarti a mostrare le tue competenze</li>
-                                </ul>
-                                
-                                <h4>Abbigliamento e comportamento</h4>
-                                <ul>
-                                    <li>Indossa un abbigliamento formale ma comodo</li>
-                                    <li>Mantieni una postura eretta ma rilassata</li>
-                                    <li>Guarda negli occhi i commissari quando parli</li>
-                                    <li>Evita gesti nervosi o ripetitivi</li>
-                                    <li>Spegni il cellulare prima di entrare</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="exercise-answer">
-                                <h3>Autovalutazione</h3>
-                                <textarea rows="10" placeholder="Rifletti sui tuoi punti di forza e di debolezza in vista del colloquio..."></textarea>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                break;
-                
-            default:
-                simulazioneHTML = `
-                    <h2>Simulazione</h2>
-                    <p>Simulazione non disponibile. Riprova più tardi.</p>
-                `;
-        }
-        
-        document.getElementById('simulazione-content').innerHTML = simulazioneHTML;
-        
-        // Aggiungi event listener per i tab nelle simulazioni
-        const tabButtons = document.querySelectorAll('#simulazione-content .tab-btn');
-        if (tabButtons.length > 0) {
-            tabButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const tab = this.getAttribute('data-tab');
-                    
-                    // Attiva tab
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Mostra contenuto tab
-                    const tabContents = document.querySelectorAll('#simulazione-content .tab-content');
-                    tabContents.forEach(content => {
-                        content.classList.remove('active');
-                        if (content.id === `${tab}-content`) {
-                            content.classList.add('active');
-                        }
-                    });
-                });
-            });
-        }
-        
-        // Aggiungi event listener per i bottoni di submit
-        const submitButtons = document.querySelectorAll('#simulazione-content .submit-btn');
-        submitButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                alert('Svolgimento inviato con successo! Riceverai un feedback a breve.');
-            });
-        });
-    }
     
     // Inizializza newsletter
     document.getElementById('newsletter-btn').addEventListener('click', function() {

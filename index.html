@@ -35,8 +35,8 @@
                 <h2>ITIS Pininfarina - Indirizzo Informatica</h2>
                 <p>La piattaforma interattiva che ti guida verso il successo nell'esame di maturità</p>
                 <div class="cta-buttons">
-                    <button class="cta-primary">Inizia Ora</button>
-                    <button class="cta-secondary">Scopri di più</button>
+                    <button class="cta-primary" id="inizia-ora-btn">Inizia Ora</button>
+                    <button class="cta-secondary" id="scopri-di-piu-btn">Scopri di più</button>
                 </div>
             </div>
             <div class="hero-image">
@@ -522,6 +522,14 @@ private static int partition(int[] array, int low, int high) {
                         <h3>GPOI</h3>
                         <p>Project management</p>
                     </div>
+
+                    <div class="materia-card" data-materia="scienze-motorie">
+                        <div class="materia-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <h3>Scienze Motorie</h3>
+                        <p>Capacità motorie</p>
+                    </div>
                 </div>
                
                 <div class="materia-details">
@@ -529,33 +537,25 @@ private static int partition(int[] array, int low, int high) {
                         <h3>Italiano - Argomenti principali</h3>
                         <div class="detail-content">
                             <ul class="argomenti-list">
-                                <li>Verismo e Giovanni Verga</li>
-                                <li>Decadentismo</li>
-                                <li>Gabriele D'Annunzio</li>
-                                <li>Giovanni Pascoli</li>
-                                <li>Luigi Pirandello</li>
-                                <li>Italo Svevo</li>
-                                <li>Ermetismo</li>
-                                <li>Giuseppe Ungaretti</li>
-                                <li>Eugenio Montale</li>
-                                <li>Neorealismo</li>
-                                <li>Primo Levi</li>
-                                <li>Italo Calvino</li>
+                                <li>Carducci - Odi barbare</li>
+                                <li>Verga - I malavoglia, Mastro don gesualdo</li>
+                                <li>Pascoli - Myricae, Il fanciullino</li>
+                                <li>D'annunzio - Il piacere</li>
+                                <li>Pirandello - La giara, Il fu mattia pascal</li>
+                                <li>Italo Svevo - La coscienza di Zeno</li>
+                                <li>Ungaretti</li>
+                                <li>Montale</li>
                             </ul>
                            
                             <div class="detail-resources">
                                 <h4>Risorse per lo studio</h4>
-                                <ul>
-                                    <li><a href="#" class="resource-link" data-resource="italiano-riassunto"><i class="fas fa-file-pdf"></i> Riassunto autori del '900</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="italiano-analisi"><i class="fas fa-file-pdf"></i> Analisi testi principali</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="italiano-video"><i class="fas fa-video"></i> Videolezioni sul Neorealismo</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="italiano-mappe"><i class="fas fa-book"></i> Mappe concettuali</a></li>
-                                </ul>
-                               
-                                <div class="practice-box">
-                                    <h4>Esercitati ora</h4>
-                                    <p>Quiz sugli autori del '900</p>
-                                    <button class="practice-btn" data-exercise="italiano-quiz">Inizia quiz</button>
+                                <div class="study-buttons">
+                                    <button class="summary-btn" data-materia="italiano">
+                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
+                                    </button>
+                                    <button class="quiz-btn" data-materia="italiano">
+                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -565,33 +565,27 @@ private static int partition(int[] array, int low, int high) {
                         <h3>Storia - Argomenti principali</h3>
                         <div class="detail-content">
                             <ul class="argomenti-list">
-                                <li>L'età giolittiana</li>
-                                <li>La Prima Guerra Mondiale</li>
-                                <li>La Rivoluzione russa</li>
+                                <li>I cambiamenti della società di massa</li>
+                                <li>La triplice intesa e la triplice alleanza</li>
+                                <li>L'affare Dreyfus</li>
+                                <li>Il Naturalismo</li>
+                                <li>La prima guerra mondiale</li>
+                                <li>I bolscevichi</li>
+                                <li>Il Comunismo</li>
                                 <li>Il Fascismo</li>
-                                <li>Il Nazismo</li>
-                                <li>La Seconda Guerra Mondiale</li>
-                                <li>La Guerra Fredda</li>
-                                <li>La decolonizzazione</li>
-                                <li>L'Italia repubblicana</li>
-                                <li>La globalizzazione</li>
-                                <li>Il crollo del comunismo</li>
-                                <li>Il mondo contemporaneo</li>
+                                <li>La seconda guerra mondiale</li>
+                                <li>Guerra fredda</li>
                             </ul>
                            
                             <div class="detail-resources">
                                 <h4>Risorse per lo studio</h4>
-                                <ul>
-                                    <li><a href="#" class="resource-link" data-resource="storia-cronologia"><i class="fas fa-file-pdf"></i> Cronologia del '900</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="storia-mappe"><i class="fas fa-file-pdf"></i> Mappe concettuali</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="storia-video"><i class="fas fa-video"></i> Documentari storici</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="storia-riassunti"><i class="fas fa-book"></i> Riassunti per periodo</a></li>
-                                </ul>
-                               
-                                <div class="practice-box">
-                                    <h4>Esercitati ora</h4>
-                                    <p>Quiz sulla Seconda Guerra Mondiale</p>
-                                    <button class="practice-btn" data-exercise="storia-quiz">Inizia quiz</button>
+                                <div class="study-buttons">
+                                    <button class="summary-btn" data-materia="storia">
+                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
+                                    </button>
+                                    <button class="quiz-btn" data-materia="storia">
+                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -601,33 +595,38 @@ private static int partition(int[] array, int low, int high) {
                         <h3>Inglese - Argomenti principali</h3>
                         <div class="detail-content">
                             <ul class="argomenti-list">
-                                <li>Computer Hardware</li>
-                                <li>Computer Software</li>
-                                <li>Programming Languages</li>
-                                <li>Databases</li>
-                                <li>Networks and Communications</li>
-                                <li>The Internet and the Web</li>
-                                <li>ICT Security</li>
-                                <li>Cloud Computing</li>
-                                <li>Big Data and Analytics</li>
-                                <li>Artificial Intelligence</li>
-                                <li>Industry 4.0</li>
-                                <li>Digital Society</li>
+                                <li>Hardware and software</li>
+                                <li>The CPU, Computer memory, The motherboard</li>
+                                <li>Linguaggi di programmazione C, C#, C++</li>
+                                <li>Linguaggi Java, Python, PHP</li>
+                                <li>How to build a program</li>
+                                <li>Operating System</li>
+                                <li>Primi anni 900 in europa e america</li>
+                                <li>The roaring 20, The great depression</li>
+                                <li>The great gatsby</li>
+                                <li>George Orwell 1984</li>
+                                <li>Computer languages vs Natural Languages</li>
+                                <li>Databases, Graphic softwares</li>
+                                <li>Photo editing and fake news</li>
+                                <li>The history of videogames</li>
+                                <li>Cryptography</li>
+                                <li>WWW, websites, web browsers, search engine and web search</li>
+                                <li>Social networks</li>
+                                <li>Big data, GDPR and Privacy Regulations</li>
+                                <li>Types of networks, VPN</li>
+                                <li>Network topologies</li>
+                                <li>Communication protocol</li>
                             </ul>
                            
                             <div class="detail-resources">
                                 <h4>Risorse per lo studio</h4>
-                                <ul>
-                                    <li><a href="#" class="resource-link" data-resource="inglese-vocab"><i class="fas fa-file-pdf"></i> Technical vocabulary</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="inglese-reading"><i class="fas fa-file-pdf"></i> Reading comprehension</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="inglese-listening"><i class="fas fa-video"></i> Listening exercises</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="inglese-grammar"><i class="fas fa-book"></i> Grammar review</a></li>
-                                </ul>
-                               
-                                <div class="practice-box">
-                                    <h4>Esercitati ora</h4>
-                                    <p>Quiz sulla terminologia tecnica</p>
-                                    <button class="practice-btn" data-exercise="inglese-quiz">Inizia quiz</button>
+                                <div class="study-buttons">
+                                    <button class="summary-btn" data-materia="inglese">
+                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
+                                    </button>
+                                    <button class="quiz-btn" data-materia="inglese">
+                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -637,33 +636,44 @@ private static int partition(int[] array, int low, int high) {
                         <h3>Matematica - Argomenti principali</h3>
                         <div class="detail-content">
                             <ul class="argomenti-list">
-                                <li>Funzioni e limiti</li>
-                                <li>Continuità</li>
-                                <li>Derivate</li>
-                                <li>Studio di funzione</li>
                                 <li>Integrali indefiniti</li>
+                                <li>Integrazione per parti</li>
+                                <li>Metodo di sostituzione</li>
+                                <li>Funzioni composte</li>
+                                <li>Integrazione di funzioni razionali fratte</li>
                                 <li>Integrali definiti</li>
-                                <li>Calcolo di aree</li>
-                                <li>Equazioni differenziali</li>
+                                <li>Definizione e Proprietà</li>
+                                <li>Teorema della media</li>
+                                <li>Teorema fondamentale del calcolo integrale</li>
+                                <li>Calcolo aree col calcolo integrale</li>
+                                <li>Area compresa tra due curve</li>
+                                <li>Teorema del valor medio</li>
+                                <li>Integrali impropri</li>
+                                <li>Calcolo aree a 3 volumi</li>
+                                <li>Geometria solida euclidea</li>
+                                <li>Definizione di rette sghembe, diedro, sezione di un diedro</li>
+                                <li>La piramide e il tronco di piramide</li>
+                                <li>Aree dei solidi</li>
+                                <li>Equivalenza di solidi</li>
+                                <li>Principio di cavalieri</li>
+                                <li>Volume dei solidi notevoli</li>
                                 <li>Probabilità</li>
-                                <li>Distribuzioni di probabilità</li>
-                                <li>Statistica descrittiva</li>
-                                <li>Statistica inferenziale</li>
+                                <li>Introduzione eventi certi impossibili e contrari</li>
+                                <li>Teorema della somma logica di eventi</li>
+                                <li>Teorema del prodotto logico di eventi</li>
+                                <li>Probabilità condizionata</li>
+                                <li>Teorema di Bayes</li>
                             </ul>
                            
                             <div class="detail-resources">
                                 <h4>Risorse per lo studio</h4>
-                                <ul>
-                                    <li><a href="#" class="resource-link" data-resource="matematica-formulario"><i class="fas fa-file-pdf"></i> Formulario completo</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="matematica-esercizi"><i class="fas fa-file-pdf"></i> Esercizi svolti</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="matematica-video"><i class="fas fa-video"></i> Videolezioni</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="matematica-mappe"><i class="fas fa-book"></i> Mappe concettuali</a></li>
-                                </ul>
-                               
-                                <div class="practice-box">
-                                    <h4>Esercitati ora</h4>
-                                    <p>Esercizi su derivate e integrali</p>
-                                    <button class="practice-btn" data-exercise="matematica-esercizi">Inizia esercitazione</button>
+                                <div class="study-buttons">
+                                    <button class="summary-btn" data-materia="matematica">
+                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
+                                    </button>
+                                    <button class="quiz-btn" data-materia="matematica">
+                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -673,33 +683,21 @@ private static int partition(int[] array, int low, int high) {
                         <h3>Informatica - Argomenti principali</h3>
                         <div class="detail-content">
                             <ul class="argomenti-list">
-                                <li>Modello concettuale E/R</li>
-                                <li>Modello relazionale</li>
-                                <li>Normalizzazione</li>
-                                <li>SQL (DDL, DML, QL)</li>
-                                <li>Transazioni e concorrenza</li>
-                                <li>Sicurezza dei dati</li>
-                                <li>Database NoSQL</li>
-                                <li>Big Data</li>
-                                <li>Programmazione lato server</li>
-                                <li>Architetture web</li>
-                                <li>Web services e API</li>
-                                <li>Mobile development</li>
+                                <li>Ripasso HTML, CSS</li>
+                                <li>XAMPP</li>
+                                <li>Linguaggio PHP (tutto praticamente)</li>
+                                <li>Tutta la roba dei database</li>
                             </ul>
                            
                             <div class="detail-resources">
                                 <h4>Risorse per lo studio</h4>
-                                <ul>
-                                    <li><a href="#" class="resource-link" data-resource="informatica-db"><i class="fas fa-file-pdf"></i> Teoria dei database</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="informatica-sql"><i class="fas fa-file-pdf"></i> Esercizi SQL</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="informatica-video"><i class="fas fa-video"></i> Videolezioni</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="informatica-progetti"><i class="fas fa-book"></i> Esempi di progetti</a></li>
-                                </ul>
-                               
-                                <div class="practice-box">
-                                    <h4>Esercitati ora</h4>
-                                    <p>Esercizi su query SQL</p>
-                                    <button class="practice-btn" data-exercise="informatica-sql">Inizia esercitazione</button>
+                                <div class="study-buttons">
+                                    <button class="summary-btn" data-materia="informatica">
+                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
+                                    </button>
+                                    <button class="quiz-btn" data-materia="informatica">
+                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -709,33 +707,29 @@ private static int partition(int[] array, int low, int high) {
                         <h3>Sistemi e Reti - Argomenti principali</h3>
                         <div class="detail-content">
                             <ul class="argomenti-list">
-                                <li>Modello ISO/OSI</li>
-                                <li>Suite TCP/IP</li>
-                                <li>Indirizzamento IP</li>
-                                <li>Subnetting</li>
-                                <li>Routing</li>
-                                <li>VLAN</li>
-                                <li>Wireless LAN</li>
-                                <li>Sicurezza di rete</li>
+                                <li>Indirizzi IP classi (A,B,C) Subnetting</li>
+                                <li>Il livello Applicazione del modello TCP/IP</li>
+                                <li>Servizi email, Protocollo http</li>
+                                <li>DHCP e DNS</li>
+                                <li>Cablaggio strutturato</li>
+                                <li>Nat dinamico e Pat</li>
+                                <li>Reti pubbliche Private e VLAN</li>
                                 <li>Crittografia</li>
-                                <li>Firewall e proxy</li>
+                                <li>Cybersecurity</li>
                                 <li>VPN</li>
-                                <li>Cloud computing</li>
+                                <li>ISAKMP</li>
+                                <li>Firma digitale</li>
                             </ul>
                            
                             <div class="detail-resources">
                                 <h4>Risorse per lo studio</h4>
-                                <ul>
-                                    <li><a href="#" class="resource-link" data-resource="sistemi-teoria"><i class="fas fa-file-pdf"></i> Teoria delle reti</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="sistemi-subnetting"><i class="fas fa-file-pdf"></i> Esercizi di subnetting</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="sistemi-video"><i class="fas fa-video"></i> Videolezioni</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="sistemi-packet"><i class="fas fa-book"></i> Simulazioni Packet Tracer</a></li>
-                                </ul>
-                               
-                                <div class="practice-box">
-                                    <h4>Esercitati ora</h4>
-                                    <p>Esercizi su subnetting</p>
-                                    <button class="practice-btn" data-exercise="sistemi-subnetting">Inizia esercitazione</button>
+                                <div class="study-buttons">
+                                    <button class="summary-btn" data-materia="sistemi">
+                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
+                                    </button>
+                                    <button class="quiz-btn" data-materia="sistemi">
+                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -745,33 +739,34 @@ private static int partition(int[] array, int low, int high) {
                         <h3>TPSIT - Argomenti principali</h3>
                         <div class="detail-content">
                             <ul class="argomenti-list">
-                                <li>Architetture di rete</li>
-                                <li>Applicazioni client-server</li>
-                                <li>Socket e comunicazione</li>
-                                <li>Programmazione concorrente</li>
-                                <li>Thread e processi</li>
-                                <li>Sincronizzazione</li>
-                                <li>Applicazioni web</li>
-                                <li>Web services</li>
-                                <li>Architetture a microservizi</li>
-                                <li>Android development</li>
-                                <li>IoT (Internet of Things)</li>
-                                <li>Sistemi embedded</li>
+                                <li>XML e DTD</li>
+                                <li>Logica(pensiero induttivo, deduttivo, abduttivo)</li>
+                                <li>JSON</li>
+                                <li>Algoritmi</li>
+                                <li>Relazione tra logica, veridicità degli assiomi e delle tesi, definizione del processo logico in matematica (geometria e algebra), algoritmi, programmi</li>
+                                <li>Javascript(circa circa)</li>
+                                <li>Definizione di Informatica</li>
+                                <li>Applicazioni Web</li>
+                                <li>Sistemi informativi distribuiti(DNS,HTTP) vs Sistemi di calcolo distribuito</li>
+                                <li>TCP la funzione dell'hash</li>
+                                <li>Socket</li>
+                                <li>Implementazione Socket tramite l'implementazione di un server/client Echo e un client/server Tris</li>
+                                <li>Ripasso classi in python</li>
+                                <li>Comunicazione client server in PHP con AJAX</li>
+                                <li>API "FETCH"</li>
+                                <li>Architetture Multi Tier (1,2,3,N)</li>
+                                <li>CGI-BIN</li>
                             </ul>
                            
                             <div class="detail-resources">
                                 <h4>Risorse per lo studio</h4>
-                                <ul>
-                                    <li><a href="#" class="resource-link" data-resource="tpsit-teoria"><i class="fas fa-file-pdf"></i> Teoria architetture</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="tpsit-codice"><i class="fas fa-file-pdf"></i> Esempi di codice</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="tpsit-video"><i class="fas fa-video"></i> Videolezioni</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="tpsit-progetti"><i class="fas fa-book"></i> Progetti guidati</a></li>
-                                </ul>
-                               
-                                <div class="practice-box">
-                                    <h4>Esercitati ora</h4>
-                                    <p>Esercizi su socket e thread</p>
-                                    <button class="practice-btn" data-exercise="tpsit-socket">Inizia esercitazione</button>
+                                <div class="study-buttons">
+                                    <button class="summary-btn" data-materia="tpsit">
+                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
+                                    </button>
+                                    <button class="quiz-btn" data-materia="tpsit">
+                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -781,33 +776,54 @@ private static int partition(int[] array, int low, int high) {
                         <h3>GPOI - Argomenti principali</h3>
                         <div class="detail-content">
                             <ul class="argomenti-list">
-                                <li>Economia e microeconomia</li>
-                                <li>Organizzazione aziendale</li>
-                                <li>Processi aziendali</li>
-                                <li>Project management</li>
-                                <li>PMBOK e metodologie</li>
-                                <li>WBS e diagrammi di Gantt</li>
-                                <li>Gestione rischi</li>
-                                <li>Qualità del software</li>
-                                <li>Sicurezza sul lavoro</li>
-                                <li>Certificazioni</li>
-                                <li>Metodologie Agile</li>
-                                <li>Startup e innovazione</li>
+                                <li>CMS(Content Management System)</li>
+                                <li>Definizione di impresa, azienda e progetto</li>
+                                <li>Classificazione del sistema d'azienda in base al profitto, alla natura ed al settore</li>
+                                <li>Sistema aperto, relazioni di scambio conclusioni</li>
+                                <li>L'azienda , l'azienda, la gestione di un'azienda il capitale, il lavoro</li>
+                                <li>Il progetto definizione e caratteristiche</li>
+                                <li>Il project management(Diagramma di Gantt, WBS)</li>
+                                <li>Projectlibre (vario)</li>
+                                <li>Le fasi di un progetto</li>
+                                <li>gli obiettivi di un progetto</li>
+                                <li>La gestione del progetto: il principio dell'anticipazione dei vincoli. L'anticipazione dei vincoli e delle opportunità nelle prime fasi del progetto.Criteri da adottare per affrontare gli inconvenienti</li>
+                                <li>Tecniche Reticolari PERT e CPM</li>
+                                <li>I costi e i ricavi definizione di efficacia ed efficienza analisi dei costi e dei ricavi</li>
+                                <li>I costi aziendali, il grado di elevabilita'</li>
                             </ul>
                            
                             <div class="detail-resources">
                                 <h4>Risorse per lo studio</h4>
-                                <ul>
-                                    <li><a href="#" class="resource-link" data-resource="gpoi-teoria"><i class="fas fa-file-pdf"></i> Teoria project management</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="gpoi-progetti"><i class="fas fa-file-pdf"></i> Esempi di progetti</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="gpoi-video"><i class="fas fa-video"></i> Videolezioni</a></li>
-                                    <li><a href="#" class="resource-link" data-resource="gpoi-casi"><i class="fas fa-book"></i> Casi di studio</a></li>
-                                </ul>
-                               
-                                <div class="practice-box">
-                                    <h4>Esercitati ora</h4>
-                                    <p>Esercizi su WBS e diagrammi</p>
-                                    <button class="practice-btn" data-exercise="gpoi-wbs">Inizia esercitazione</button>
+                                <div class="study-buttons">
+                                    <button class="summary-btn" data-materia="gpoi">
+                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
+                                    </button>
+                                    <button class="quiz-btn" data-materia="gpoi">
+                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="materia-detail" id="scienze-motorie-detail">
+                        <h3>Scienze Motorie e Sportive - Argomenti principali</h3>
+                        <div class="detail-content">
+                            <ul class="argomenti-list">
+                                <li>I parametri allenanti</li>
+                                <li>Allenamento delle capacità motorie</li>
+                                <li>Le capacità motorie (velocità, mobilità articolare e coordinazione)</li>
+                            </ul>
+                           
+                            <div class="detail-resources">
+                                <h4>Risorse per lo studio</h4>
+                                <div class="study-buttons">
+                                    <button class="summary-btn" data-materia="scienze-motorie">
+                                        <i class="fas fa-file-text"></i> Riassunto per l'esame
+                                    </button>
+                                    <button class="quiz-btn" data-materia="scienze-motorie">
+                                        <i class="fas fa-question-circle"></i> Quiz di ripasso
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -829,12 +845,6 @@ private static int partition(int[] array, int low, int high) {
                             <li>Collega l'esperienza con il tuo percorso di studi</li>
                             <li>Rifletti sull'impatto per il tuo futuro professionale</li>
                         </ul>
-                       
-                        <div class="template-box">
-                            <h4>Template PowerPoint</h4>
-                            <p>Scarica un template per la presentazione PCTO</p>
-                            <button class="download-btn" data-resource="pcto-template">Scarica template <i class="fas fa-download"></i></button>
-                        </div>
                     </div>
                 </div>
                
@@ -855,10 +865,13 @@ private static int partition(int[] array, int low, int high) {
                             <li>Etica dell'informatica</li>
                         </ul>
                        
-                        <div class="practice-box">
-                            <h4>Esercitati ora</h4>
-                            <p>Quiz su Costituzione e cittadinanza digitale</p>
-                            <button class="practice-btn" data-exercise="ed-civica-quiz">Inizia quiz</button>
+                        <div class="study-buttons">
+                            <button class="summary-btn" data-materia="educazione-civica">
+                                <i class="fas fa-file-text"></i> Riassunto per l'esame
+                            </button>
+                            <button class="quiz-btn" data-materia="educazione-civica">
+                                <i class="fas fa-question-circle"></i> Quiz di ripasso
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1158,6 +1171,22 @@ private static int partition(int[] array, int low, int high) {
             <div class="modal-content simulazione-modal-content">
                 <span class="close-modal">&times;</span>
                 <div id="simulazione-content"></div>
+            </div>
+        </div>
+
+        <!-- Modal per i riassunti -->
+        <div id="summary-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="summary-content"></div>
+            </div>
+        </div>
+
+        <!-- Modal per i quiz -->
+        <div id="quiz-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="quiz-content"></div>
             </div>
         </div>
     </main>
